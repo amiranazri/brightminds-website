@@ -14,7 +14,9 @@ const Navbar = () => {
             <div className="container mx-auto px-4 py-2 flex items-center justify-between max-w-7xl">
                 {/* Logo */}
                 <div>
-                    <Image src="/brightminds_logo_1.jpeg" width={100} height={100} className="" alt="Brightminds logo" />
+                    <Link href="/">
+                        <Image src="/brightminds_logo_1.jpeg" width={100} height={100} className="" alt="Brightminds logo" />
+                    </Link>
                 </div>
 
                 {/* Navigation Links */}
@@ -38,12 +40,12 @@ const Navbar = () => {
                 }
             </div>
             <MenuContainer className="space-y-2" isOpen={hamburgerIsOpen}>
-                <Link href="/"><span className={styles.buttonMenu}>Home</span></Link>
-                <Link href="/about"><span className={styles.buttonMenu}>About</span></Link>
-                <Link href="/services"><span className={styles.buttonMenu}>Our Services</span></Link>
-                <Link href="/corporate-solutions"><span className={styles.buttonMenu}>Corporate Solutions</span></Link>
-                <Link href="/events"><span className={styles.buttonMenu}>Events</span></Link>
-                <Link href="/contact"><span className={styles.buttonMenu}>Contact Us</span></Link>
+                <Link href="/"><span className={styles.buttonMenu} onClick={() => {setHamburgerIsOpen(false)}}>Home</span></Link>
+                <Link href="/about"><span className={styles.buttonMenu} onClick={() => {setHamburgerIsOpen(false)}}>About</span></Link>
+                <Link href="/services"><span className={styles.buttonMenu} onClick={() => {setHamburgerIsOpen(false)}}>Our Services</span></Link>
+                <Link href="/corporate-solutions"><span className={styles.buttonMenu} onClick={() => {setHamburgerIsOpen(false)}}>Corporate Solutions</span></Link>
+                <Link href="/events"><span className={styles.buttonMenu} onClick={() => {setHamburgerIsOpen(false)}}>Events</span></Link>
+                <Link href="/contact"><span className={styles.buttonMenu} onClick={() => {setHamburgerIsOpen(false)}}>Contact Us</span></Link>
             </MenuContainer>
         </nav>
     );
