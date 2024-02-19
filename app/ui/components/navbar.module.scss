@@ -1,0 +1,26 @@
+.button {
+    color: #000;
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.buttonMenu {
+    color: #000;
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.image {
+    @media (min-width: 768px) {
+        display: none;
+      }
+}
