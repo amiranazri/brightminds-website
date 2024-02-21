@@ -1,7 +1,7 @@
-import "@/app/ui/global.css";
-import { inter } from "@/app/ui/fonts";
-import Navbar from "@/app/ui/components/navbar/Navbar";
-
+import '@/app/ui/global.css';
+import { inter } from '@/app/ui/fonts';
+import Navbar from '@/app/ui/components/Navbar'
+ 
 export default function RootLayout({
   children,
 }: {
