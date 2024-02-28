@@ -1,3 +1,5 @@
+@import '../global.scss';
+
 .button {
     color: #000;
     position: relative;
@@ -13,9 +15,15 @@
     position: relative;
     text-decoration: none;
     font-size: 20px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    transition: transform 0.3s ease;
 
     &:hover {
         opacity: 0.8;
+        background-color: $primary-blue;
+        color: white;
     }
 }
 
