@@ -8,7 +8,6 @@ import Title from "@/app/ui/components/Title"
 import Why from "./Why";
 import { useEffect, useState, useRef } from 'react';
 import MainButton from "@/app/ui/components/MainButton"
-import AutoplayCarouselPartners from './AutoplayCarouselPartners';
 import Slider from 'react-infinite-logo-slider'
 
 function CorporateSolutions() {
