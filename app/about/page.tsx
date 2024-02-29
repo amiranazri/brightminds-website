@@ -1,9 +1,8 @@
-async function About() {
+"use client"
 
+async function About() {
     return (
-      <div className="">
-          About
-      </div>
+      <div>About</div>
     );
   }
   
