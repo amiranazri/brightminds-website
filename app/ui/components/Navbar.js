@@ -32,17 +32,15 @@ const Navbar = () => {
 
                 {hamburgerIsOpen ? 
                 <HamburgerCross className="md:hidden cursor-pointer hover:opacity-50 rounded-full items-center" onClick={() => {setHamburgerIsOpen(!hamburgerIsOpen)}}>
-                    {/* <Image src="/cross.png" width={30} height={30} className={styles.image} alt="Hamburger Menu Icon" /> */}
                     <img src="/cross.png" className="w-[20px] h-[20px] md:w-[30px] md:h-[30px]" alt="Hamburger Menu Icon" />
                 </HamburgerCross>
                 :
                 <HamburgerCross className="md:hidden cursor-pointer hover:opacity-50 rounded-full items-center" onClick={() => {setHamburgerIsOpen(!hamburgerIsOpen)}}>
-                    {/* <Image src="/hamburger.png" width={40} height={40} className={styles.image} alt="Hamburger Menu Icon" /> */}
                     <img src="/hamburger.png" className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]" alt="Hamburger Menu Icon" />
                 </HamburgerCross>
                 }
             </div>
-            <MenuContainer className="space-y-2" $isOpen={hamburgerIsOpen}>
+            <MenuContainer className={`space-y-2 ${hamburgerIsOpen ? "opacity-100 max-h-[500px]" : "opacity-0 max-h-[0px]"}`}>
                 <Link href="/" className="flex justify-center w-[100%] center"><span className={styles.buttonMenu} onClick={() => {setHamburgerIsOpen(false)}}>Home</span></Link>
                 <Link href="/about" className="flex justify-center w-[100%]"><span className={styles.buttonMenu} onClick={() => {setHamburgerIsOpen(false)}}>About</span></Link>
                 <Link href="/services" className="flex justify-center w-[100%]"><span className={styles.buttonMenu} onClick={() => {setHamburgerIsOpen(false)}}>Our Services</span></Link>
@@ -71,19 +69,6 @@ const HamburgerCross = styled.div`
   }
 `
 
-// const MenuContainer = styled.div`
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     transition: max-height 0.3s ease-in-out, opacity 0.5s ease;
-//     max-height: ${({ isOpen }) => (isOpen ? '500px' : '0')}; // Adjust max-height as needed
-//     opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
-//     overflow: hidden;
-//     @media (min-width: 768px) {
-//         display: none;
-//     }
-// `;
-
 const MenuContainer = styled.div`
   position: absolute; // Position the menu absolutely
   left: 0;
@@ -94,8 +79,6 @@ const MenuContainer = styled.div`
   background-color: white; // Set a background color to make the menu visible over the content
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); // Optional: adds a shadow to the menu for better separation */
   transition: max-height 0.3s ease-in-out, opacity 0.5s ease;
-  max-height: ${({ $isOpen }) => ($isOpen ? '500px' : '0')}; // Adjust max-height as needed
-  opacity: ${({ $isOpen }) => ($isOpen ? '1' : '0')};
   overflow: hidden;
   z-index: 10; // Ensure the menu is above other content
   @media (min-width: 768px) {

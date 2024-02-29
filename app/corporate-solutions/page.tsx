@@ -1,6 +1,5 @@
 "use client"
 
-import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 import EducationPillar from "./EducationPillar"
@@ -11,59 +10,6 @@ import MainButton from "@/app/ui/components/MainButton"
 import Slider from 'react-infinite-logo-slider'
 
 function CorporateSolutions() {
-  // const [sliderSettings, setSliderSettings] = useState({
-  //   className: "slider variable-width",
-  //   infinite: true,
-  //   slidesToShow: 1,
-  //   speed: 5000,
-  //   autoplay: true,
-  //   autoplaySpeed: 0,
-  //   cssEase: "linear",
-  //   variableWidth: true,
-  //   arrows: false,
-  // });
-
-  // useEffect(() => {
-  //   if (window.innerWidth > 1000) {
-  //     setSliderSettings({
-  //       className: "slider variable-width",
-  //       infinite: false,
-  //       slidesToShow: 1,
-  //       speed: 5000,
-  //       autoplay: false,
-  //       autoplaySpeed: 0,
-  //       cssEase: "linear",
-  //       variableWidth: true,
-  //       arrows: false,
-  //     })
-  //   }
-  // }, [window.innerWidth])
-
-  const [isOverflowing, setIsOverflowing] = useState(false);
-  const containerRef = useRef(null) as any;
-
-  function isElement(maybeElement: unknown): maybeElement is HTMLElement {
-    return maybeElement instanceof HTMLElement;
-  }
-
-  useEffect(() => {
-    const checkOverflow = () => {
-      const container = containerRef.current
-      if (container && isElement(container)) {
-        // It's overflowing if the scroll width is greater than the client width
-        const overflow = container.scrollWidth > container.clientWidth;
-        setIsOverflowing(overflow);
-      }
-    };
-
-    // Run the check on mount and on window resize
-    checkOverflow();
-    window.addEventListener('resize', checkOverflow);
-
-    // Cleanup the event listener on unmount
-    return () => window.removeEventListener('resize', checkOverflow);
-  }, []);
-
   return (
     <div>
       <BannerContainer className="bg-primary-blue flex items-center justify-center relative">
@@ -76,7 +22,7 @@ function CorporateSolutions() {
       <div className="m-5">
         <div>
           <Title title='CORE EDUCATION PILLARS' />
-            <EducationPillars ref={containerRef} className={`flex flex-col lg:flex-row lg:flex-wrap mt-10 space-x-5 items-center no-scrollbar ${isOverflowing ? '' : 'justify-center'}`}>
+            <EducationPillars className={`flex flex-col lg:flex-row lg:flex-wrap mt-10 space-x-5 items-center justify-center`}>
               <EducationPillar key={1} imageName="education_pillar_es.svg" text="Environmental Sustainability" />
               <EducationPillar key={2} imageName="education_pillar_feae.svg" text="Financial Education & Empowerment" />
               <EducationPillar key={3} imageName="education_pillar_haw.svg" text="Health & Wellness" />
