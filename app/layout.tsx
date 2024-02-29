@@ -15,7 +15,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
       </head>
       <body className={`${inter.className} antialiased`}>
-        <div className="mt-[115px]">
+        <div className="mt-[67px] md:mt-[115px]">
           <Navbar />
           {children}
           <Footer />

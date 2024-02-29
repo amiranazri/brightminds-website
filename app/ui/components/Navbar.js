@@ -16,7 +16,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <div>
                     <Link href="/">
-                        <Image src="/brightminds_logo_1.jpeg" width={100} height={100} className="" alt="Brightminds logo" />
+                        <img src="/brightminds_logo_1.jpeg" className="w-[50px] h-[50px] md:w-[100px] md:h-[100px]" alt="Brightminds logo" />
                     </Link>
                 </div>
 
@@ -32,11 +32,13 @@ const Navbar = () => {
 
                 {hamburgerIsOpen ? 
                 <HamburgerCross className="md:hidden cursor-pointer hover:opacity-50 rounded-full items-center" onClick={() => {setHamburgerIsOpen(!hamburgerIsOpen)}}>
-                    <Image src="/cross.png" width={30} height={30} className={styles.image} alt="Hamburger Menu Icon" />
+                    {/* <Image src="/cross.png" width={30} height={30} className={styles.image} alt="Hamburger Menu Icon" /> */}
+                    <img src="/cross.png" className="w-[20px] h-[20px] md:w-[30px] md:h-[30px]" alt="Hamburger Menu Icon" />
                 </HamburgerCross>
                 :
                 <HamburgerCross className="md:hidden cursor-pointer hover:opacity-50 rounded-full items-center" onClick={() => {setHamburgerIsOpen(!hamburgerIsOpen)}}>
-                    <Image src="/hamburger.png" width={40} height={40} className={styles.image} alt="Hamburger Menu Icon" />
+                    {/* <Image src="/hamburger.png" width={40} height={40} className={styles.image} alt="Hamburger Menu Icon" /> */}
+                    <img src="/hamburger.png" className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]" alt="Hamburger Menu Icon" />
                 </HamburgerCross>
                 }
             </div>

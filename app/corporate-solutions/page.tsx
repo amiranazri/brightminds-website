@@ -7,10 +7,9 @@ import EducationPillar from "./EducationPillar"
 import Title from "@/app/ui/components/Title"
 import Why from "./Why";
 import { useEffect, useState, useRef } from 'react';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import MainButton from "@/app/ui/components/MainButton"
+import AutoplayCarouselPartners from './AutoplayCarouselPartners';
+import Slider from 'react-infinite-logo-slider'
 
 function CorporateSolutions() {
   // const [sliderSettings, setSliderSettings] = useState({
@@ -78,16 +77,7 @@ function CorporateSolutions() {
       <div className="m-5">
         <div>
           <Title title='CORE EDUCATION PILLARS' />
-          {/* <EducationPillars className="mt-10 items-center justify-center">
-            <Slider {...sliderSettings}>
-              <EducationPillar key={1} imageName="education_pillar_es.svg" text="Environmental Sustainability" />
-              <EducationPillar key={2} imageName="education_pillar_feae.svg" text="Financial Education & Empowerment" />
-              <EducationPillar key={3} imageName="education_pillar_haw.svg" text="Health & Wellness" />
-              <EducationPillar key={4} imageName="education_pillar_ecis.svg" text="Effective Communication & Interpersonal Skills" />
-              <EducationPillar key={5} imageName="education_pillar_ti.svg" text="Technology & Innovation" />
-            </Slider>
-          </EducationPillars> */}
-            <EducationPillars ref={containerRef} className={`flex overflow-x-scroll h-[330px] mt-10 space-x-5 items-center no-scrollbar ${isOverflowing ? '' : 'justify-center'}`}>
+            <EducationPillars ref={containerRef} className={`flex flex-col lg:flex-row lg:flex-wrap mt-10 space-x-5 items-center no-scrollbar ${isOverflowing ? '' : 'justify-center'}`}>
               <EducationPillar key={1} imageName="education_pillar_es.svg" text="Environmental Sustainability" />
               <EducationPillar key={2} imageName="education_pillar_feae.svg" text="Financial Education & Empowerment" />
               <EducationPillar key={3} imageName="education_pillar_haw.svg" text="Health & Wellness" />
@@ -107,7 +97,28 @@ function CorporateSolutions() {
 
         <div>
           <Title title='OUR PARTNERS' />
-          {/* PARTNERS */}
+          <div className="mt-16 mb-16">
+            <Slider
+              width="200px"
+              duration={30}
+              pauseOnHover={true}
+              blurBorders={false}
+              blurBoderColor={'#fff'}
+            >
+              <Slider.Slide>
+                  <img src="/partner1.jpg" alt="any" className='w-20' />
+              </Slider.Slide>
+              <Slider.Slide>
+                  <img src="/partner2.jpg" alt="any2" className='w-20' />
+              </Slider.Slide>
+              <Slider.Slide>
+                  <img src="/partner3.jpg" alt="any3" className='w-20' />
+              </Slider.Slide>
+              <Slider.Slide>
+                <img src="/partner4.jpg" alt="any3" className='w-20' />
+              </Slider.Slide>
+            </Slider>
+          </div>
           <MainButton />
         </div>
       </div>
