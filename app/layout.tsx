@@ -1,4 +1,4 @@
-import "@/app/ui/global.css";
+import "/public/styles/global.css";
 import { inter } from "@/app/ui/fonts";
 import Navbar from "@/app/ui/components/navbar/Navbar";
 

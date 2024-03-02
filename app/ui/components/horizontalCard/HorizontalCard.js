@@ -3,11 +3,15 @@ import Image from "next/image";
 
 const HorizontalCard = ({ imageUrl, title, subtitle }) => {
   return (
-    <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-row justify-between leading-normal items-center">
-      <Image src={imageUrl} width={120} height={120} />
-      <div className="mb-8">
-        <div className="text-gray-900 font-bold text-xl mb-2">{title}</div>
-        <p className="text-gray-700 text-base">{subtitle}</p>
+    <div className="bg-white mx-4 my-3 sm:min-w-[500px] sm:min-h-52 md:max-w-[500px] lg:max-w-[500px] md:min-h-50 lg:min-h-53 border border-gray-200 rounded-[16px] lg:rounded-[16px] p-4 flex items-center sm:flex-col md:flex-row lg:flex-row">
+      <Image src={imageUrl} width={140} height={140} className="rounded-full" />
+      <div className="ml-4">
+        <div className="flex text-gray-900 font-bold text-xl mb-2 sm:justify-center md:justify-start lg:justify-start">
+          {title}
+        </div>
+        <p className="text-gray-700 text-base sm:text-center md:text-start lg:text-start">
+          {subtitle}
+        </p>
       </div>
     </div>
   );
