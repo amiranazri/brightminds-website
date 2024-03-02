@@ -12,23 +12,23 @@ import Slider from 'react-infinite-logo-slider'
 function CorporateSolutions() {
   return (
     <div>
-      <BannerContainer className="bg-primary-blue flex-col flex items-center justify-center relative h-[400px]">
-        <Banner className="lg:w-[80%] xl:w-[60%] 2xl:w-[60%] h-[300px]" src="/corporate_services_banner.svg" alt='' />
+      <BannerContainer className="flex-col flex items-center justify-center relative w-[100%]">
+        <Banner className="w-[100%] lg:w-[80%] xl:w-[60%] 2xl:w-[60%]" src="/corporate_services_banner.jpg" alt='' />
         <BannerText className="sm:absolute sm:bottom-4 md:bottom-5 2xl:bottom-8 text-primary-blue p-1 md:p-2 xl:p-4 rounded cursor-pointer font-bold hover:opacity-90 2xl:text-md bg-white">
           <Link href="contact">CONTACT US</Link>
         </BannerText>
       </BannerContainer>
-      
+
       <div className="m-5">
         <div>
           <Title title='CORE EDUCATION PILLARS' />
-            <EducationPillars className={`flex flex-col lg:flex-row lg:flex-wrap mt-10 space-x-5 items-center justify-center`}>
-              <EducationPillar key={1} imageName="education_pillar_es.svg" text="Environmental Sustainability" />
-              <EducationPillar key={2} imageName="education_pillar_feae.svg" text="Financial Education & Empowerment" />
-              <EducationPillar key={3} imageName="education_pillar_haw.svg" text="Health & Wellness" />
-              <EducationPillar key={4} imageName="education_pillar_ecis.svg" text="Effective Communication & Interpersonal Skills" />
-              <EducationPillar key={5} imageName="education_pillar_ti.svg" text="Technology & Innovation" />
-            </EducationPillars>
+          <EducationPillars className={`flex flex-col lg:flex-row lg:flex-wrap mt-10 space-x-5 items-center justify-center`}>
+            <EducationPillar key={1} imageName="education_pillar_es.svg" text="Environmental Sustainability" />
+            <EducationPillar key={2} imageName="education_pillar_feae.svg" text="Financial Education & Empowerment" />
+            <EducationPillar key={3} imageName="education_pillar_haw.svg" text="Health & Wellness" />
+            <EducationPillar key={4} imageName="education_pillar_ecis.svg" text="Effective Communication & Interpersonal Skills" />
+            <EducationPillar key={5} imageName="education_pillar_ti.svg" text="Technology & Innovation" />
+          </EducationPillars>
         </div>
 
         <div className="">
@@ -51,13 +51,13 @@ function CorporateSolutions() {
               blurBoderColor={'#fff'}
             >
               <Slider.Slide>
-                  <img src="/partner1.jpg" alt="any" className='w-20' />
+                <img src="/partner1.jpg" alt="any" className='w-20' />
               </Slider.Slide>
               <Slider.Slide>
-                  <img src="/partner2.jpg" alt="any2" className='w-20' />
+                <img src="/partner2.jpg" alt="any2" className='w-20' />
               </Slider.Slide>
               <Slider.Slide>
-                  <img src="/partner3.jpg" alt="any3" className='w-20' />
+                <img src="/partner3.jpg" alt="any3" className='w-20' />
               </Slider.Slide>
               <Slider.Slide>
                 <img src="/partner4.jpg" alt="any3" className='w-20' />

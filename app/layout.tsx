@@ -2,7 +2,8 @@ import '@/app/ui/global.css';
 import { inter } from '@/app/ui/fonts';
 import Navbar from '@/app/ui/components/Navbar'
 import Footer from '@/app/ui/components/Footer'
- 
+import Script from 'next/script';
+
 export default function RootLayout({
   children,
 }: {
@@ -20,6 +21,10 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
+        <Script
+          src="https://cdn.jsdelivr.net/npm/flowbite@2.3.0/dist/flowbite.min.js"
+          strategy="beforeInteractive"
+        />
       </body>
     </html>
   );

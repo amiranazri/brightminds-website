@@ -5,7 +5,7 @@ import Link from 'next/link';
 function Footer() {
   return (
     <div className="bg-[#FCFCFC] flex flex-col items-center justify-center space-y-3 p-2">
-        <Image src="/brightminds_logo_2.jpeg" width={220} height={220} />
+        <Image src="/brightminds_logo_2.jpeg" width={220} height={220} alt="Brightminds logo" />
         <div className="flex flex-col items-center justify-center md:flex-row md:space-x-5">
             <div>insta image</div>
             <div>facebook image</div>

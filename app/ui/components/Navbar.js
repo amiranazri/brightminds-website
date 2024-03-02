@@ -5,83 +5,72 @@ import Image from 'next/image';
 import styles from './navbar.module.scss'
 import {useEffect, useState} from "react";
 import styled from 'styled-components';
+import {usePathname} from 'next/navigation'; 
 
 const Navbar = () => {
-    const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false);
+  const [navbarScroll, setNavbarScroll] = useState(false);
+  const pathname = usePathname()
+  function navLinkCss(pathToCheck) {
+    if (pathToCheck == pathname) return `md:bg-transparent bg-primary-blue md:text-primary-blue text-white ${navbarScroll ? "md:text-primary-yellow" : ""}`
+    else return `text-gray-900 hover:bg-gray-100 md:hover:underline md:underline-offset-8 ${navbarScroll ? "md:text-white md:hover:text-primary-yellow" : "md:hover:text-primary-blue"}`
+  }
 
-    return (
-        <nav className="shadow-2xl fixed top-0 left-0 w-[100%] z-10 bg-white">
-          {/* container mx-auto px-4 py-2 flex items-center justify-between max-w-7xl text-xl */}
-            <div className="flex items-center justify-between text-md px-4 py-2 max-w-7xl text-lg mx-auto">
-                {/* Logo */}
-                <div>
-                    <Link href="/">
-                        <img src="/brightminds_logo_1.jpeg" className="w-[50px] h-[50px] md:w-[100px] md:h-[100px]" alt="Brightminds logo" />
-                    </Link>
-                </div>
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 50) {
+        setNavbarScroll(true)
+      } else {
+        setNavbarScroll(false)
+      }
+    }
 
-                {/* Navigation Links */}
-                <div className="hidden md:block md:space-x-4 lg:space-x-8 xl:space-x-10 text-black">
-                    <Link href="/"><span className={styles.button}>Home</span></Link>
-                    <Link href="/about"><span className={styles.button}>About</span></Link>
-                    <Link href="/services"><span className={styles.button}>Our Services</span></Link>
-                    <Link href="/corporate-solutions"><span className={styles.button}>Corporate Solutions</span></Link>
-                    <Link href="/events"><span className={styles.button}>Events</span></Link>
-                    <Link href="/contact"><span className={styles.button}>Contact Us</span></Link>
-                </div>
+    window.addEventListener('scroll', handleScroll);
 
-                {hamburgerIsOpen ? 
-                <HamburgerCross className="md:hidden cursor-pointer hover:opacity-50 rounded-full items-center" onClick={() => {setHamburgerIsOpen(!hamburgerIsOpen)}}>
-                    <img src="/cross.png" className="w-[20px] h-[20px] md:w-[30px] md:h-[30px]" alt="Hamburger Menu Icon" />
-                </HamburgerCross>
-                :
-                <HamburgerCross className="md:hidden cursor-pointer hover:opacity-50 rounded-full items-center" onClick={() => {setHamburgerIsOpen(!hamburgerIsOpen)}}>
-                    <img src="/hamburger.png" className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]" alt="Hamburger Menu Icon" />
-                </HamburgerCross>
-                }
-            </div>
-            <MenuContainer className={`space-y-2 ${hamburgerIsOpen ? "opacity-100 max-h-[500px]" : "opacity-0 max-h-[0px]"}`}>
-                <Link href="/" className="flex justify-center w-[100%] center"><span className={styles.buttonMenu} onClick={() => {setHamburgerIsOpen(false)}}>Home</span></Link>
-                <Link href="/about" className="flex justify-center w-[100%]"><span className={styles.buttonMenu} onClick={() => {setHamburgerIsOpen(false)}}>About</span></Link>
-                <Link href="/services" className="flex justify-center w-[100%]"><span className={styles.buttonMenu} onClick={() => {setHamburgerIsOpen(false)}}>Our Services</span></Link>
-                <Link href="/corporate-solutions" className="flex justify-center w-[100%]"><span className={styles.buttonMenu} onClick={() => {setHamburgerIsOpen(false)}}>Corporate Solutions</span></Link>
-                <Link href="/events" className="flex justify-center w-[100%]"><span className={styles.buttonMenu} onClick={() => {setHamburgerIsOpen(false)}}>Events</span></Link>
-                <Link href="/contact" className="flex justify-center w-[100%]"><span className={styles.buttonMenu} onClick={() => {setHamburgerIsOpen(false)}}>Contact Us</span></Link>
-            </MenuContainer>
-        </nav>
-    );
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
+  return (
+    <nav className={`${navbarScroll ? "bg-primary-blue" : "bg-white"} transition ease-in delay:250 shadow-2xl border-gray-200 fixed w-full z-20 top-0 start-0`}>
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
+            <Image src="/brightminds_logo_1.jpeg" width={80} height={80} alt="Brightminds Logo" />
+            <span className={`${navbarScroll ? "text-white" : "text-primary-blue"} transition-colors ease-in delay:250 self-center text-lg font-semibold whitespace-nowrap`}>Brightminds</span>
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button" className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden ${navbarScroll ? "text-white hover:bg-black" : "text-gray-500 hover:bg-gray-100"}`} aria-controls="navbar-default" aria-expanded="false">
+            <span className="sr-only">Open main menu</span>
+            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul className={`max-md:bg-gray-50 font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 transition-none`}>
+            <li>
+              <Link href="/" className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss("/")}`}>Home</Link>
+            </li>
+            <li>
+              <Link href="/about" className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss("/about")}`}>About</Link>
+            </li>
+            <li>
+              <Link href="/portfolio" className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss("/portfolio")}`}>Portfolio</Link>
+            </li>
+            <li>
+              <Link href="services" className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss("/services")}`}>Our Services</Link>
+            </li>
+            <li>
+              <Link href="corporate-solutions" className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss("/corporate-solutions")}`}>Corporate Solutions</Link>
+            </li>
+            <li>
+              <Link href="/events" className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss("/events")}`}>Events</Link>
+            </li>
+            <li>
+              <Link href="contact" className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss("/contact")}`}>Contact Us</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  )
 };
 
 export default Navbar;
-
-const HamburgerCross = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease;
-
-  &:active {
-    transform: scale(0.95);
-  }
-
-  @media (min-width: 768px) {
-    display: none;
-  }
-`
-
-const MenuContainer = styled.div`
-  position: absolute; // Position the menu absolutely
-  left: 0;
-  right: 0; // Stretch the menu across the full width of the navbar
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white; // Set a background color to make the menu visible over the content
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); // Optional: adds a shadow to the menu for better separation */
-  transition: max-height 0.3s ease-in-out, opacity 0.5s ease;
-  overflow: hidden;
-  z-index: 10; // Ensure the menu is above other content
-  @media (min-width: 768px) {
-    display: none;
-  }
-`;
