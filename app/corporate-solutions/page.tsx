@@ -12,9 +12,9 @@ import Slider from 'react-infinite-logo-slider'
 function CorporateSolutions() {
   return (
     <div>
-      <BannerContainer className="bg-primary-blue flex items-center justify-center relative">
-        <Banner className="lg:w-[80%] xl:w-[60%] 2xl:w-[60%]" src="/corporate_services_banner.svg" alt='' />
-        <BannerText className="absolute sm:bottom-4 md:bottom-5 2xl:bottom-8 text-primary-blue p-1 md:p-2 xl:p-4 rounded cursor-pointer font-bold hover:opacity-90 2xl:text-md bg-white">
+      <BannerContainer className="bg-primary-blue flex-col flex items-center justify-center relative h-[400px]">
+        <Banner className="lg:w-[80%] xl:w-[60%] 2xl:w-[60%] h-[300px]" src="/corporate_services_banner.svg" alt='' />
+        <BannerText className="sm:absolute sm:bottom-4 md:bottom-5 2xl:bottom-8 text-primary-blue p-1 md:p-2 xl:p-4 rounded cursor-pointer font-bold hover:opacity-90 2xl:text-md bg-white">
           <Link href="contact">CONTACT US</Link>
         </BannerText>
       </BannerContainer>
@@ -80,9 +80,9 @@ const BannerContainer = styled.div`
 `
 
 const Banner = styled.img`
-  @media (max-width: 639px) {
-    transform: scale(1.2);
-  }
+  /* @media (max-width: 639px) {
+    transform: scale(1.5);
+  } */
 `
 
 const BannerText = styled.div`
