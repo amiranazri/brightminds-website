@@ -1,0 +1,22 @@
+[
+    {
+        "imageUrl": "/critical_thinking.svg",
+        "title": "Critical Analysis",
+        "subtitle": "Learn to think critically through analysing real world issues and critically forming opinions on them practice of real world issues."
+    },
+    {
+        "imageUrl": "/financial_literacy.svg",
+        "title": "Financial Literacy",
+        "subtitle": "Learn the need to knows when it comes to personal financial skills and businesses"
+    },
+    {
+        "imageUrl": "/effective_communication.svg",
+        "title": "Effective Communication",
+        "subtitle": "Develop communication skills to better convey information, ideas and arguments."
+    },
+    {
+        "imageUrl": "/public_speaking.svg",
+        "title": "Public Speaking",
+        "subtitle": "Tackle the essential concepts and skills needed to effectively deliver presentations in front of audiences."
+    }
+]
