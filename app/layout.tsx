@@ -1,5 +1,5 @@
 import '@/app/ui/global.css';
-import { inter } from '@/app/ui/fonts';
+import { open_sans } from '@/app/ui/fonts';
 import Navbar from '@/app/ui/components/Navbar'
 import Footer from '@/app/ui/components/Footer'
 import Script from 'next/script';
@@ -15,7 +15,7 @@ export default function RootLayout({
         <title>Brightminds School of Learning</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${open_sans.className} antialiased`}>
         <div className="mt-[67px] md:mt-[115px]">
           <Navbar />
           {children}
