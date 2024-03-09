@@ -51,7 +51,7 @@ function ContactUs() {
       </div>
       {/* Form Part */}
       <div className="w-[300px] sm:w-[600px] lg:w-[500px] lg:mr-10 mt-5 lg:mt-0 flex flex-col items-center relative">
-        {/* <FormDropDown setState={setSelectedForm} /> */}
+        <FormDropDown setState={setSelectedForm} />
         <div
           className="mt-5 w-full rounded-lg border-black"
           style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" }}
@@ -65,7 +65,7 @@ function ContactUs() {
                 : "bg-primary-yellow"
             }`}
           ></div>
-          <div className="p-2">
+          {/* <div className="p-2">
             {selectedForm === "Corporate" ? (
               <CorporateForm />
             ) : selectedForm === "School Partnership" ? (
@@ -73,7 +73,7 @@ function ContactUs() {
             ) : (
               <RegistrationForm />
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
