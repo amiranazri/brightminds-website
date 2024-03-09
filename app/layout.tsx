@@ -1,8 +1,8 @@
-import '@/app/ui/global.css';
-import { open_sans } from '@/app/ui/fonts';
-import Navbar from '@/app/ui/components/Navbar'
-import Footer from '@/app/ui/components/Footer'
-import Script from 'next/script';
+import "@/app/ui/global.css";
+import { open_sans } from "@/app/ui/fonts";
+import Navbar from "@/app/ui/components/Navbar";
+import Footer from "@/app/ui/components/Footer";
+import Script from "next/script";
 
 export default function RootLayout({
   children,
@@ -13,9 +13,16 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>Brightminds School of Learning</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <style>
+          @import
+          url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap')
+        </style>
       </head>
-      <body className={`${open_sans.className} antialiased`}>
+      <body className={`antialiased`}>
         <div className="mt-[67px] md:mt-[115px]">
           <Navbar />
           {children}
