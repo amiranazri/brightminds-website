@@ -19,10 +19,10 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1.0, viewport-fit=cover"
         />
-        <style>
-          @import
-          url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
-        </style>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+          rel="stylesheet" // Use rel="stylesheet" for importing external CSS
+        />
       </head>
       <body className={`${open_sans.className} antialiased`}>
         <ToastContainer position="top-center" />

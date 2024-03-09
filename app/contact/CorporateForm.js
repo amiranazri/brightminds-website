@@ -73,7 +73,7 @@ function CorporateForm() {
             htmlFor="floating_first_name"
             className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            First name <span className="text-red-500">required</span>
+            First name <span className="text-red-500">*</span>
           </label>
         </div>
         <div className="relative z-0 w-full mb-5 group">
@@ -89,7 +89,7 @@ function CorporateForm() {
             htmlFor="floating_last_name"
             className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            Last name <span className="text-red-500">required</span>
+            Last name <span className="text-red-500">*</span>
           </label>
         </div>
       </div>
@@ -107,7 +107,7 @@ function CorporateForm() {
             htmlFor="floating_email"
             className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            Email <span className="text-red-500">required</span>
+            Email <span className="text-red-500">*</span>
           </label>
         </div>
         <div className="relative z-0 w-full mb-5 group">
@@ -125,7 +125,7 @@ function CorporateForm() {
             className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
             Phone number (+60123456789){" "}
-            <span className="text-red-500">required</span>
+            <span className="text-red-500">*</span>
           </label>
         </div>
       </div>
@@ -144,7 +144,7 @@ function CorporateForm() {
             htmlFor="floating_company"
             className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            Company <span className="text-red-500">required</span>
+            Company <span className="text-red-500">*</span>
           </label>
         </div>
         <div className="relative z-0 w-full mb-5 group">
@@ -160,7 +160,7 @@ function CorporateForm() {
             htmlFor="floating_position"
             className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            Position/Title <span className="text-red-500">required</span>
+            Position/Title <span className="text-red-500">*</span>
           </label>
         </div>
       </div>
@@ -177,7 +177,7 @@ function CorporateForm() {
           htmlFor="floating_program"
           className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
         >
-          Program <span className="text-red-500">required</span>
+          Program <span className="text-red-500">*</span>
         </label>
       </div>
       <div className="relative z-0 w-full mb-5 group">

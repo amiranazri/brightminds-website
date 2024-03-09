@@ -101,7 +101,7 @@ function RegistrationForm() {
           htmlFor="floating_school_name"
           className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
         >
-          School name <span className="text-red-500">required</span>
+          School name <span className="text-red-500">*</span>
         </label>
       </div>
 
@@ -119,7 +119,7 @@ function RegistrationForm() {
             htmlFor="floating_country"
             className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            Country <span className="text-red-500">required</span>
+            Country <span className="text-red-500">*</span>
           </label>
         </div>
 
@@ -136,7 +136,7 @@ function RegistrationForm() {
             htmlFor="floating_city"
             className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            City <span className="text-red-500">required</span>
+            City <span className="text-red-500">*</span>
           </label>
         </div>
       </div>
@@ -155,7 +155,7 @@ function RegistrationForm() {
           className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
         >
           Full name of school representative{" "}
-          <span className="text-red-500">required</span>
+          <span className="text-red-500">*</span>
         </label>
       </div>
 
@@ -173,7 +173,7 @@ function RegistrationForm() {
             htmlFor="floating_email"
             className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            Email <span className="text-red-500">required</span>
+            Email <span className="text-red-500">*</span>
           </label>
         </div>
         <div className="relative z-0 w-full mb-5 group">
@@ -191,13 +191,13 @@ function RegistrationForm() {
             className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
             Phone number (+60123456789){" "}
-            <span className="text-red-500">required</span>
+            <span className="text-red-500">*</span>
           </label>
         </div>
       </div>
       <div className="relative z-0 w-full mb-5 group">
         <div className="text-gray-500 mb-2 text-sm">
-          Subjects: <span className="text-red-500">required</span>
+          Subjects: <span className="text-red-500">*</span>
         </div>
         <div id="checkboxGroup" className="w-50 h-28 overflow-y-scroll p-2">
           {subjects.map((s) => (
