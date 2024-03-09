@@ -15,18 +15,18 @@ function ContactUs() {
     <div className="max-w-[1920px] text-primary-black m-5 mt-[170px] lg:mt-[300px] flex flex-col items-center justify-center lg:flex-row-reverse">
       {/* Text Part */}
       <div className="max-w-lg flex flex-col items-center lg:ml-10">
-        <div className="text-primary-yellow font-bold">CONTACT US</div>
-        <div className="text-primary-blue text-2xl font-bold mt-3 mb-3">
+        {/* <div className="text-primary-yellow font-bold">CONTACT US</div> */}
+        {/* <div className="text-primary-blue text-2xl font-bold mt-3 mb-3">
           How can we help?
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           Your satisfaction is our top priority. Whether you have a question
           about our services, need assistance with an order, or simply want to
           share your feedback, we are here to help. Please feel free to reach
           out using the form below, and our dedicated team will get back to you
           as soon as possible. Thank you for choosing us - we look forward to
           assisting you!
-        </div>
+        </div> */}
 
         <div className="flex flex-col items-center space-y-3 w-[100%] lg:items-start mt-5">
           <ContactInfo
@@ -65,7 +65,7 @@ function ContactUs() {
                 : "bg-primary-yellow"
             }`}
           ></div>
-          {/* <div className="p-2">
+          <div className="p-2">
             {selectedForm === "Corporate" ? (
               <CorporateForm />
             ) : selectedForm === "School Partnership" ? (
@@ -73,7 +73,7 @@ function ContactUs() {
             ) : (
               <RegistrationForm />
             )}
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
