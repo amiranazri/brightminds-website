@@ -11,13 +11,13 @@ function Footer() {
         height={220}
         alt="Brightminds logo"
       />
-      <div className="grid grid-cols-3 gap-5 md:grid-cols-1 md:space-y-5">
+      <div className="flex space-x-5 mb-5">
         <Link href="https://www.instagram.com/brightmindsedu/" target="_blank">
           <Image
             src="/instagram_icon.svg"
             width={50}
             height={50}
-            className="cursor-pointer mb-5 hover:opacity-80"
+            className="cursor-pointer hover:opacity-80"
             alt="Instagram Icon"
           />
         </Link>
@@ -26,7 +26,7 @@ function Footer() {
             src="/facebook_icon.svg"
             width={50}
             height={50}
-            className="cursor-pointer mb-5 hover:opacity-80"
+            className="cursor-pointer hover:opacity-80"
             alt="Facebook Icon"
           />
         </Link>
@@ -38,7 +38,7 @@ function Footer() {
             src="/twitter_icon.svg"
             width={50}
             height={50}
-            className="cursor-pointer mb-5 hover:opacity-80"
+            className="cursor-pointer hover:opacity-80"
             alt="LinkedIn Icon"
           />
         </Link>
