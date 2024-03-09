@@ -11,8 +11,8 @@ const ReviewCard = ({ author, authorImg, rating, review, date }) => {
 
   return (
     <div className="review-card bg-white rounded-lg shadow-md p-4 md:p-6 lg:p-8 mx-2 md:mx-4 lg:mx-8 my-4 md:my-8 lg:my-32 md:h-72 lg:w-96 relative">
-      <div className="flex flex-col md:flex-row justify-between items-center">
-        <div className="author-info flex items-center mb-4 md:mb-0">
+      <div className="flex flex-col md:flex-row justify-between items-start md:flex-wrap">
+        <div className="author-info flex items-center mb-4 md:mb-0 md:w-full">
           <div
             className="author-image border-1 border-yellow-300 aspect-w-1 aspect-h-1 rounded-full overflow-hidden"
             style={{ width: "60px", height: "60px", ...backgroundImageStyle }}
@@ -22,7 +22,7 @@ const ReviewCard = ({ author, authorImg, rating, review, date }) => {
             <div className="author-date text-xs text-gray-600">{date}</div>
           </div>
         </div>
-        <div className="google-logo hidden md:block absolute top-2 right-2">
+        <div className="google-logo absolute top-2 right-2">
           <Image src={glogo} width={30} height={30} alt="Google" />
         </div>
       </div>

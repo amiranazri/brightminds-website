@@ -11,15 +11,36 @@ function Footer() {
         height={220}
         alt="Brightminds logo"
       />
-      <div className="flex flex-col items-center justify-center md:flex-row md:space-x-5">
+      <div className="grid grid-cols-3 gap-5 md:grid-cols-1 md:space-y-5">
         <Link href="https://www.instagram.com/brightmindsedu/" target="_blank">
-          <Image src="/instagram_icon.svg" width={50} height={50} className="cursor-pointer mb-5 hover:opacity-80" alt="Instagram Icon" />
+          <Image
+            src="/instagram_icon.svg"
+            width={50}
+            height={50}
+            className="cursor-pointer mb-5 hover:opacity-80"
+            alt="Instagram Icon"
+          />
         </Link>
         <Link href="https://www.facebook.com/Brightmindsorg" target="_blank">
-          <Image src="/facebook_icon.svg" width={50} height={50} className="cursor-pointer mb-5 hover:opacity-80" alt="Facebook Icon" />
+          <Image
+            src="/facebook_icon.svg"
+            width={50}
+            height={50}
+            className="cursor-pointer mb-5 hover:opacity-80"
+            alt="Facebook Icon"
+          />
         </Link>
-        <Link href="https://www.linkedin.com/company/brightminds-edu/" target="_blank">
-          <Image src="/twitter_icon.svg" width={50} height={50} className="cursor-pointer mb-5 hover:opacity-80" alt="LinkedIn Icon" />
+        <Link
+          href="https://www.linkedin.com/company/brightminds-edu/"
+          target="_blank"
+        >
+          <Image
+            src="/twitter_icon.svg"
+            width={50}
+            height={50}
+            className="cursor-pointer mb-5 hover:opacity-80"
+            alt="LinkedIn Icon"
+          />
         </Link>
       </div>
       <div className="text-center flex flex-col md:flex-row md:space-x-5">

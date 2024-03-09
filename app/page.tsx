@@ -33,16 +33,15 @@ export default function Page() {
           ))}
         </div>
       </div>
-      <div className="flex justify-center mt-24 sm:px-24 md:px-32 lg:px-48">
-        <h1>What Our Clients Say</h1>
-      </div>
-      <div className="flex justify-center mt-4 sm:px-24 md:px-32 lg:px-48">
-        <h2>
+      <div className="flex justify-center items-center flex-col mt-24 sm:px-24 md:px-32 lg:px-48">
+        <h1 className="text-center">What Our Clients Say</h1>
+        <h3 className="text-center mt-4 mx-8">
           Unlocking Potential, Inspiring Joy: Hear the Voices of Our Satisfied
           Families
-        </h2>
+        </h3>
       </div>
-      <div className="flex flex-row justify-center px-16">
+
+      <div className="flex flex-col items-center sm:px-4 md:flex-row lg:flex-row lg:px-16 mt-8">
         {reviewsData.map((review, index) => (
           <ReviewCard
             key={index}
