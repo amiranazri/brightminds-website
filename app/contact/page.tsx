@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import ContactInfo from "./ContactInfo";
 import FormDropDown from "./FormDropDown";
@@ -18,14 +20,12 @@ function ContactUs() {
           How can we help?
         </div>
         <div>
-          <p>
-            Your satisfaction is our top priority. Whether you have a question
-            about our services, need assistance with an order, or simply want to
-            share your feedback, we&apos;re here to help. Please feel free to
-            reach out using the form below, and our dedicated team will get back
-            to you as soon as possible. Thank you for choosing us - we look
-            forward to assisting you!
-          </p>
+          Your satisfaction is our top priority. Whether you have a question
+          about our services, need assistance with an order, or simply want to
+          share your feedback, we're here to help. Please feel free to reach out
+          using the form below, and our dedicated team will get back to you as
+          soon as possible. Thank you for choosing us - we look forward to
+          assisting you!
         </div>
         <div className="flex flex-col items-center space-y-3 w-[100%] lg:items-start mt-5">
           <ContactInfo
