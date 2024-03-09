@@ -28,7 +28,7 @@ function ContactUs() {
           assisting you!
         </div>
 
-        {/* <div className="flex flex-col items-center space-y-3 w-[100%] lg:items-start mt-5">
+        <div className="flex flex-col items-center space-y-3 w-[100%] lg:items-start mt-5">
           <ContactInfo
             imgSrc="/brightminds_logo_1.png"
             alt="Marker"
@@ -47,11 +47,11 @@ function ContactUs() {
             title="PHONE"
             subTitle="(+60) 111-232-1134"
           />
-        </div> */}
+        </div>
       </div>
       {/* Form Part */}
       <div className="w-[300px] sm:w-[600px] lg:w-[500px] lg:mr-10 mt-5 lg:mt-0 flex flex-col items-center relative">
-        <FormDropDown setState={setSelectedForm} />
+        {/* <FormDropDown setState={setSelectedForm} /> */}
         <div
           className="mt-5 w-full rounded-lg border-black"
           style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" }}
