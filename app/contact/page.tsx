@@ -1,12 +1,10 @@
-"use client";
-
 import Image from "next/image";
 import ContactInfo from "./ContactInfo";
 import FormDropDown from "./FormDropDown";
 import { useState } from "react";
 import CorporateForm from "./CorporateForm";
 import RegistrationForm from "./RegistrationForm";
-import SchoolFrom from "./SchoolForm";
+import SchoolForm from "./SchoolForm";
 
 function ContactUs() {
   const [selectedForm, setSelectedForm] = useState("Corporate");
@@ -20,14 +18,13 @@ function ContactUs() {
           How can we help?
         </div>
         <div>
-          {" "}
           <p>
             Your satisfaction is our top priority. Whether you have a question
             about our services, need assistance with an order, or simply want to
-            share your feedback, we're here to help. Please feel free to reach
-            out using the form below, and our dedicated team will get back to
-            you as soon as possible. Thank you for choosing us - we look forward
-            to assisting you!
+            share your feedback, we&apos;re here to help. Please feel free to
+            reach out using the form below, and our dedicated team will get back
+            to you as soon as possible. Thank you for choosing us - we look
+            forward to assisting you!
           </p>
         </div>
         <div className="flex flex-col items-center space-y-3 w-[100%] lg:items-start mt-5">
@@ -60,18 +57,18 @@ function ContactUs() {
         >
           <div
             className={`w-full h-3 rounded-t-full mb-3 ${
-              selectedForm == "Corporate"
+              selectedForm === "Corporate"
                 ? "bg-primary-blue"
-                : selectedForm == "School Partnership"
+                : selectedForm === "School Partnership"
                 ? "bg-gray-500"
                 : "bg-primary-yellow"
             }`}
           ></div>
           <div className="p-2">
-            {selectedForm == "Corporate" ? (
+            {selectedForm === "Corporate" ? (
               <CorporateForm />
-            ) : selectedForm == "School Partnership" ? (
-              <SchoolFrom />
+            ) : selectedForm === "School Partnership" ? (
+              <SchoolForm />
             ) : (
               <RegistrationForm />
             )}
