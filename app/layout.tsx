@@ -21,7 +21,7 @@ export default function RootLayout({
         />
         <style>
           @import
-          url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap')
+          url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
         </style>
       </head>
       <body className={`${open_sans.className} antialiased`}>
