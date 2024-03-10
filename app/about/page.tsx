@@ -125,14 +125,14 @@ function About() {
             Nurturing Future Leaders with Modern Education{" "}
           </h3>
           <p className="text-gray-600 mb-8" style={{ textAlign: "justify" }}>
-            Bright Minds is dedicated to providing education and training that
+            {`Bright Minds is dedicated to providing education and training that
             equips students with the skills needed to navigate today's rapidly
             changing world. Recognizing the limitations of traditional
             education, we aim to supplement it by focusing on relevant skills
             essential for success in the evolving society. The modern teaching
             methods at Bright Minds prioritize student-centered learning to
             ensure a tailored approach, with our current courses designed to
-            foster 21st Century Skills.
+            foster 21st Century Skills.`}
           </p>
         </div>
       </div>

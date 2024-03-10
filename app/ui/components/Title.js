@@ -14,7 +14,7 @@ function Title({title="", subTitle=""}) {
 
 export default Title
 
-const TitleText = styled.div`
+const TitleText = styled.h1`
 
 `
 const SubTitleText = styled.div`
