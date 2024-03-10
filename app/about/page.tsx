@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-async function About() {
+function About() {
   const router = useRouter();
 
   const handleContactUs = () => {
@@ -14,7 +14,7 @@ async function About() {
   };
   return (
     <>
-      <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mx-auto max-w-6xl py-12 px-16">
+      <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mx-auto max-w-6xl py-12 px-8">
         <div className="flex-1">
           <Image
             src="/about-1.svg"
@@ -39,35 +39,64 @@ async function About() {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row space-x-4 space-y-4 items-center justify-between mx-auto max-w-6xl py-12 px-16">
-        <div className="flex-1 text-center md:text-left">
-          <h3 className=" font-bold mb-4">
-            Navigating the Gap Between Education and Industry{" "}
-          </h3>
-          <p className="text-gray-600 mb-8" style={{ textAlign: "justify" }}>
-            Despite the historically high production of around 50,000 graduates
-            annually, a significant number of them face unemployment due to a
-            lack of relevant skills. The disconnect between traditional
-            education and the evolving demands of society contributes to
-            graduates being ill-equipped for the competitive job market. This
-            highlights the pressing issue of the education system's failure to
-            adapt quickly, leaving many students functionally illiterate and
-            unprepared for real-world challenges.
-          </p>
+      {window.innerWidth <= 640 ? (
+        <div className="flex flex-col sm:flex-row items-center justify-between mx-auto max-w-6xl py-12 px-8">
+          <div className="flex-1">
+            <Image
+              src="/about-2.svg"
+              alt="Bright Minds logo"
+              width={400}
+              height={400}
+              className="rounded-lg mx-auto"
+            />
+          </div>
+          <div className="flex-1 text-center md:text-left">
+            <h3 className="font-bold mb-4">
+              Navigating the Gap Between Education and Industry{" "}
+            </h3>
+            <p className="text-gray-600 mb-8" style={{ textAlign: "justify" }}>
+              Despite the historically high production of around 50,000
+              graduates annually, a significant number of them face unemployment
+              due to a lack of relevant skills. The disconnect between
+              traditional education and the evolving demands of society
+              contributes to graduates being ill-equipped for the competitive
+              job market. This highlights the pressing issue of the education
+              system's failure to adapt quickly, leaving many students
+              functionally illiterate and unprepared for real-world challenges.
+            </p>
+          </div>
         </div>
-        <div className="flex-1">
-          <Image
-            src="/about-2.svg"
-            alt="Bright Minds logo"
-            width={400}
-            height={400}
-            className="rounded-lg ml-32"
-          />
+      ) : (
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mx-auto max-w-6xl py-12 px-8">
+          <div className="flex-1 text-center md:text-center">
+            <h3 className="font-bold mb-4">
+              Navigating the Gap Between Education and Industry{" "}
+            </h3>
+            <p className="text-gray-600 mb-8" style={{ textAlign: "justify" }}>
+              Despite the historically high production of around 50,000
+              graduates annually, a significant number of them face unemployment
+              due to a lack of relevant skills. The disconnect between
+              traditional education and the evolving demands of society
+              contributes to graduates being ill-equipped for the competitive
+              job market. This highlights the pressing issue of the education
+              system's failure to adapt quickly, leaving many students
+              functionally illiterate and unprepared for real-world challenges.
+            </p>
+          </div>
+          <div className="flex-1 ml-32 sm:block md:hidden lg:block">
+            <Image
+              src="/about-2.svg"
+              alt="Bright Minds logo"
+              width={424}
+              height={424}
+              className="rounded-lg mx-auto"
+            />
+          </div>
         </div>
-      </div>
+      )}
 
-      <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mx-auto max-w-6xl py-12 px-16">
-        <div className="flex-1">
+      <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mx-auto max-w-6xl py-12 px-8">
+        <div className="flex-1 sm:block md:hidden lg:block">
           <Image
             src="/about-1.svg"
             alt="Bright Minds logo"
@@ -76,7 +105,7 @@ async function About() {
             className="rounded-lg"
           />
         </div>
-        <div className="flex-1 text-center md:text-left">
+        <div className="flex-1 text-center md:text-center">
           <h3 className=" font-bold mb-4">
             Nurturing Future Leaders with Modern Education{" "}
           </h3>

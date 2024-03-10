@@ -7,8 +7,13 @@ h1 {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 56px;
   text-transform: uppercase;
+  @screen sm {
+    font-size: 24px;
+  }
+  @screen md {
+    font-size: 56px;
+  }
 }
 
 h3 {
@@ -16,8 +21,13 @@ h3 {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 48px;
   text-transform: uppercase;
+  @screen sm {
+    font-size: 18px;
+  }
+  @screen md {
+    font-size: 48px;
+  }
 }
 
 h4 {
@@ -25,11 +35,16 @@ h4 {
   font-family: sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 20px;
+  @screen sm {
+    font-size: 16px;
+  }
+  @screen md {
+    font-size: 20px;
+  }
 }
 
 h6 {
-  font-size: 18;
+  font-size: 18px;
   font-weight: 500;
   font-family: sans-serif;
 }
