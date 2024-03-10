@@ -3,8 +3,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 function About() {
   const router = useRouter();
@@ -12,6 +12,21 @@ function About() {
   const handleContactUs = () => {
     router.push("/contact");
   };
+
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    const updateWindowWidth = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    updateWindowWidth();
+    window.addEventListener("resize", updateWindowWidth);
+
+    return () => {
+      window.removeEventListener("resize", updateWindowWidth);
+    };
+  }, []);
+
   return (
     <>
       <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mx-auto max-w-6xl py-12 px-8">
@@ -121,6 +136,8 @@ function About() {
           </p>
         </div>
       </div>
+
+      {/* COURSES */}
     </>
   );
 }
