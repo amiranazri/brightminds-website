@@ -42,10 +42,10 @@ function About() {
         <div className="flex-1 text-center md:text-left">
           <h3 className=" font-bold mb-4">What Is Bright Minds?</h3>
           <p className="text-gray-600 mb-8" style={{ textAlign: "justify" }}>
-            We are a centre of learning that aims to equip students with
+            {`We are a centre of learning that aims to equip students with
             relevant skills to take on the modern world. Going beyond classroom
             education, our courses supplement traditional learning with
-            practical knowledge.
+            practical knowledge.`}
           </p>
 
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -70,14 +70,14 @@ function About() {
               Navigating the Gap Between Education and Industry{" "}
             </h3>
             <p className="text-gray-600 mb-8" style={{ textAlign: "justify" }}>
-              Despite the historically high production of around 50,000
+              {`Despite the historically high production of around 50,000
               graduates annually, a significant number of them face unemployment
               due to a lack of relevant skills. The disconnect between
               traditional education and the evolving demands of society
               contributes to graduates being ill-equipped for the competitive
               job market. This highlights the pressing issue of the education
               system's failure to adapt quickly, leaving many students
-              functionally illiterate and unprepared for real-world challenges.
+              functionally illiterate and unprepared for real-world challenges.`}
             </p>
           </div>
         </div>
@@ -88,14 +88,14 @@ function About() {
               Navigating the Gap Between Education and Industry{" "}
             </h3>
             <p className="text-gray-600 mb-8" style={{ textAlign: "justify" }}>
-              Despite the historically high production of around 50,000
+              {`Despite the historically high production of around 50,000
               graduates annually, a significant number of them face unemployment
               due to a lack of relevant skills. The disconnect between
               traditional education and the evolving demands of society
               contributes to graduates being ill-equipped for the competitive
               job market. This highlights the pressing issue of the education
               system's failure to adapt quickly, leaving many students
-              functionally illiterate and unprepared for real-world challenges.
+              functionally illiterate and unprepared for real-world challenges.`}
             </p>
           </div>
           <div className="flex-1 ml-32 sm:block md:hidden lg:block">
