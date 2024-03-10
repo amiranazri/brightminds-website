@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -20,11 +18,12 @@ function About() {
       setWindowWidth(window.innerWidth);
     };
     updateWindowWidth();
-    window.addEventListener("resize", updateWindowWidth);
-
-    return () => {
-      window.removeEventListener("resize", updateWindowWidth);
-    };
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", updateWindowWidth);
+      return () => {
+        window.removeEventListener("resize", updateWindowWidth);
+      };
+    }
   }, []);
 
   return (
@@ -48,13 +47,16 @@ function About() {
             practical knowledge.`}
           </p>
 
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+          <button
+            onClick={handleContactUs}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          >
             <h6>CONTACT US</h6>
           </button>
         </div>
       </div>
 
-      {window.innerWidth <= 640 ? (
+      {windowWidth <= 640 ? (
         <div className="flex flex-col sm:flex-row items-center justify-between mx-auto max-w-6xl py-12 px-8">
           <div className="flex-1">
             <Image
