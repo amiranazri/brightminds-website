@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-async function About() {
+function About() {
   const router = useRouter();
 
   const handleContactUs = () => {
@@ -45,14 +45,14 @@ async function About() {
             Navigating the Gap Between Education and Industry{" "}
           </h3>
           <p className="text-gray-600 mb-8" style={{ textAlign: "justify" }}>
-            Despite the historically high production of around 50,000 graduates
+            {`Despite the historically high production of around 50,000 graduates
             annually, a significant number of them face unemployment due to a
             lack of relevant skills. The disconnect between traditional
             education and the evolving demands of society contributes to
             graduates being ill-equipped for the competitive job market. This
             highlights the pressing issue of the education system's failure to
             adapt quickly, leaving many students functionally illiterate and
-            unprepared for real-world challenges.
+            unprepared for real-world challenges.`}
           </p>
         </div>
         <div className="flex-1">
@@ -81,14 +81,14 @@ async function About() {
             Nurturing Future Leaders with Modern Education{" "}
           </h3>
           <p className="text-gray-600 mb-8" style={{ textAlign: "justify" }}>
-            Bright Minds is dedicated to providing education and training that
+            {`Bright Minds is dedicated to providing education and training that
             equips students with the skills needed to navigate today's rapidly
             changing world. Recognizing the limitations of traditional
             education, we aim to supplement it by focusing on relevant skills
             essential for success in the evolving society. The modern teaching
             methods at Bright Minds prioritize student-centered learning to
             ensure a tailored approach, with our current courses designed to
-            foster 21st Century Skills.
+            foster 21st Century Skills.`}
           </p>
         </div>
       </div>
