@@ -218,7 +218,7 @@ function About() {
           />
         </div>
         <div className="flex-1 text-center md:text-left">
-          <h3 className=" font-bold mb-4">Brihtminds & Partners</h3>
+          <h3 className=" font-bold mb-4">Brightminds & Partnerships</h3>
           <p className="text-gray-600 mb-8" style={{ textAlign: "justify" }}>
             {`We are a centre of learning that aims to equip students with
             relevant skills to take on the modern world. Going beyond classroom
