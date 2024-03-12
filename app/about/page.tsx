@@ -90,7 +90,7 @@ function About() {
       <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mx-auto max-w-6xl py-12 px-8">
         <div className="flex-1">
           <Image
-            src="/about-1.svg"
+            src="/about_1.svg"
             alt="Bright Minds logo"
             width={400}
             height={400}
@@ -118,7 +118,7 @@ function About() {
         <div className="flex flex-col sm:flex-row items-center justify-between mx-auto max-w-6xl py-12 px-8">
           <div className="flex-1">
             <Image
-              src="/about-2.svg"
+              src="/about_2.svg"
               alt="Bright Minds logo"
               width={400}
               height={400}
@@ -160,7 +160,7 @@ function About() {
           </div>
           <div className="flex-1 ml-32 sm:block md:hidden lg:block">
             <Image
-              src="/about-2.svg"
+              src="/about_2.svg"
               alt="Bright Minds logo"
               width={424}
               height={424}
@@ -172,7 +172,7 @@ function About() {
       <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mx-auto max-w-6xl py-12 px-8">
         <div className="flex-1 sm:block md:hidden lg:block">
           <Image
-            src="/about-1.svg"
+            src="/about_3.svg"
             alt="Bright Minds logo"
             width={400}
             height={400}
@@ -196,7 +196,7 @@ function About() {
         </div>
       </div>
       {/* COURSES */}
-      <div className="flex flex-wrap justify-center items-center w-[80%] mx-auto my-32">
+      <div className="flex flex-wrap justify-center items-center w-[80%] mx-auto my-16">
         {courseData.map((course, index) => (
           <CourseCard
             key={index}
@@ -205,6 +205,34 @@ function About() {
             description={course.description}
           />
         ))}
+      </div>
+
+      <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mx-auto max-w-6xl py-12 px-8">
+        <div className="flex-1">
+          <Image
+            src="/about_4.svg"
+            alt="Bright Minds logo"
+            width={400}
+            height={400}
+            className="rounded-lg"
+          />
+        </div>
+        <div className="flex-1 text-center md:text-left">
+          <h3 className=" font-bold mb-4">Brihtminds & Partners</h3>
+          <p className="text-gray-600 mb-8" style={{ textAlign: "justify" }}>
+            {`We are a centre of learning that aims to equip students with
+            relevant skills to take on the modern world. Going beyond classroom
+            education, our courses supplement traditional learning with
+            practical knowledge.`}
+          </p>
+
+          <button
+            onClick={handleContactUs}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          >
+            <h6>CONTACT US</h6>
+          </button>
+        </div>
       </div>
     </>
   );
