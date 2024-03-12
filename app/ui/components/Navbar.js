@@ -13,7 +13,7 @@ const Navbar = () => {
   function navLinkCss(pathToCheck) {
     if (pathToCheck == pathname)
       return `md:bg-transparent bg-primary-blue md:text-primary-blue text-white ${
-        navbarScroll ? "md:text-primary-yellow" : ""
+        navbarScroll ? "md:text-primary-yellow font-bold" : ""
       }`;
     else
       return `text-gray-900 hover:bg-gray-100 md:hover:underline md:underline-offset-8 ${
@@ -45,20 +45,17 @@ const Navbar = () => {
       } transition ease-in delay:250 shadow-2xl border-gray-200 fixed w-full z-20 top-0 start-0`}
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a
-          href="/"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
-        >
+        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image
-            src="/brightminds_logo_1.png"
-            width={80}
-            height={80}
+            src={navbarScroll ? "/bm_icon_light.png" : "/bm_icon.png"}
+            width={48}
+            height={48}
             alt="Brightminds Logo"
           />
           <span
             className={`${
               navbarScroll ? "text-white" : "text-primary-blue"
-            } transition-colors ease-in delay:250 self-center text-lg font-semibold whitespace-nowrap`}
+            } transition-colors ease-in delay:250 self-center text-xl font-semibold whitespace-nowrap`}
           >
             Brightminds
           </span>
