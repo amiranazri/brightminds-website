@@ -14,7 +14,7 @@ function Footer() {
       <div className="flex space-x-5 mb-5">
         <Link href="https://www.instagram.com/brightmindsedu/" target="_blank">
           <Image
-            src="/instagram_icon.svg"
+            src="/instagram_icon.png"
             width={50}
             height={50}
             className="cursor-pointer hover:opacity-80"
