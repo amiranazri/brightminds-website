@@ -6,14 +6,7 @@ import { useEffect, useState } from "react";
 import Slider from "react-infinite-logo-slider";
 import CourseCard from "../ui/components/CourseCard";
 import partnerSchools from "../../data/partnerSchools.json";
-import icon1 from "../../public/critical_analysis.svg";
-import icon2 from "../../public/financial_literacy.svg";
-import icon3 from "../../public/public_speaking.svg";
-import icon4 from "../../public/communication_skills.svg";
-import icon5 from "../../public/debate.svg";
-import icon6 from "../../public/writing_skills.svg";
-import icon7 from "../../public/leadership_skills.svg";
-import icon8 from "../../public/entrepreneurial_skills.svg";
+import coursedata from "../../data/courseData.json";
 
 function About() {
   const router = useRouter();
@@ -23,56 +16,6 @@ function About() {
   };
 
   const [windowWidth, setWindowWidth] = useState(0);
-
-  const courseData = [
-    {
-      icon: icon4,
-      title: "Communication Skills",
-      description:
-        "Develop your language skills through creative writing and communication.",
-    },
-    {
-      icon: icon2,
-      title: "Financial Literacy",
-      description:
-        "Learn the fundamentals of coding and programming languages.",
-    },
-    {
-      icon: icon3,
-      title: "Public Speaking",
-      description:
-        "Engage in hands-on experiments to understand scientific concepts.",
-    },
-    {
-      icon: icon1,
-      title: "Critical Analysis",
-      description:
-        "Explore the world of literature and enhance your analytical skills.",
-    },
-    {
-      icon: icon8,
-      title: "Entrepreneurial Skills",
-      description: "Explore cutting-edge technologies and foster innovation.",
-    },
-    {
-      icon: icon6,
-      title: "Debate",
-      description:
-        "Unleash your creativity with courses on art, design, and visual communication.",
-    },
-    {
-      icon: icon7,
-      title: "Leadership Skills",
-      description:
-        "Gain essential engineering knowledge and problem-solving skills.",
-    },
-    {
-      icon: icon5,
-      title: " Writing Skills",
-      description:
-        "Master the art of interpreting and visualizing data for decision-making.",
-    },
-  ];
 
   useEffect(() => {
     const updateWindowWidth = () => {
@@ -199,7 +142,7 @@ function About() {
       </div>
       {/* COURSES */}
       <div className="flex flex-wrap justify-center items-center w-[80%] mx-auto my-16">
-        {courseData.map((course, index) => (
+        {coursedata.map((course, index) => (
           <CourseCard
             key={index}
             icon={course.icon}
@@ -237,7 +180,7 @@ function About() {
         </div>
       </div>
 
-      <div className="my-32 py-16 bg-sky-100 ">
+      <div className="mt-16 py-16 bg-sky-100 ">
         <h1 className="my-16">Partner Schools</h1>
         <Slider
           width="250px"
@@ -249,9 +192,13 @@ function About() {
           {partnerSchools.map((p) => (
             <Slider.Slide
               key={p.imageSrc}
-              className="flex items-center justify-center mx-8"
+              className="flex items-center justify-center "
             >
-              <img src={p.imageSrc} alt={p.alt} className="w-30" />
+              <img
+                src={p.imageSrc}
+                alt={p.alt}
+                style={{ minWidth: "100px", maxWidth: "164px" }}
+              />
             </Slider.Slide>
           ))}
         </Slider>

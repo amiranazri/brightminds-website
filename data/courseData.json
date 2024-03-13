@@ -1,0 +1,42 @@
+[
+    {
+        "icon": "/communication_skills.svg",
+        "title": "Communication Skills",
+        "description": "Develop your language skills through creative writing and communication."
+    },
+    {
+        "icon": "/financial_literacy.svg",
+        "title": "Financial Literacy",
+        "description": "Learn the fundamentals of coding and programming languages."
+    },
+    {
+        "icon": "/public_speaking.svg",
+        "title": "Public Speaking",
+        "description": "Engage in hands-on experiments to understand scientific concepts."
+    },
+    {
+        "icon": "/critical_analysis.svg",
+        "title": "Critical Analysis",
+        "description": "Explore the world of literature and enhance your analytical skills."
+    },
+    {
+        "icon": "/entrepreneurial_skills.svg",
+        "title": "Entrepreneurial Skills",
+        "description": "Explore cutting-edge technologies and foster innovation."
+    },
+    {
+        "icon": "/debate.svg",
+        "title": "Debate",
+        "description": "Unleash your creativity with courses on art, design, and visual communication."
+    },
+    {
+        "icon": "/leadership_skills.svg",
+        "title": "Leadership Skills",
+        "description": "Gain essential engineering knowledge and problem-solving skills."
+    },
+    {
+        "icon": "/writing_skills.svg",
+        "title": " Writing Skills",
+        "description": "Master the art of interpreting and visualizing data for decision-making."
+    }
+]
