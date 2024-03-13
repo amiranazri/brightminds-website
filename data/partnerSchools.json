@@ -1,0 +1,34 @@
+[
+    {
+        "imageSrc": "/tenby_schools.svg",
+        "alt": "Tenby Schools"
+    },
+    {
+        "imageSrc": "/british_international.png",
+        "alt": "The British International School Kuala Lumpur"
+    },
+    {
+        "imageSrc": "/saint_international.png",
+        "alt": "Saint International School"
+    },
+    {
+        "imageSrc": "/prince_international.png",
+        "alt": "Prince of Wales Island International School"
+    },
+    {
+        "imageSrc": "/sri_kdu.png",
+        "alt": "SRI KDU International School Kota Damansara"
+    },
+    {
+        "imageSrc": "/kl_international.gif",
+        "alt": "International School of Kuala Lumpur"
+    },
+    {
+        "imageSrc": "/erudite_academy.svg",
+        "alt": "Erudite Academy"
+    },
+    {
+        "imageSrc": "/cranbridge_international.png",
+        "alt": "Cranbridge International School"
+    }
+]

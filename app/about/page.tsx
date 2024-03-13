@@ -3,7 +3,9 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import Slider from "react-infinite-logo-slider";
 import CourseCard from "../ui/components/CourseCard";
+import partnerSchools from "../../data/partnerSchools.json";
 import icon1 from "../../public/critical_analysis.svg";
 import icon2 from "../../public/financial_literacy.svg";
 import icon3 from "../../public/public_speaking.svg";
@@ -233,6 +235,26 @@ function About() {
             <h6>CONTACT US</h6>
           </button>
         </div>
+      </div>
+
+      <div className="my-32 py-16 bg-sky-100 ">
+        <h1 className="my-16">Partner Schools</h1>
+        <Slider
+          width="250px"
+          duration={30}
+          pauseOnHover={true}
+          blurBorders={false}
+          blurBorderColor={"#fff"}
+        >
+          {partnerSchools.map((p) => (
+            <Slider.Slide
+              key={p.imageSrc}
+              className="flex items-center justify-center mx-8"
+            >
+              <img src={p.imageSrc} alt={p.alt} className="w-30" />
+            </Slider.Slide>
+          ))}
+        </Slider>
       </div>
     </>
   );
