@@ -16,12 +16,13 @@ export default function Page() {
         alt="bright minds"
       />
 
-      <div className="flex justify-center sm:mt-16 lg:my-16 sm:px-24 md:px-32 lg:px-48">
+      <div className="flex justify-center mt-4 sm:mt-16 lg:my-16 sm:px-24 md:px-32 lg:px-48">
         <h1 className="text-center">
           Learn practical soft skills from the comfort of your own home
         </h1>
       </div>
-      <div className="flex justify-center content-center my-8">
+
+      <div className="flex justify-center content-center my-4">
         <div className="flex flex-wrap justify-center sm:w-[80%] md:w-[80%] lg:w-[80%]">
           {skillsList.map((card, index) => (
             <HorizontalCard
@@ -33,7 +34,8 @@ export default function Page() {
           ))}
         </div>
       </div>
-      <div className="flex justify-center items-center flex-col lg:mt-24 sm:mt-8 sm:px-24 md:px-32 lg:px-48">
+
+      <div className="flex justify-center items-center flex-col py-16 lg:mt-24 sm:mt-8 sm:px-24 md:px-32 lg:px-48 lg:py-32 bg-sky-100">
         <h1 className="text-center">What Our Clients Say</h1>
         <h4 className="text-center mt-2 mx-8">
           Unlocking Potential, Inspiring Joy: Hear the Voices of Our Satisfied
@@ -41,7 +43,7 @@ export default function Page() {
         </h4>
       </div>
 
-      <div className="flex flex-col items-center sm:px-4 md:flex-row lg:flex-row lg:px-16 ">
+      <div className="flex md:flex-wrap lg:flex-wrap justify-center mx-auto py-16  w-full sm:w-[85%] md:w-[65%]">
         {reviewsData.map((review, index) => (
           <ReviewCard
             key={index}

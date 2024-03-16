@@ -26,9 +26,9 @@ export default function RootLayout({
       </head>
       <body className={`${open_sans.className} antialiased`}>
         <ToastContainer position="top-center" />
-        <div className="mt-[67px] md:mt-[115px]">
+        <div className="flex flex-col min-h-screen">
           <Navbar />
-          <div className="min-h-screen">{children}</div>
+          {children}
           <Footer />
         </div>
         <Script
