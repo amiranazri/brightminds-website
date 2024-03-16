@@ -53,7 +53,7 @@ function About() {
 
           <button
             onClick={handleContactUs}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            className="w-90 bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded"
           >
             <h6>CONTACT US</h6>
           </button>
@@ -173,7 +173,7 @@ function About() {
 
           <button
             onClick={handleContactUs}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            className="w-90 bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded"
           >
             <h6>CONTACT US</h6>
           </button>
