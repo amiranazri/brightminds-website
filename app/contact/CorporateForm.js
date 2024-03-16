@@ -28,7 +28,8 @@ function CorporateForm() {
                     <p>Email: ${dataObject.floating_email}</p>
                     <p>Phone Number: ${dataObject.floating_phone}</p>
                     <p>Company: ${dataObject.floating_company}</p>
-                    <p>Position / Title: ${dataObject.floating_program}</p>
+                    <p>Program: ${dataObject.floating_program}</p>
+                    <p>Position / Title: ${dataObject.floating_position}</p>
                     ${
                       dataObject.floating_additional_comments
                         ? `<p>Additional Comments: ${dataObject.floating_additional_comments}</p>`
