@@ -37,7 +37,7 @@ function Events() {
       </div>
 
       <div className="flex justify-center my-16 sm:px-24 md:px-32 lg:px-48">
-        <h1 className="text-center">What's New At Brightminds</h1>
+        <h1 className="text-center">{`What's New At Brightminds`}</h1>
       </div>
 
       <div className="mb-16">
