@@ -55,6 +55,7 @@ function RegistrationForm() {
                         <p>Name of School Representative: ${
                           dataObject.floating_first_name
                         }</p>
+                        <p>Position / Title: ${dataObject.floating_position}</p>
                         <p>Phone Number: ${dataObject.floating_phone}</p>
                         <p>Subjects: ${selectedSubjects.join(", ")}</p>
                         ${
@@ -141,22 +142,43 @@ function RegistrationForm() {
         </div>
       </div>
 
-      <div className="relative z-0 w-full mb-5 group">
-        <input
-          type="text"
-          name="floating_first_name"
-          id="floating_first_name"
-          className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-          placeholder=" "
-          required
-        />
-        <label
-          htmlFor="floating_first_name"
-          className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-        >
-          Full name of school representative{" "}
-          <span className="text-red-500">*</span>
-        </label>
+      <div className="grid md:grid-cols-2 md:gap-6">
+        <div className="relative z-0 w-full mb-5 group">
+          <input
+            type="text"
+            name="floating_first_name"
+            id="floating_first_name"
+            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=" "
+            required
+          />
+          <label
+            htmlFor="floating_first_name"
+            className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >
+            Name of school representative{" "}
+            <span className="text-red-500">*</span>
+          </label>
+        </div>
+
+        <div className="relative z-0 w-full mb-5 group">
+          <input
+            type="text"
+            name="floating_position"
+            id="floating_position"
+            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=" "
+            required
+          />
+          <label
+            htmlFor="floating_position"
+            className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >
+            Position/Title{" "}
+            <span className="text-red-500">*</span>
+          </label>
+        </div>
+
       </div>
 
       <div className="grid md:grid-cols-2 md:gap-6">
