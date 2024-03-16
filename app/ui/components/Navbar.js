@@ -9,9 +9,10 @@ import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [navbarScroll, setNavbarScroll] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  function navLinkCss(pathToCheck) {
-    if (pathToCheck == pathname)
+  function navLinkCss(pathArr) {
+    if (pathArr.includes(pathname))
       return `md:bg-transparent bg-primary-blue md:text-primary-blue text-white ${
         navbarScroll ? "md:text-primary-yellow font-bold" : ""
       }`;
@@ -38,6 +39,9 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
     <nav
       className={`${
@@ -69,7 +73,8 @@ const Navbar = () => {
               : "text-gray-500 hover:bg-gray-100"
           }`}
           aria-controls="navbar-default"
-          aria-expanded="false"
+          aria-expanded={isMenuOpen}
+          onClick={toggleMenu}
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -88,15 +93,16 @@ const Navbar = () => {
             />
           </svg>
         </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+        <div className={`${isMenuOpen ? "block" : "hidden"} w-full md:block md:w-auto`} id="navbar-default">
           <ul
             className={`max-md:bg-gray-50 font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 transition-none`}
           >
             <li>
               <Link
+                onClick={toggleMenu}
                 href="/"
                 className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
-                  "/"
+                  ["/"]
                 )}`}
               >
                 Home
@@ -104,9 +110,10 @@ const Navbar = () => {
             </li>
             <li>
               <Link
+                onClick={toggleMenu}
                 href="/about"
                 className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
-                  "/about"
+                  ["/about"]
                 )}`}
               >
                 About
@@ -114,9 +121,10 @@ const Navbar = () => {
             </li>
             <li>
               <Link
+                onClick={toggleMenu}
                 href="/portfolio"
                 className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
-                  "/portfolio"
+                  ["/portfolio"]
                 )}`}
               >
                 Portfolio
@@ -124,9 +132,10 @@ const Navbar = () => {
             </li>
             <li>
               <Link
+                onClick={toggleMenu}
                 href="/services"
                 className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
-                  "/services"
+                  ["/services"]
                 )}`}
               >
                 Our Services
@@ -134,9 +143,10 @@ const Navbar = () => {
             </li>
             <li>
               <Link
+                onClick={toggleMenu}
                 href="/corporate-solutions"
                 className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
-                  "/corporate-solutions"
+                  ["/corporate-solutions"]
                 )}`}
               >
                 Corporate Solutions
@@ -144,9 +154,10 @@ const Navbar = () => {
             </li>
             <li>
               <Link
+                onClick={toggleMenu}
                 href="/events"
                 className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
-                  "/events"
+                  ["/events"]
                 )}`}
               >
                 Events
@@ -154,9 +165,10 @@ const Navbar = () => {
             </li>
             <li>
               <Link
+                onClick={toggleMenu}
                 href="/contact/general"
                 className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
-                  "/contact"
+                  ["/contact/general", "/contact/corporate", "/contact/school", "/contact/student"]
                 )}`}
               >
                 Contact Us
