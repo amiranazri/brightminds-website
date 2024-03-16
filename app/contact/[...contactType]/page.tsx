@@ -32,7 +32,7 @@ function ContactUs() {
 
   }, [pathname, searchParams])
 
-  function selectFunc(value) {
+  function selectFunc(value: string) {
     setIsOpen(false);
     setSelectedForm(value);
   }
