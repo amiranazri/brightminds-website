@@ -10,7 +10,7 @@ const ReviewCard = ({ author, authorImg, rating, review, date }) => {
   };
 
   return (
-    <div className="review-card bg-white rounded-lg shadow-md p-4 md:p-6 lg:p-8 mx-2 md:mx-4 lg:mx-8 my-4 md:my-8 lg:my-32 md:h-72 lg:w-96 relative">
+    <div className="review-card bg-white rounded-lg shadow-md p-4 md:p-6 lg:p-8 mx-2 md:mx-4 lg:mx-8 my-4 md:h-56 lg:w-96 relative sm:w-80 md:w-full">
       <div className="flex flex-col md:flex-row justify-between items-start md:flex-wrap">
         <div className="author-info flex items-center mb-4 md:mb-0 md:w-full">
           <div
