@@ -7,7 +7,7 @@ import BlogData from "../../../../data/blog-data.json";
 function BlogDetails() {
     const pathname = usePathname()
     const searchParams = useSearchParams()
-    const [selectedArticle, setSelectedArticle] = useState({});
+    const [selectedArticle, setSelectedArticle] = useState({ img: "", title: "", styleType: "" });
 
     useEffect(() => {
         const url = `${pathname}?${searchParams}`;
@@ -15,7 +15,7 @@ function BlogDetails() {
 
         if (slug) {
             const slugFormatted = slug.split("?")[0]
-            const foundArticle = BlogData.find(b => b.blogID == slugFormatted) || {};
+            const foundArticle = BlogData.find(b => b.blogID == slugFormatted) || { img: "", title: "", styleType: "" };
             setSelectedArticle(foundArticle);
         }
 
@@ -28,7 +28,7 @@ function BlogDetails() {
         className: "mx-auto",
     };
 
-    if (!selectedArticle || (selectedArticle && !selectedArticle.styleType)) {
+    if (!selectedArticle) {
         return <div>Loading...</div>;
     } else {
         switch (selectedArticle.styleType) {
