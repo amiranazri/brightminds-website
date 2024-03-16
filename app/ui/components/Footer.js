@@ -65,7 +65,7 @@ function Footer() {
       </div>
       <div className="text-center space-y-2">
         <div>Ipoh, Malaysia</div>
-        <div>{`© ${new Date().getFullYear()} Digital Alchemy. All rights reserved`}</div>
+        <div>{`© ${new Date().getFullYear()} Brightminds Edu. All rights reserved`}</div>
       </div>
     </div>
   );
