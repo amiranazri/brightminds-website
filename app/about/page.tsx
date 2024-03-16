@@ -143,7 +143,7 @@ function About() {
         </div>
       </div>
       {/* COURSES */}
-      <div className="flex flex-wrap justify-center items-center w-[80%] mx-auto my-16">
+      <div className="flex flex-wrap justify-center items-center md:w-[60%] lg:w-[80%] mx-auto my-16">
         {coursedata.map((course, index) => (
           <CourseCard
             key={index}
@@ -184,7 +184,7 @@ function About() {
         </div>
       </div>
 
-      <div className="mt-16 py-16 bg-sky-100 ">
+      <div className="mt-16 pt-8 pb-16 bg-sky-100 ">
         <h1 className="my-16">Partner Schools</h1>
         <Slider
           width="250px"

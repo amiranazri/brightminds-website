@@ -43,7 +43,7 @@ export default function Page() {
         </h4>
       </div>
 
-      <div className="flex md:flex-wrap lg:flex-wrap justify-center mx-auto py-16  w-full sm:w-[85%] md:w-[65%]">
+      <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row md:flex-wrap lg:flex-wrap justify-center mx-auto py-16  w-full md:w-[65%]">
         {reviewsData.map((review, index) => (
           <ReviewCard
             key={index}
