@@ -1,6 +1,6 @@
 const BlogCard = ({ blogData, handleNavigation }) => {
   const handleReadMoreClick = (article) => {
-    handleNavigation(`/events/BlogDetails?blogId=${article.blogID}`);
+    handleNavigation(`/events/blog/${article.blogID}`);
   };
 
   const reversedArticlesData = blogData.slice().reverse();
