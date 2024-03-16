@@ -31,7 +31,7 @@ function CorporateSolutions() {
           className="mt-[113px] md:mt-[136px] min-[918px]:mt-[-2px]"
         />
 
-        <Link href="/contact" className="absolute -bottom-4 sm:-bottom-5 left-0 right-0 w-[100px] sm:w-[130px] lg:w-[150px] m-auto bg-white text-center z-10 p-1 sm:p-2 lg:p-3 rounded-md border border-primary-blue hover:scale-95 transition ease-in duration-75 hover:bg-primary-blue hover:text-primary-yellow hover:font-bold text-sm sm:text-md lg:text-xl">
+        <Link href="/contact/corporate" className="absolute -bottom-4 sm:-bottom-5 left-0 right-0 w-[100px] sm:w-[130px] lg:w-[150px] m-auto bg-white text-center z-10 p-1 sm:p-2 lg:p-3 rounded-md border border-primary-blue hover:scale-95 transition ease-in duration-75 hover:bg-primary-blue hover:text-primary-yellow hover:font-bold text-sm sm:text-md lg:text-xl">
           <div>Contact Us</div>
         </Link>
       </div>
