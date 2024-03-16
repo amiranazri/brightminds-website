@@ -13,11 +13,13 @@ const BlogCard = ({ blogData, handleNavigation }) => {
             key={index}
             className="bg-white rounded-lg overflow-hidden shadow-lg cursor-pointer"
             onClick={() => handleReadMoreClick(article)}
+            style={{ borderRadius: "8px 8px 0 0" }} // Apply border-radius to the top corners
           >
             <img
               src={`/${article.img}`}
               alt={article.title}
               className="w-full h-64 mt-4 object-cover object-center"
+              style={{ borderRadius: "8px 8px 0 0" }} // Apply border-radius to the top corners of the image
             />
             <div className="p-4" style={{ minHeight: "148px" }}>
               <h3 className="text-lg font-semibold">{article.title}</h3>
