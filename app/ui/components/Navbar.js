@@ -124,7 +124,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="services"
+                href="/services"
                 className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
                   "/services"
                 )}`}
@@ -134,7 +134,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="corporate-solutions"
+                href="/corporate-solutions"
                 className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
                   "/corporate-solutions"
                 )}`}
@@ -154,7 +154,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="contact"
+                href="/contact/general"
                 className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
                   "/contact"
                 )}`}
