@@ -16,7 +16,7 @@ export default function Page() {
         alt="bright minds"
       />
 
-      <div className="flex justify-center lg:my-16 sm:px-24 md:px-32 lg:px-48">
+      <div className="flex justify-center sm:mt-16 lg:my-16 sm:px-24 md:px-32 lg:px-48">
         <h1 className="text-center">
           Learn practical soft skills from the comfort of your own home
         </h1>

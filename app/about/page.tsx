@@ -55,9 +55,9 @@ function About() {
             onClick={() => {
               handleContactUs("general");
             }}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
           >
-            <h6>CONTACT US</h6>
+            <h6>Contact Us</h6>
           </button>
         </div>
       </div>
@@ -177,9 +177,9 @@ function About() {
             onClick={() => {
               handleContactUs("school");
             }}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
           >
-            <h6>CONTACT US</h6>
+            <h6>Contact Us</h6>
           </button>
         </div>
       </div>

@@ -24,14 +24,8 @@ function Events() {
         alt="bright minds"
       />
 
-      <div
-        style={{
-          position: "absolute",
-          top: "140px",
-          left: "20px",
-        }}
-      >
-        <button className="absolute top-72 left-8 bg-white text-black hover:bg-[#19598F] hover:text-white px-4 py-2 w-40 rounded">
+      <div className="hidden sm:block absolute top-[195px] left-[365px] transform -translate-x-1/2 sm:static sm:left-8 sm:top-[80px] lg:absolute lg:left-[124px] lg:top-[43%]">
+        <button className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]">
           Learn More
         </button>
       </div>
@@ -40,7 +34,7 @@ function Events() {
         <h1 className="text-center">{`What's New At Brightminds`}</h1>
       </div>
 
-      <div className="mb-16">
+      <div className="mb-16 mx-4">
         <BlogCard blogData={BlogData} handleNavigation={handleNavigation} />
       </div>
     </main>
