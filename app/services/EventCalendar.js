@@ -1,4 +1,6 @@
-import React from "react";
+"use client"
+
+import React, {useEffect, useState} from "react";
 import Calendar from "@ericz1803/react-google-calendar";
 
 const API_KEY = "AIzaSyC9ZkPNeFRZRXMII3V9uLSjVvswCGgtSlg";
@@ -13,9 +15,17 @@ let calendars = [
 ];
 
 function EventCalendar() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <div>
-      <Calendar apiKey={API_KEY} calendars={calendars} showFooter={false} />
+      {isClient && (
+        <Calendar apiKey={API_KEY} calendars={calendars} showFooter={false} />
+      )}
     </div>
   );
 }
