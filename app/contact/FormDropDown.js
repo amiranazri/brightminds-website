@@ -26,7 +26,7 @@ function FormDropDown({setState}) {
                 <div className="block px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={() => {selectFunc("Corporate")}} data-dropdown-trigger="click">Corporate</div>
             </li>
             <li>
-                <div className="block px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={() => {selectFunc("Student / Registration")}}>Student / Registration</div>
+                <div className="block px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={() => {selectFunc("Student Inquiry")}}>Student Inquiry</div>
             </li>
             <li>
                 <div className="block px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={() => {selectFunc("School Partnership")}}>School Partnership</div>

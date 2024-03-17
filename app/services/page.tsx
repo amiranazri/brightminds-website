@@ -2,9 +2,17 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import EventCalendar from "./EventCalendar";
 
-const OurServices = () => {
+function OurServices() {
+  const router = useRouter();
   const [selectedTab, setSelectedTab] = useState("all");
+  const [imageSrc, setImageSrc] = useState("/class-1.png");
+
+  const handleContactUs = (slug: string) => {
+    router.push(`/contact/${slug}`);
+  };
 
   const handleTabClick = (slug) => {
     setSelectedTab(slug);
@@ -100,8 +108,12 @@ const OurServices = () => {
           {renderImages()}
         </div>
       </div>
+      {/* Calendar */}
+      <div className="max-w-[1280px] sm:p-5 xl:p-0 m-auto">
+        <EventCalendar />
+      </div>
     </>
   );
-};
+}
 
 export default OurServices;

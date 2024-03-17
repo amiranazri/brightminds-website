@@ -10,18 +10,21 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
+    "@emotion/react": "^11.11.4",
+    "@ericz1803/react-google-calendar": "^4.3.2",
     "@types/react-slick": "^0.23.13",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.7.2",
     "next": "14.1.0",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-infinite-logo-slider": "^1.0.13",
     "react-modal": "^3.16.1",
     "react-responsive": "^9.0.2",
     "react-toastify": "^10.0.4",
     "sass": "^1.71.0",
-    "styled-components": "^6.1.8"
+    "styled-components": "^6.1.8",
+    "webpack": "^5.90.3"
   },
   "devDependencies": {
     "@types/node": "20.11.24",
