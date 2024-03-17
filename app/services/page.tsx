@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import EventCalendar from "./EventCalendar";
 
 function OurServices() {
   const router = useRouter();
@@ -114,6 +115,10 @@ function OurServices() {
             className="rounded-lg"
           />
         </div>
+      </div>
+      {/* Calendar */}
+      <div className="max-w-[1280px] sm:p-5 xl:p-0 m-auto">
+        <EventCalendar />
       </div>
     </>
   );
