@@ -48,7 +48,7 @@ function RegistrationForm() {
           floating_first_name: dataObject.floating_first_name,
           floating_email: dataObject.floating_email,
           emailContent: `
-                        <p><b>Student / Registration Form</b></p>
+                        <p><b>Student Inquiry Form</b></p>
                         <p>Student Name: ${dataObject.floating_student_name}</p>
                         <p>Parent/Guardian Name: ${
                           dataObject.floating_first_name
