@@ -35,7 +35,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center flex-col py-16 lg:mt-24 sm:mt-8 sm:px-24 md:px-32 lg:px-48 lg:py-32 bg-sky-100">
+      <div className="flex justify-center items-center flex-col py-16 sm:py-4 lg:mt-24 sm:mt-8 sm:px-24 md:px-32 lg:px-48 lg:py-16 lg:bg-white sm:bg-sky-100">
         <h1 className="text-center">What Our Clients Say</h1>
         <h4 className="text-center mt-2 mx-8">
           Unlocking Potential, Inspiring Joy: Hear the Voices of Our Satisfied
