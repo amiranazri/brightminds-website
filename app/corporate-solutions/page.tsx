@@ -11,6 +11,41 @@ import MainButton from "@/app/ui/components/MainButton"
 import Slider from 'react-infinite-logo-slider'
 import partnerData from "./partnerData.json";
 
+const educationPillars = [
+  {
+    key: "1",
+    imageName: "education_pillar_es.svg",
+    text: "Environmental Sustainability",
+    modalText: "The Environmental Sustainability sector is dedicated to fostering awareness and action towards protecting our planet. It covers topics such as climate change mitigation, sustainable living practices, waste reduction and recycling, and the conservation of natural resources. These talks encourage individuals and communities to adopt eco-friendly habits and contribute to global sustainability efforts."
+  },
+  {
+    key: "2",
+    imageName: "education_pillar_feae.svg",
+    text: "Financial Education & Empowerment",
+    modalText: "This sector focuses on providing individuals of all ages with the knowledge and tools necessary for sound financial management. It covers a wide range of topics, including savings and budgeting strategies, the fundamentals of investing, understanding credit and debt, and planning for financial milestones such as homeownership and retirement. The goal of Financial Education and Empowerment is to promote financial literacy across the lifespan, empowering participants to achieve financial stability and independence."
+  },
+  {
+    key: "3",
+    imageName: "education_pillar_haw.svg",
+    text: "Health & Wellness",
+    modalText: "Talks and programs in the Health and Wellness sector focus on educating individuals about maintaining and improving their physical and mental well-being. Topics include nutritional guidance, the importance of balanced diets, understanding menstrual health, personal grooming habits, and strategies for achieving a holistic lifestyle. This sector aims to empower people with knowledge and practical tips to make informed health choices."
+  },
+  {
+    key: "4",
+    imageName: "education_pillar_ecis.svg",
+    text: "Effective Communication & Interpersonal Skills",
+    modalText: "Effective Communication and Interpersonal Skills sector addresses the foundational aspects of how we connect with others. It encompasses topics on verbal and non-verbal communication, active listening, empathy, conflict resolution, and emotional intelligence. These programs are designed to enhance personal and professional relationships, improve teamwork, and foster a culture of open and constructive dialogue."
+  },
+  {
+    key: "5",
+    imageName: "education_pillar_ti.svg",
+    text: "Technology & Innovation",
+    modalText: "This sector explores the rapidly evolving world of technology and its impact on society. Talks cover emerging technologies such as artificial intelligence, blockchain, and the Internet of Things (IoT), digital literacy, cybersecurity, and ethical considerations in technology use. The focus is on educating individuals about the opportunities and challenges presented by innovation, preparing them for the future digital landscape."
+  }
+]
+
+
+
 function CorporateSolutions() {
   return (
     <div className="max-w-[1920px] text-primary-black">
@@ -31,20 +66,19 @@ function CorporateSolutions() {
           className="mt-[113px] md:mt-[136px] min-[918px]:mt-[-2px]"
         />
 
-        <Link href="/contact/corporate" className="absolute -bottom-4 sm:-bottom-5 left-0 right-0 w-[100px] sm:w-[130px] lg:w-[150px] m-auto bg-white text-center z-10 p-1 sm:p-2 lg:p-3 rounded-md border border-primary-blue hover:scale-95 transition ease-in duration-75 hover:bg-primary-blue hover:text-primary-yellow hover:font-bold text-sm sm:text-md lg:text-xl">
+        {/* <Link href="/contact/corporate" className="absolute -bottom-4 sm:-bottom-5 left-0 right-0 w-[100px] sm:w-[130px] lg:w-[150px] m-auto bg-white text-center z-10 p-1 sm:p-2 lg:p-3 rounded-md border border-primary-blue hover:scale-95 transition ease-in duration-75 hover:bg-primary-blue hover:text-primary-yellow hover:font-bold text-sm sm:text-md lg:text-xl">
           <div>Contact Us</div>
-        </Link>
+        </Link> */}
+        <MainButton isAbsolute={true} text="Contact Us" />
       </div>
 
       <div className="m-5">
         <div className="mt-20">
           <Title title='Core Education Pillars' />
           <EducationPillars className={`flex flex-col lg:flex-row lg:flex-wrap mt-10 items-center justify-center`}>
-            <EducationPillar key={1} imageName="education_pillar_es_2.svg" text="Environmental Sustainability" />
-            <EducationPillar key={2} imageName="education_pillar_feae_2.jpg" text="Financial Education & Empowerment" />
-            <EducationPillar key={3} imageName="education_pillar_haw_2.jpg" text="Health & Wellness" />
-            <EducationPillar key={4} imageName="education_pillar_ecis_2.jpg" text="Effective Communication & Interpersonal Skills" />
-            <EducationPillar key={5} imageName="education_pillar_ti.svg" text="Technology & Innovation" />
+            {educationPillars.map(ep => (
+              <EducationPillar key={ep.key} imageName={ep.imageName} text={ep.text} modalText={ep.modalText} />
+            ))}
           </EducationPillars>
         </div>
 

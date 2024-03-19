@@ -9,7 +9,7 @@ function PortfolioCard({imageSrc, text}) {
       <div className="absolute w-full h-full bg-black z-10 opacity-50"></div>
       <div className="w-full h-[270px] absolute z-20 flex flex-col items-center justify-end">
         <div className="text-white mb-2 text-center">{text}</div>
-        <div className="text-white bg-primary-blue w-[150px] p-1 cursor-pointer text-center hover:opacity-90 hover:scale-95">READ MORE</div>
+        <div className="text-white bg-[#19598F] hover:bg-yellow-300 hover:text-black w-[150px] p-1 cursor-pointer text-center">READ MORE</div>
       </div>
     </div>
   )

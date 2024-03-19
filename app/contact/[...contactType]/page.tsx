@@ -40,11 +40,11 @@ function ContactUs() {
   return (
     <div className="max-w-[1920px] text-primary-black m-5 mt-[170px] lg:mt-[200px]" key={selectedForm}>
 
-      <h1 className="hidden lg:flex lg:items-center lg:justify-center text-primary-yellow">CONTACT US</h1>
+      <h1 className="hidden lg:flex lg:items-center lg:justify-center">CONTACT US</h1>
 
       <div className="flex flex-col items-center justify-center lg:flex-row-reverse lg:mt-[100px]">
         <div className="max-w-lg flex flex-col items-center lg:ml-10">
-          <div className="text-primary-yellow font-bold lg:hidden">CONTACT US</div>
+          <h1 className="lg:hidden text-3xl">CONTACT US</h1>
           <div className="text-primary-blue text-2xl font-bold mt-3 mb-3">
             How can we help?
           </div>

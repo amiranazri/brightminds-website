@@ -140,9 +140,9 @@ function GeneralForm() {
         </label>
       </div>
       <div className="w-full text-center">
-        <button
+      <button
           type="submit"
-          className={`text-white bg-primary-blue hover:bg-blue-800 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 w-auto`}
+          className={`bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 w-auto`}
           disabled={buttonClicked}
         >
           Submit
