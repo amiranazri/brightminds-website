@@ -10,7 +10,7 @@ function OurServices() {
   const [selectedTab, setSelectedTab] = useState("all");
   const [imageSrc, setImageSrc] = useState("/class-1.png");
 
-  const handleContactUs = (slug: string) => {
+  const handleContactUs = (slug) => {
     router.push(`/contact/${slug}`);
   };
 

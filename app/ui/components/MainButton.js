@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
-function MainButton({ text = "Partner With Us", isAbsolute }) {
+function MainButton({ text = "Partner With Us", isAbsolute=false }) {
   return (
     <Link href="contact/corporate">
       <div
