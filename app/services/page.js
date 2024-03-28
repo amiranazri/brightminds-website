@@ -10,7 +10,7 @@ function OurServices() {
   const [selectedTab, setSelectedTab] = useState("all");
   const [imageSrc, setImageSrc] = useState("/class-1.png");
 
-  const handleContactUs = (slug: string) => {
+  const handleContactUs = (slug) => {
     router.push(`/contact/${slug}`);
   };
 
@@ -110,7 +110,9 @@ function OurServices() {
       </div>
       {/* Calendar */}
       <div className="max-w-[1280px] sm:p-5 xl:p-0 m-auto">
+        <h1 className="mb-10">Our Schedule</h1>
         <EventCalendar />
+        <div className="mt-10"></div>
       </div>
     </>
   );

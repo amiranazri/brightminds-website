@@ -11,7 +11,7 @@ import coursedata from "../../data/courseData.json";
 function About() {
   const router = useRouter();
 
-  const handleContactUs = (slug: string) => {
+  const handleContactUs = (slug) => {
     router.push(`/contact/${slug}`);
   };
 
