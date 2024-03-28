@@ -2,41 +2,41 @@
     {
         "icon": "/communication_skills.svg",
         "title": "Communication Skills",
-        "description": "Develop your language skills through creative writing and communication."
+        "description": "The Communication Skills course focuses on developing students' verbal and nonverbal communication abilities. From active listening and empathetic communication to assertiveness and conflict resolution, students learn to communicate effectively in diverse personal and professional settings."
     },
     {
         "icon": "/financial_literacy.svg",
         "title": "Financial Literacy",
-        "description": "Learn the fundamentals of coding and programming languages."
+        "description": "In our Financial Literacy course, students develop a foundational understanding of financial concepts such as budgeting, saving, investing, and managing debt. Through real-life scenarios and interactive lessons, students learn practical skills to navigate the complexities of personal finance responsibly."
     },
     {
         "icon": "/public_speaking.svg",
         "title": "Public Speaking",
-        "description": "Engage in hands-on experiments to understand scientific concepts."
+        "description": "Our Public Speaking course empowers students to become confident and articulate speakers. Through speech writing, presentation techniques, and constructive feedback, students enhance their communication skills and learn to express themselves effectively in front of audiences."
     },
     {
         "icon": "/critical_analysis.svg",
         "title": "Critical Analysis",
-        "description": "Explore the world of literature and enhance your analytical skills."
+        "description": "Our Critical Analysis course equips students with the essential skills to think critically and analyze information effectively. Through engaging activities and discussions, students learn how to evaluate arguments, identify biases, and make informed decisions in various contexts. Based on real world happenings."
     },
     {
         "icon": "/entrepreneurial_skills.svg",
         "title": "Entrepreneurial Skills",
-        "description": "Explore cutting-edge technologies and foster innovation."
+        "description": "Our Entrepreneurial Skills course introduces students to the principles of entrepreneurship, innovation, and business management. From ideation and market research to business planning and pitching, students explore the entrepreneurial mindset and develop the skills needed to turn their ideas into successful ventures."
     },
     {
         "icon": "/debate.svg",
         "title": "Debate",
-        "description": "Unleash your creativity with courses on art, design, and visual communication."
+        "description": "Our Debate course cultivates students' critical thinking, research, and argumentation skills through structured debates on relevant topics. Students learn to construct persuasive arguments, refute opposing viewpoints, and engage in respectful discourse, fostering intellectual growth and civic engagement."
     },
     {
         "icon": "/leadership_skills.svg",
         "title": "Leadership Skills",
-        "description": "Gain essential engineering knowledge and problem-solving skills."
+        "description": "The Leadership Skills course empowers students to develop essential leadership qualities such as decision-making, teamwork, problem-solving, and resilience. Through experiential activities and role-playing scenarios, students learn to inspire and motivate others while leading with integrity and empathy."
     },
     {
         "icon": "/writing_skills.svg",
         "title": " Writing Skills",
-        "description": "Master the art of interpreting and visualizing data for decision-making."
+        "description": "In our Writing Skills course, students hone their writing abilities across various formats, including essays, creative writing, and professional correspondence. Through guided exercises and feedback, students learn to express their ideas clearly, cohesively, and persuasively."
     }
 ]

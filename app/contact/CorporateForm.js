@@ -59,7 +59,11 @@ function CorporateForm() {
     }, 1000); // Simulated delay
   }
   return (
-    <form className="max-w-xl mx-auto" onSubmit={handleSubmit} method="post">
+    <form
+      className="max-w-[500px] mx-auto"
+      onSubmit={handleSubmit}
+      method="post"
+    >
       <div className="grid md:grid-cols-2 md:gap-6">
         <div className="relative z-0 w-full mb-5 group">
           <input
@@ -125,8 +129,7 @@ function CorporateForm() {
             htmlFor="floating_phone"
             className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            Phone number (+60123456789){" "}
-            <span className="text-red-500">*</span>
+            Phone number (+60123456789) <span className="text-red-500">*</span>
           </label>
         </div>
       </div>

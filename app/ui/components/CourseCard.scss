@@ -1,18 +1,23 @@
+.modal-content {
+  max-width: 300px;
+  margin: auto;
+}
+
 @media (min-width: 640px) {
-    .flex-container {
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
+  .flex-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-  
-  @media (min-width: 768px) {
-    .flex-container {
-      justify-content: space-around;
-    }
+}
+
+@media (min-width: 768px) {
+  .flex-container {
+    justify-content: space-around;
   }
-  
-  @media (min-width: 1024px) {
-    .flex-container {
-      justify-content: space-between;
-    }
+}
+
+@media (min-width: 1024px) {
+  .flex-container {
+    justify-content: space-between;
   }
+}

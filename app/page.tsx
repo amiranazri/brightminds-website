@@ -1,11 +1,24 @@
+"use client";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import HorizontalCard from "./ui/components/HorizontalCard";
 import skillsList from "../data/skillsList.json";
-import heroBanner from "../public/hero.png";
+import heroBanner from "../public/hero.svg";
 import ReviewCard from "@/app/ui/components/ReviewCard";
 import reviewsData from "@/data/googleReviews.json";
 
 export default function Page() {
+  const router = useRouter();
+
+  const handleCourses = () => {
+    router.push(`/about`);
+  };
+
+  const handleFreeClasses = () => {
+    router.push(`/about`);
+  };
+
   return (
     <main>
       <Image
@@ -35,11 +48,27 @@ export default function Page() {
         </div>
       </div>
 
+      <div className="flex flex-row justify-center items-center mt-16">
+        <div>
+          <button
+            onClick={handleCourses}
+            className="mr-8 bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
+          >
+            <h6>Our Courses</h6>
+          </button>
+          <button
+            onClick={handleFreeClasses}
+            className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
+          >
+            <h6>Free Classes</h6>
+          </button>
+        </div>
+      </div>
+
       <div className="flex justify-center items-center flex-col py-16 sm:py-4 lg:mt-24 sm:mt-8 sm:px-24 md:px-32 lg:px-48 lg:py-16 lg:bg-white sm:bg-sky-100">
         <h1 className="text-center">What Our Clients Say</h1>
         <h4 className="text-center mt-2 mx-8">
-          Unlocking Potential, Inspiring Joy: Hear the Voices of Our Satisfied
-          Families
+          Empowering Minds, Transforming Communities
         </h4>
       </div>
 

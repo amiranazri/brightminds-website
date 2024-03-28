@@ -60,12 +60,19 @@ h5 {
 
 h6 {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   font-family: sans-serif;
+  font-color: $tertiary-blue;
 }
 
 p {
   font-size: 20px;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+button {
+  font-size: 18px;
   font-weight: 400;
   font-family: sans-serif;
 }

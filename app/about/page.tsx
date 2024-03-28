@@ -32,14 +32,14 @@ function About() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mx-auto max-w-6xl py-12 px-8">
+      <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mx-auto max-w-6xl py-12 px-8 ">
         <div className="flex-1">
           <Image
             src="/about_1.svg"
             alt="Bright Minds logo"
             width={400}
             height={400}
-            className="rounded-lg"
+            className="rounded-lg "
           />
         </div>
         <div className="flex-1 text-center md:text-left">
@@ -123,7 +123,7 @@ function About() {
             alt="Bright Minds logo"
             width={400}
             height={400}
-            className="rounded-lg"
+            className="rounded-lg "
           />
         </div>
         <div className="flex-1 text-center md:text-center">
@@ -142,6 +142,31 @@ function About() {
           </p>
         </div>
       </div>
+
+      <div className="flex flex-col mx-auto w-[60%] my-24">
+        <h3 className="font-bold mb-4 text-center ">
+          Nurturing Future Leaders with Modern Education{" "}
+        </h3>
+        <p className="text-justify	">
+          {`Despite the historically high production of around 50,000 graduates
+          annually, a significant number of them face unemployment due to a lack
+          of relevant skills. The disconnect between traditional education and
+          the evolving demands of society contributes to graduates being
+          ill-equipped for the competitive job market. This highlights the
+          pressing issue of the education system's failure to adapt quickly,
+          leaving many students functionally illiterate and unprepared for
+          real-world challenges.`}
+        </p>
+      </div>
+      <div className="flex flex-col mx-auto w-[60%] my-24">
+        <h3 className="font-bold mb-4 text-center ">
+          FutureForward Initiative
+        </h3>
+        <p className="text-justify	">
+          {`We are deeply committed to making soft skill and life skill education accessible to all, regardless of socioeconomic status. As part of our 'FutureForward' initiative, we offer free classes to students from underserved communities and anyone who may not be able to afford our classes. Our dedication to this cause stems from our belief that everyone deserves the opportunity to develop essential skills that pave the way for success in both personal and professional endeavors. If this applies to you, we invite you to take advantage of this opportunity by clicking the button below to be directed to our contact form. We will reach out to you promptly to discuss the available classes and how we can support your journey towards a brighter future. Do note that the eligibility for these free classes will be assessed before you are enrolled.`}
+        </p>
+      </div>
+
       {/* COURSES */}
       <div className="flex flex-wrap justify-center items-center md:w-[60%] lg:w-[80%] mx-auto my-16">
         {coursedata.map((course, index) => (
@@ -164,23 +189,24 @@ function About() {
             className="rounded-lg"
           />
         </div>
-        <div className="flex-1 text-center md:text-left">
-          <h3 className=" font-bold mb-4">Brightminds & Partnerships</h3>
+        <div className="flex-1 md:text-left">
+          <h3 className="text-center font-bold mb-4">
+            School Partnership Program
+          </h3>
           <p className="text-gray-600 mb-8" style={{ textAlign: "justify" }}>
-            {`We are a centre of learning that aims to equip students with
-            relevant skills to take on the modern world. Going beyond classroom
-            education, our courses supplement traditional learning with
-            practical knowledge.`}
+            {`We specialize in offering custom soft skills and life skills programs tailored to meet the unique needs of schools and their students. By partnering with international schools as part of their Co-Curricular Activities (CCA), we provide engaging and interactive sessions that complement their academic curriculum. Our programs not only enhance students' personal development but also contribute to their holistic education, equipping them with essential skills for success in both their academic and future professional endeavors. Through our collaborative approach, schools benefit from enriching their CCA offerings and empowering students to thrive in today's dynamic world.`}
           </p>
 
-          <button
-            onClick={() => {
-              handleContactUs("school");
-            }}
-            className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
-          >
-            <h6>Contact Us</h6>
-          </button>
+          <div className="flex justify-center">
+            <button
+              onClick={() => {
+                handleContactUs("school");
+              }}
+              className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
+            >
+              <h6>Contact Us</h6>
+            </button>
+          </div>
         </div>
       </div>
 
