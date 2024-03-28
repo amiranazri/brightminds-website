@@ -22,7 +22,7 @@ function Events() {
         height={140}
         layout="responsive"
         alt="bright minds"
-        className=""
+        className="mt-16"
       />
 
       <div className="hidden sm:block absolute top-[195px] left-[365px] transform -translate-x-1/2 sm:static sm:left-8 sm:top-[80px] lg:absolute lg:left-[124px] lg:top-[43%]">

@@ -51,18 +51,26 @@ h5 {
   font-weight: 400;
   font-style: normal;
   @screen sm {
+    font-size: 18px;
+  }
+  @screen md {
+    font-size: 22px;
+  }
+}
+
+h6 {
+  color: #19598f;
+  font-size: px;
+  font-weight: 400;
+  font-family: sans-serif;
+  font-color: $tertiary-blue;
+
+  @screen sm {
     font-size: 16px;
   }
   @screen md {
     font-size: 20px;
   }
-}
-
-h6 {
-  font-size: 18px;
-  font-weight: 400;
-  font-family: sans-serif;
-  font-color: $tertiary-blue;
 }
 
 p {

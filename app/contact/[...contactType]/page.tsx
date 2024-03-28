@@ -39,169 +39,167 @@ function ContactUs() {
 
   return (
     <>
-      <div className="w-[100%] mt-20">
-        <Image
-          src={contactBanner}
-          width={120}
-          height={120}
-          layout="responsive"
-          alt="Let's get in touch at bright minds school of learning"
-        />
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="hidden mt-16 lg:flex lg:items-center lg:justify-center">
-          CONTACT US
-        </h1>
-        <h4>How can we help?</h4>
-        <p className="text-center my-8 px-24 sm:px-8 md:px-16 max-w-[80%]">
-          Your satisfaction is our top priority. Whether you have a question
+      <div className="flex flex-col mt-16 px-8 sm:px-4 md:px-8 ">
+        <div className="flex flex-col  md:flex-row items-center md:justify-between mx-auto max-w-6xl py-12">
+          <div className="justify-center">
+            <h3 className=" mt-16">CONTACT US</h3>
+            <h6>How can we help?</h6>
+            <p className="text-justify my-8  max-w-[80%]">
+              {`Your satisfaction is our top priority. Whether you have a question
           about our services, need assistance with registration, or simply want
           to share your feedback, we are here to help. Please feel free to reach
           out using the form below, and our dedicated team will get back to you
           as soon as possible. Thank you for choosing us - we look forward to
-          assisting you!
-        </p>
-
-        <div
-          className="max-w-[1920px] text-primary-black m-5 "
-          key={selectedForm}
-        >
-          <div className="flex flex-col items-center justify-center lg:flex-row-reverse relative">
-            <div className="max-w-lg flex flex-col items-center lg:ml-10">
-              <div className="w-[300px] sm:w-[600px] lg:w-[500px] lg:mr-10 mt-5 lg:mt-0 flex flex-col items-end relative">
-                <div className="flex flex-row items-center">
-                  <h6 className="text-[primary-blue]">Inquiry Type:</h6>
-                  <button
-                    id="dropdownDefaultButton"
-                    data-dropdown-toggle="dropdown"
-                    className=" bg-white hover:text-blue-700 font-medium rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center relative z-10"
-                    type="button"
-                    onClick={() => {
-                      setIsOpen(!isOpen);
-                    }}
-                  >
-                    {selectedForm}
-                    <svg
-                      className="w-2.5 h-2.5 ms-3"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 10 6"
-                      data-dropdown-trigger="click"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="m1 1 4 4 4-4"
-                      />
-                    </svg>
-                  </button>
-
-                  {/* <!-- Dropdown menu --> */}
-                  <div
-                    id="dropdown"
-                    className={`absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ${
-                      isOpen ? "" : "hidden"
-                    }`}
-                    style={{ top: "calc(13%)", right: 0 }}
-                    data-dropdown-trigger="click"
-                  >
-                    <ul
-                      className="py-2 text-sm text-gray-700"
-                      aria-labelledby="dropdownDefaultButton"
-                      data-dropdown-trigger="click"
-                    >
-                      <li>
-                        <div
-                          className="block px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                          onClick={() => {
-                            selectFunc("General");
-                          }}
+          assisting you!`}
+            </p>
+          </div>
+          <div className="flex-1">
+            <div
+              className="flex max-w-[1920px] justify-start text-primary-black m-5 "
+              key={selectedForm}
+            >
+              <div className="flex flex-col items-center justify-start lg:flex-row-reverse relative">
+                <div className="max-w-lg flex flex-col items-center lg:ml-10">
+                  <div className="w-[300px] sm:w-[600px] lg:w-[500px] lg:mr-10 lg:mt-0 flex flex-col items-end relative">
+                    <div className="flex flex-row items-center">
+                      <p className="text-sm text-[primary-blue]">
+                        Inquiry Type:
+                      </p>
+                      <button
+                        id="dropdownDefaultButton"
+                        data-dropdown-toggle="dropdown"
+                        className=" bg-white hover:text-[#19598f] font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center relative z-10"
+                        type="button"
+                        onClick={() => {
+                          setIsOpen(!isOpen);
+                        }}
+                      >
+                        {selectedForm}
+                        <svg
+                          className="w-2.5 h-2.5 ms-3"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 10 6"
                           data-dropdown-trigger="click"
                         >
-                          General Inquiry
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          className="block px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                          onClick={() => {
-                            selectFunc("Corporate");
-                          }}
+                          <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="m1 1 4 4 4-4"
+                          />
+                        </svg>
+                      </button>
+
+                      {/* <!-- Dropdown menu --> */}
+                      <div
+                        id="dropdown"
+                        className={`absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ${
+                          isOpen ? "" : "hidden"
+                        }`}
+                        style={{ top: "calc(13%)", right: 0 }}
+                        data-dropdown-trigger="click"
+                      >
+                        <ul
+                          className="py-2 text-sm text-gray-700"
+                          aria-labelledby="dropdownDefaultButton"
                           data-dropdown-trigger="click"
                         >
-                          Corporate
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          className="block px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                          onClick={() => {
-                            selectFunc("Student Inquiry");
-                          }}
-                        >
-                          Student Inquiry
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          className="block px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                          onClick={() => {
-                            selectFunc("School Partnership");
-                          }}
-                        >
-                          School Partnership
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                {/* CONTACT FORMS */}
-                <div
-                  className="mt-5 w-full rounded-lg border-black mb-8"
-                  style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" }}
-                >
-                  <div
-                    className={`w-full h-3 rounded-t-full mb-3 bg-primary-yellow`}
-                  ></div>
-                  <div className="p-2">
-                    {selectedForm === "Corporate" ? (
-                      <CorporateForm />
-                    ) : selectedForm === "School Partnership" ? (
-                      <SchoolForm />
-                    ) : selectedForm === "General" ? (
-                      <GeneralForm />
-                    ) : (
-                      <RegistrationForm />
-                    )}
+                          <li>
+                            <div
+                              className="block px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                              onClick={() => {
+                                selectFunc("General");
+                              }}
+                              data-dropdown-trigger="click"
+                            >
+                              General Inquiry
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="block px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                              onClick={() => {
+                                selectFunc("Corporate");
+                              }}
+                              data-dropdown-trigger="click"
+                            >
+                              Corporate
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="block px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                              onClick={() => {
+                                selectFunc("Student Inquiry");
+                              }}
+                            >
+                              Student Inquiry
+                            </div>
+                          </li>
+                          <li>
+                            <div
+                              className="block px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                              onClick={() => {
+                                selectFunc("School Partnership");
+                              }}
+                            >
+                              School Partnership
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    {/* CONTACT FORMS */}
+                    <div
+                      className="mt-5 w-full rounded-lg border-black mb-8"
+                      style={{
+                        boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+                      }}
+                    >
+                      <div
+                        className={`w-full h-3 rounded-t-full mb-3 bg-primary-yellow`}
+                      ></div>
+                      <div className="p-2">
+                        {selectedForm === "Corporate" ? (
+                          <CorporateForm />
+                        ) : selectedForm === "School Partnership" ? (
+                          <SchoolForm />
+                        ) : selectedForm === "General" ? (
+                          <GeneralForm />
+                        ) : (
+                          <RegistrationForm />
+                        )}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            {/* CONTACT INFO ROW */}
+            {/* <div className="flex flex-col items-center justify-start lg:flex-row lg:items-start mb-24">
+              <ContactInfo
+                imgSrc="/icon_email.svg"
+                alt="Email"
+                title="EMAIL"
+                subTitle="info@brightminds.com"
+              />
+              <ContactInfo
+                imgSrc="/icon_phone.svg"
+                alt="Phone"
+                title="PHONE"
+                subTitle="(+60) 111-232-1134"
+              />
+              <ContactInfo
+                imgSrc="/icon_location.svg"
+                alt="Marker"
+                title="HEADQUARTERS"
+                subTitle="Ipoh, Malaysia"
+              />
+            </div> */}
           </div>
-        </div>
-        {/* CONTACT INFO ROW */}
-        <div className="flex flex-col items-center justify-center ml-16 lg:flex-row lg:items-start mb-24">
-          <ContactInfo
-            imgSrc="/icon_email.svg"
-            alt="Email"
-            title="EMAIL"
-            subTitle="info@brightminds.com"
-          />
-          <ContactInfo
-            imgSrc="/icon_phone.svg"
-            alt="Phone"
-            title="PHONE"
-            subTitle="(+60) 111-232-1134"
-          />
-          <ContactInfo
-            imgSrc="/icon_location.svg"
-            alt="Marker"
-            title="HEADQUARTERS"
-            subTitle="Ipoh, Malaysia"
-          />
         </div>
       </div>
     </>

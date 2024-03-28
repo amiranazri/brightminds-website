@@ -39,7 +39,7 @@ function About() {
             alt="Bright Minds logo"
             width={400}
             height={400}
-            className="rounded-lg "
+            className="rounded-lg mt-16"
           />
         </div>
         <div className="flex-1 text-center md:text-left">
