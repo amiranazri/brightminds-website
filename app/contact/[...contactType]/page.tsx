@@ -44,7 +44,7 @@ function ContactUs() {
           <div className="justify-center">
             <h3 className=" mt-16">CONTACT US</h3>
             <h6>How can we help?</h6>
-            <p className="text-justify my-8  max-w-[80%]">
+            <p className="text-justify my-8 max-w-[80%]">
               {`Your satisfaction is our top priority. Whether you have a question
           about our services, need assistance with registration, or simply want
           to share your feedback, we are here to help. Please feel free to reach
@@ -52,13 +52,34 @@ function ContactUs() {
           as soon as possible. Thank you for choosing us - we look forward to
           assisting you!`}
             </p>
+            {/* CONTACT INFO ROW */}
+            <div className="flex flex-col items-center justify-start sm:items-start md:items-start lg:items-start mb-24">
+              <ContactInfo
+                imgSrc="/icon_location.svg"
+                alt="Marker"
+                title="Headquarters"
+                subTitle="Ipoh, Malaysia"
+              />
+              <ContactInfo
+                imgSrc="/icon_phone.svg"
+                alt="Phone"
+                title="Phone"
+                subTitle="(+60) 111-232-1134"
+              />
+              <ContactInfo
+                imgSrc="/icon_email.svg"
+                alt="Email"
+                title="Email"
+                subTitle="info@brightminds.com"
+              />
+            </div>
           </div>
           <div className="flex-1">
             <div
               className="flex max-w-[1920px] justify-start text-primary-black m-5 "
               key={selectedForm}
             >
-              <div className="flex flex-col items-center justify-start lg:flex-row-reverse relative">
+              <div className="flex flex-col md:mb-40 justify-start lg:flex-row-reverse relative">
                 <div className="max-w-lg flex flex-col items-center lg:ml-10">
                   <div className="w-[300px] sm:w-[600px] lg:w-[500px] lg:mr-10 lg:mt-0 flex flex-col items-end relative">
                     <div className="flex flex-row items-center">
@@ -178,27 +199,6 @@ function ContactUs() {
                 </div>
               </div>
             </div>
-            {/* CONTACT INFO ROW */}
-            {/* <div className="flex flex-col items-center justify-start lg:flex-row lg:items-start mb-24">
-              <ContactInfo
-                imgSrc="/icon_email.svg"
-                alt="Email"
-                title="EMAIL"
-                subTitle="info@brightminds.com"
-              />
-              <ContactInfo
-                imgSrc="/icon_phone.svg"
-                alt="Phone"
-                title="PHONE"
-                subTitle="(+60) 111-232-1134"
-              />
-              <ContactInfo
-                imgSrc="/icon_location.svg"
-                alt="Marker"
-                title="HEADQUARTERS"
-                subTitle="Ipoh, Malaysia"
-              />
-            </div> */}
           </div>
         </div>
       </div>

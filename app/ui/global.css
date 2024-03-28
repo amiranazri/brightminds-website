@@ -10,7 +10,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   @screen sm {
-    font-size: 24px;
+    font-size: large;
   }
   @screen md {
     font-size: 56px;
@@ -60,13 +60,12 @@ h5 {
 
 h6 {
   color: #19598f;
-  font-size: px;
   font-weight: 400;
   font-family: sans-serif;
   font-color: $tertiary-blue;
 
   @screen sm {
-    font-size: 16px;
+    font-size: large;
   }
   @screen md {
     font-size: 20px;

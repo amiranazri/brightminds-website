@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function ContactInfo({ imgSrc, alt, title, subTitle }) {
   return (
-    <div className="flex w-[250px] items-center">
+    <div className="flex w-[250px] items-center my-2">
       <div>
         <Image src={imgSrc} width={40} height={40} alt={alt} />
       </div>
