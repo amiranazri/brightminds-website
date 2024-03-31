@@ -121,7 +121,7 @@ function About() {
         </>
       ) : (
         <>
-          <div className="flex flex-col md:flex-row items-center justify-between mx-auto py-12 mt-8">
+          <div className="flex flex-col md:flex-row items-center justify-between mx-auto py-12 mt-24">
             <div className="flex-1 text-center md:text-center ml-40">
               <h3 className="font-bold mb-4">What We Do </h3>
               <p
@@ -141,7 +141,7 @@ function About() {
               />
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-between mx-auto py-12 mt-16">
+          <div className="flex flex-col md:flex-row items-center justify-between mx-auto py-12">
             <div className="flex-1 ml-24">
               <Image
                 src="/the-gap.svg"
@@ -167,7 +167,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-between mx-auto py-12 mt-16">
+          <div className="flex flex-col md:flex-row items-center justify-between mx-auto py-12 mt-8">
             <div className="flex-1 text-center ml-24">
               <h3 className="font-bold mb-4 ">BrightLearners Initiative </h3>
               <p
@@ -199,7 +199,7 @@ function About() {
       )}
 
       {/* COURSES */}
-      <div className="flex flex-wrap justify-center items-center md:w-[60%] lg:w-[80%] mx-auto my-16">
+      <div className="flex flex-wrap justify-center items-center md:w-[60%] lg:w-[80%] mx-auto mt-16 mb-8">
         {coursedata.map((course, index) => (
           <CourseCard
             key={index}
@@ -211,7 +211,7 @@ function About() {
       </div>
 
       {windowWidth <= 1024 ? (
-        <div className="flex flex-col md:flex-row items-center justify-between mx-auto py-12 mt-16">
+        <div className="flex flex-col md:flex-row items-center justify-between mx-auto py-12 mt-4">
           <div className="flex-1 text-center px-8">
             <Image
               src="/about_4.svg"

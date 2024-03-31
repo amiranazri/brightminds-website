@@ -174,11 +174,9 @@ function RegistrationForm() {
             htmlFor="floating_position"
             className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            Position/Title{" "}
-            <span className="text-red-500">*</span>
+            Position/Title <span className="text-red-500">*</span>
           </label>
         </div>
-
       </div>
 
       <div className="grid md:grid-cols-2 md:gap-6">
@@ -212,8 +210,7 @@ function RegistrationForm() {
             htmlFor="floating_phone"
             className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            Phone number (+60123456789){" "}
-            <span className="text-red-500">*</span>
+            Phone number <span className="text-red-500">*</span>
           </label>
         </div>
       </div>
@@ -242,7 +239,7 @@ function RegistrationForm() {
         </div>
       </div>
       <div className="w-full text-center">
-      <button
+        <button
           type="submit"
           className={`bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 w-auto`}
           disabled={buttonClicked}

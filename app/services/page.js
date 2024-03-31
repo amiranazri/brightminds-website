@@ -60,7 +60,7 @@ function OurServices() {
 
   return (
     <>
-      <div className="mt-[113px] md:mt-[136px] flex flex-col md:flex-row items-center justify-center md:justify-between mx-auto max-w-[90%]  py-12 px-8">
+      <div className="mt-[113px] md:mt-[136px] flex flex-col items-center justify-center md:justify-between mx-auto max-w-[90%]  py-12 px-8">
         <div className="flex-1">
           <Image
             src="/about_1.svg"
@@ -70,22 +70,26 @@ function OurServices() {
             className="rounded-lg sm:ml-16"
           />
         </div>
-        <div className="flex-1 text-center md:text-left">
-          <h3 className="font-bold mb-4">
+        <div className="flex-1 justify-center items-center md:text-left">
+          <h3 className="font-bold mb-4 text-center px-40">
             Unlock Your Potential With E-Learning Classes
           </h3>
-          <p className="text-gray-600 mb-8" style={{ textAlign: "justify" }}>
+          <p
+            className="text-gray-600 mb-8 lg:px-24"
+            style={{ textAlign: "justify" }}
+          >
             {`Embark on a transformative journey with our online classes tailored exclusively for students. Each session is not just a course; it's an immersive experience crafted to ignite curiosity, broaden horizons, and propel students towards academic and personal growth. Led by expert instructors passionate about nurturing young minds, our dynamic online classes offer a diverse range of subjects to explore. Whether your child seeks to enhance their skills or prepare for future academic challenges, our flexible, interactive approach ensures learning anytime, anywhere. With unparalleled support and guidance, our goal is to empower students to unlock their fullest potential and excel in their educational journey. Start your child's adventure today and set them on the path to lifelong learning and skill mastery!`}
           </p>
-
-          <button
-            onClick={() => {
-              handleContactUs("general");
-            }}
-            className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
-          >
-            <h6>Contact Us</h6>
-          </button>
+          <div className="flex justify-center">
+            <button
+              onClick={() => {
+                handleContactUs("general");
+              }}
+              className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
+            >
+              <h6>Contact Us</h6>
+            </button>
+          </div>
         </div>
       </div>
       <div className="flex-1 text-center my-16">
