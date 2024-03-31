@@ -59,7 +59,7 @@ h5 {
 }
 
 h6 {
-  color: #19598f;
+  /* color: #19598f; */
   font-weight: 400;
   font-family: sans-serif;
   font-color: $tertiary-blue;

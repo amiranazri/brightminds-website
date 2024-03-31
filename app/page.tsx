@@ -27,6 +27,7 @@ export default function Page() {
         height={140}
         layout="responsive"
         alt="bright minds"
+        className="mt-16"
       />
 
       <div className="flex justify-center mt-4 sm:mt-16 lg:my-16 sm:px-24 md:px-32 lg:px-48">
@@ -72,7 +73,7 @@ export default function Page() {
         </h4>
       </div>
 
-      <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row md:flex-wrap lg:flex-wrap justify-center mx-auto py-16  w-full md:w-[65%]">
+      <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row md:flex-wrap lg:flex-wrap justify-center mx-auto pb-16  w-full md:w-[65%]">
         {reviewsData.map((review, index) => (
           <ReviewCard
             key={index}
