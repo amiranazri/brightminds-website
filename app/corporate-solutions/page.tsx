@@ -4,12 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
 import EducationPillar from "./EducationPillar";
-import Title from "@/app/ui/components/Title";
 import Why from "./Why";
 import { useEffect, useState, useRef } from "react";
 import MainButton from "@/app/ui/components/MainButton";
 import Slider from "react-infinite-logo-slider";
 import partnerData from "./partnerData.json";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const educationPillars = [
   {
@@ -50,15 +51,26 @@ const educationPillars = [
 ];
 
 function CorporateSolutions() {
-  return (
-    <div className="max-w-[1920px] text-primary-black">
-      {/* <BannerContainer className="flex-col flex items-center justify-center relative w-[100%]">
-        <Banner className="w-[100%] lg:w-[80%] xl:w-[60%] 2xl:w-[60%]" src="/corporate_services_banner.jpg" alt='' />
-        <BannerText className="sm:absolute sm:bottom-4 md:bottom-5 2xl:bottom-8 text-primary-blue p-1 md:p-2 xl:p-4 rounded cursor-pointer font-bold hover:opacity-90 2xl:text-md bg-white">
-          <Link href="contact">CONTACT US</Link>
-        </BannerText>
-      </BannerContainer> */}
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 2,
+      slidesToSlide: 2,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+      slidesToSlide: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1,
+    },
+  };
 
+  return (
+    <>
       <div className="w-[100%] relative">
         <Image
           src="/corporate_services_banner.svg"
@@ -69,77 +81,85 @@ function CorporateSolutions() {
           className="mt-[113px] md:mt-[136px] min-[918px]:mt-[-2px]"
         />
 
-        {/* <Link href="/contact/corporate" className="absolute -bottom-4 sm:-bottom-5 left-0 right-0 w-[100px] sm:w-[130px] lg:w-[150px] m-auto bg-white text-center z-10 p-1 sm:p-2 lg:p-3 rounded-md border border-primary-blue hover:scale-95 transition ease-in duration-75 hover:bg-primary-blue hover:text-primary-yellow hover:font-bold text-sm sm:text-md lg:text-xl">
-          <div>Contact Us</div>
-        </Link> */}
         <MainButton isAbsolute={true} text="Contact Us" />
       </div>
 
-      <div className="m-5">
-        <div className="mt-20">
-          <h1>Core Education Pillars</h1>
-          <EducationPillars
-            className={`flex flex-col lg:flex-row lg:flex-wrap mt-10 items-center justify-center`}
+      <div className="my-24 ">
+        <h1>Core Education Pillars</h1>
+        <EducationPillarsWrapper>
+          <Carousel
+            responsive={responsive}
+            swipeable={true}
+            draggable={false}
+            showDots={false}
+            infinite={true}
+            autoPlay={true}
+            keyBoardControl={true}
+            customTransition="transform 300ms ease-in-out"
+            transitionDuration={300}
+            containerClass="carousel-container"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            itemClass="carousel-item-padding-40-px"
           >
-            {educationPillars.map((ep) => (
+            {educationPillars.map((pillar, index) => (
               <EducationPillar
-                key={ep.key}
-                imageName={ep.imageName}
-                text={ep.text}
-                modalText={ep.modalText}
+                key={pillar.key}
+                imageName={pillar.imageName}
+                text={pillar.text}
+                modalText={pillar.modalText}
               />
             ))}
-          </EducationPillars>
-        </div>
-
-        <div className="">
-          <h1>Why Us</h1>
-          <WhyUs className="flex flex-col lg:flex-row justify-center mt-10 space-y-3 lg:space-y-0 lg:space-x-3 xl:space-x-10 items-center text-center">
-            <Why
-              key={1}
-              imageName="why_us_adaptation.svg"
-              text="Adaptation and Navigation"
-              subText="Bright Minds is dedicated to providing education that equips students to navigate the current world, emphasizing skills for adaptation amidst rapid societal changes and technological advancements."
-            />
-            <Why
-              key={2}
-              imageName="why_us_empowerment.svg"
-              text="Empowerment Through Student-Centered Learning"
-              subText="Through modern teaching methods, we empower students by making essential skills accessible. Our focus on student-centered learning acknowledges that education is not a one-size-fits-all process, tailoring the learning experience to individual needs."
-            />
-            <Why
-              key={3}
-              imageName="why_us_education.svg"
-              text="Supplementing Traditional Education"
-              subText="We recognize the evolving demands on students and aim to supplement traditional education by facilitating the learning of relevant skills. This ensures students are better prepared to face the dynamic challenges of our society."
-            />
-          </WhyUs>
-        </div>
-
-        <div>
-          <Title title="OUR PARTNERS" />
-          <div className="mt-16 mb-16">
-            <Slider
-              width="250px"
-              duration={30}
-              pauseOnHover={true}
-              blurBorders={false}
-              blurBorderColor={"#fff"}
-            >
-              {partnerData.map((p) => (
-                <Slider.Slide
-                  key={p.imageSrc}
-                  className="flex items-center justify-center"
-                >
-                  <img src={p.imageSrc} alt={p.alt} className="w-30" />
-                </Slider.Slide>
-              ))}
-            </Slider>
-          </div>
-          <MainButton />
-        </div>
+          </Carousel>
+        </EducationPillarsWrapper>
       </div>
-    </div>
+
+      <div className="mt-16 mb-56 sm:mt-8 md:mt-16">
+        <h1>Why Us</h1>
+        <WhyUs className="flex flex-col lg:flex-row justify-center mt-10 space-y-3 space-x-4 lg:space-y-0 lg:space-x-4 xl:space-x-10 items-center text-center px-16">
+          <Why
+            key={1}
+            imageName="why_us_adaptation.svg"
+            text=" Data-Driven Social Impact"
+            subText="Our data-driven approach, underscored by field experts, aligns with both the Sustainable Development Goals (SDGs) and ESG reporting requirements. This ensures our social impact assessments are not only reliable but also strategically positioned to support corporate clients in achieving their sustainability commitments. By leveraging SDG-aligned metrics and providing essential data for ESG reporting, we empower companies to transparently demonstrate their progress towards global sustainability targets and enhance their stakeholder engagement."
+          />
+          <Why
+            key={2}
+            imageName="why_us_empowerment.svg"
+            text="Comprehensive Reports"
+            subText="Our comprehensive reporting sets us apart by meticulously collecting and analyzing a wide array of data points relevant to each program's objectives. Tailored reporting frameworks ensure alignment with client priorities, offering clear insights into academic, skill-based, and community impact. Transparent and accountable, our reports foster informed decision-making while inviting stakeholder input for continuous improvement. Through this approach, we empower clients to maximize the effectiveness of their investments, driving meaningful change and lasting impact."
+          />
+          <Why
+            key={3}
+            imageName="why_us_education.svg"
+            text="Community-Centric Engagement"
+            subText="Our commitment to community engagement is foundational. By listening to and incorporating community feedback, we ensure our educational programs are adaptable and resonate on a universal/micro scale. This approach allows us to create experiences that are deeply rooted in diverse needs and aspirations, fostering a culture of participation and long-term success. Our inclusive strategy empowers communities, driving collective progress towards social and environmental goals with a foundation of active engagement and shared success. Our programs are designed to not just meet, but exceed, the collective aspirations of the communities we serve, laying the groundwork for enduring impact and mutual growth."
+          />
+        </WhyUs>
+      </div>
+
+      <div className="pt-16 pb-8 bg-sky-100 ">
+        <h1>Our Partners</h1>
+        <div className="my-4">
+          <Slider
+            width="250px"
+            duration={30}
+            pauseOnHover={true}
+            blurBorders={false}
+            blurBorderColor={"#fff"}
+          >
+            {partnerData.map((p) => (
+              <Slider.Slide
+                key={p.imageSrc}
+                className="flex items-center justify-center"
+              >
+                <img src={p.imageSrc} alt={p.alt} className="w-30" />
+              </Slider.Slide>
+            ))}
+          </Slider>
+        </div>
+        <MainButton />
+      </div>
+    </>
   );
 }
 
@@ -174,6 +194,16 @@ const BannerText = styled.div`
     font-size: 0.5rem;
   }
 `;
-const EducationPillars = styled.div``;
+const EducationPillarsWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 16px;
+  padding-bottom: 16px;
+  margin-bottom: -16px;
+  // width: 80%;
+`;
 
-const WhyUs = styled.div``;
+const WhyUs = styled.div`
+  margin-top: 32px;
+`;

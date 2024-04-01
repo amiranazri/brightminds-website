@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "imageSrc": "/portfolio_image_1.svg",
+        "imageSrc": "/portfolio/1/p1-1.jpg",
         "title": "Yakinlah Menjadi Remaja Project",
         "content": [
             {
@@ -38,7 +38,7 @@
     },
     {
         "id": "2",
-        "imageSrc": "/portfolio_image_1.svg",
+        "imageSrc": "/portfolio/2/p2-1.png",
         "title": "Money & Me Financial Literacy Workshop",
         "content": [
             {
@@ -61,7 +61,7 @@
     },
     {
         "id": "3",
-        "imageSrc": "/portfolio_image_1.svg",
+        "imageSrc": "/portfolio/3/p3-1.jpeg",
         "title": "ConQuest: The Great Speech Challenge 2023",
         "content": [
             {
@@ -84,7 +84,7 @@
     },
     {
         "id": "4",
-        "imageSrc": "/portfolio_image_1.svg",
+        "imageSrc": "/portfolio/4/p4-1.jpeg",
         "title": "Future Ready Holiday Camp with Xtraschool",
         "content": [
             {
@@ -107,7 +107,7 @@
     },
     {
         "id": "5",
-        "imageSrc": "/portfolio_image_1.svg",
+        "imageSrc": "/portfolio/5/p5-3.jpg",
         "title": "Nationwide Interpersonal Skills Workshops Initiative",
         "content": [
             {

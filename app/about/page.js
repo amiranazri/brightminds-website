@@ -238,8 +238,8 @@ function About() {
         </div>
       ) : (
         <>
-          <div className="flex flex-col md:flex-row items-center justify-between mx-auto py-12 mt-16">
-            <div className="flex-1 text-center md:text-center ml-40">
+          <div className="flex flex-col md:flex-row  mx-auto py-12 mt-16">
+            <div className="flex-1 text-center ml-64">
               <h3 className="text-center font-bold mb-4">
                 School Partnership Program
               </h3>
@@ -253,12 +253,12 @@ function About() {
                 onClick={() => {
                   handleContactUs("school");
                 }}
-                className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
+                className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full w-[200px]"
               >
-                <h6>Contact Us</h6>
+                <h6>Partner With Us</h6>
               </button>
             </div>
-            <div className="flex-1 ml-40">
+            <div className="flex-1 ml-40 my-auto">
               <Image
                 src="/about_4.svg"
                 alt="Bright Minds logo"

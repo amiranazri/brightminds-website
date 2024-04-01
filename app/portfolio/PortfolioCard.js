@@ -36,7 +36,7 @@ function PortfolioCard({ imageSrc, title, content }) {
         className="modal"
         overlayClassName="overlay"
       >
-        <div className="modal-content">
+        <div className="p-4 sm:p-4 lg:p-8">
           <button onClick={closeModal} className="close-button">
             Close
           </button>
