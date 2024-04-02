@@ -3,22 +3,23 @@ import Modal from "react-modal";
 import styled from "styled-components";
 
 const CardContainer = styled.div`
-  width: 40%;
-  height: 40%;
-  margin: 0 24px;
+  width: 90%;
+  min-height: 464px;
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  overflow: hidden;
+  overflow-y: hidden;
+  border-weight: 4px;
+  border-color: "#fafafa";
 `;
 
 const CardImage = styled.img`
-  width: 30%;
+  width: 60%;
   margin: auto;
 `;
 
 const CardContent = styled.div`
-  padding: 24px;
+  padding: 16px;
   background-color: white;
   text-align: justify;
 `;

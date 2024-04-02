@@ -84,53 +84,52 @@ function CorporateSolutions() {
         <MainButton isAbsolute={true} text="Contact Us" />
       </div>
 
-      <div className="my-24 ">
+      <div className="my-24 mx-2 min-h-24 justify-center items-center">
         <h1>Core Education Pillars</h1>
-        <EducationPillarsWrapper>
-          <Carousel
-            responsive={responsive}
-            swipeable={true}
-            draggable={false}
-            showDots={false}
-            infinite={true}
-            autoPlay={true}
-            keyBoardControl={true}
-            customTransition="transform 300ms ease-in-out"
-            transitionDuration={300}
-            containerClass="carousel-container"
-            removeArrowOnDeviceType={["tablet", "mobile"]}
-            itemClass="carousel-item-padding-40-px"
-          >
-            {educationPillars.map((pillar, index) => (
-              <EducationPillar
-                key={pillar.key}
-                imageName={pillar.imageName}
-                text={pillar.text}
-                modalText={pillar.modalText}
-              />
-            ))}
-          </Carousel>
-        </EducationPillarsWrapper>
+        <Carousel
+          responsive={responsive}
+          swipeable={true}
+          draggable={false}
+          showDots={false}
+          infinite={true}
+          autoPlay={true}
+          keyBoardControl={true}
+          customTransition="transform 300ms ease-in-out"
+          transitionDuration={500}
+          containerClass="carousel-container"
+          // removeArrowOnDeviceType={["tablet", "mobile"]}
+          itemClass="carousel-item-padding-10-px"
+          className="mt-16 px-8"
+        >
+          {educationPillars.map((pillar, index) => (
+            <EducationPillar
+              key={pillar.key}
+              imageName={pillar.imageName}
+              text={pillar.text}
+              modalText={pillar.modalText}
+            />
+          ))}
+        </Carousel>
       </div>
 
-      <div className="mt-16 mb-56 sm:mt-8 md:mt-16">
+      <div className=" mb-56 sm:mt-8 md:mt-16">
         <h1>Why Us</h1>
-        <WhyUs className="flex flex-col lg:flex-row justify-center mt-10 space-y-3 space-x-4 lg:space-y-0 lg:space-x-4 xl:space-x-10 items-center text-center px-16">
+        <WhyUs className="flex flex-col lg:flex-row justify-center mt-10 space-y-2 space-x-4 lg:space-y-0 lg:space-x-4 xl:space-x-10 items-center text-center px-16 md:px-8 md:mb-24 lg:mb-24">
           <Why
             key={1}
-            imageName="why_us_adaptation.svg"
+            imageName="why_us_1.svg"
             text=" Data-Driven Social Impact"
             subText="Our data-driven approach, underscored by field experts, aligns with both the Sustainable Development Goals (SDGs) and ESG reporting requirements. This ensures our social impact assessments are not only reliable but also strategically positioned to support corporate clients in achieving their sustainability commitments. By leveraging SDG-aligned metrics and providing essential data for ESG reporting, we empower companies to transparently demonstrate their progress towards global sustainability targets and enhance their stakeholder engagement."
           />
           <Why
             key={2}
-            imageName="why_us_empowerment.svg"
+            imageName="why_us_2.svg"
             text="Comprehensive Reports"
             subText="Our comprehensive reporting sets us apart by meticulously collecting and analyzing a wide array of data points relevant to each program's objectives. Tailored reporting frameworks ensure alignment with client priorities, offering clear insights into academic, skill-based, and community impact. Transparent and accountable, our reports foster informed decision-making while inviting stakeholder input for continuous improvement. Through this approach, we empower clients to maximize the effectiveness of their investments, driving meaningful change and lasting impact."
           />
           <Why
             key={3}
-            imageName="why_us_education.svg"
+            imageName="why_us_3.svg"
             text="Community-Centric Engagement"
             subText="Our commitment to community engagement is foundational. By listening to and incorporating community feedback, we ensure our educational programs are adaptable and resonate on a universal/micro scale. This approach allows us to create experiences that are deeply rooted in diverse needs and aspirations, fostering a culture of participation and long-term success. Our inclusive strategy empowers communities, driving collective progress towards social and environmental goals with a foundation of active engagement and shared success. Our programs are designed to not just meet, but exceed, the collective aspirations of the communities we serve, laying the groundwork for enduring impact and mutual growth."
           />
