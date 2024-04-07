@@ -17,6 +17,7 @@ function ContactUs() {
   const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedForm, setSelectedForm] = useState("Corporate");
+  const [isFree, setIsFree] = useState(false);
 
   useEffect(() => {
     const url = `${pathname}?${searchParams}`;
@@ -29,6 +30,10 @@ function ContactUs() {
       else if (slugFormatted == "school") setSelectedForm("School Partnership");
       else if (slugFormatted == "student") setSelectedForm("Student Inquiry");
       else if (slugFormatted == "general") setSelectedForm("General");
+      else if (slugFormatted == "student/free") {
+        setSelectedForm("Student Inquiry");
+        setIsFree(true)
+      }
     }
   }, [pathname, searchParams]);
 
@@ -200,7 +205,7 @@ function ContactUs() {
                   ) : selectedForm === "General" ? (
                     <GeneralForm />
                   ) : (
-                    <RegistrationForm />
+                    <RegistrationForm isFree={isFree} />
                   )}
                 </div>
               </div>
@@ -359,7 +364,7 @@ function ContactUs() {
                         ) : selectedForm === "General" ? (
                           <GeneralForm />
                         ) : (
-                          <RegistrationForm />
+                          <RegistrationForm isFree={isFree} />
                         )}
                       </div>
                     </div>

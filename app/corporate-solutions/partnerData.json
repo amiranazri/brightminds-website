@@ -1,18 +1,18 @@
 [
     {
-        "imageSrc": "/partner_kao.png",
+        "imageSrc": "/partner/partner_kao.jpg",
         "alt": "Kao Logo"
     },
     {
-        "imageSrc": "/partner_laurier.png",
+        "imageSrc": "/partner/partner_laurier.jpg",
         "alt": "Laurier Logo"
     },
     {
-        "imageSrc": "/partner_liese.png",
+        "imageSrc": "/partner/partner_liese.jpg",
         "alt": "Liese Logo"
     },
     {
-        "imageSrc": "/partner_biore.png",
+        "imageSrc": "/partner/partner_biore.jpg",
         "alt": "Biore Logo"
     },
     {
@@ -20,27 +20,31 @@
         "alt": "Spin Logo"
     },
     {
-        "imageSrc": "/partner_xtraschool.png",
+        "imageSrc": "/partner/partner_xtraschool.jpg",
         "alt": "XtraSchool Logo"
     },
     {
-        "imageSrc": "/partner_diya.png",
+        "imageSrc": "/partner/partner_diya.jpg",
         "alt": "Diya Logo"
     },
     {
-        "imageSrc": "/partner_beyondLimitation.png",
+        "imageSrc": "/partner/partner_beyondLimitation.jpg",
         "alt": "Beyond Limitation Logo"
     },
     {
-        "imageSrc": "/partner_workInspires.png",
+        "imageSrc": "/partner/partner_workInspires.png",
         "alt": "Work Inspires Logo"
     },
     {
-        "imageSrc": "/partner_youthopia.png",
+        "imageSrc": "/partner/partner_youthopia.png",
         "alt": "Youthopia Logo"
     },
     {
-        "imageSrc": "/partner_akarAsia.png",
+        "imageSrc": "/partner/partner_akarAsia.png",
         "alt": "Akar Asia Consulting Logo"
+    },
+    {
+        "imageSrc": "/partner/partner_merchantrade.png",
+        "alt": "Merchantrade Logo"
     }
 ]

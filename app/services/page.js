@@ -18,18 +18,27 @@ function OurServices() {
     setSelectedTab(slug);
   };
 
+  // const buttonData = [
+  //   { title: "All", slug: "all" },
+  //   { title: "Ages 7-8", slug: "age-tier-1" },
+  //   { title: "Ages 8-12", slug: "age-tier-2" },
+  //   { title: "Ages 13-15", slug: "age-tier-3" },
+  // ];
+
   const buttonData = [
     { title: "All", slug: "all" },
-    { title: "Ages 7-8", slug: "age-tier-1" },
-    { title: "Ages 8-12", slug: "age-tier-2" },
-    { title: "Ages 13-15", slug: "age-tier-3" },
+    { title: "Ages 7-10", subTitle: "Elementary", slug: "elementary" },
+    { title: "Ages 11-13", subTitle: "Junior", slug: "junior" },
+    { title: "Ages 14-16", subTitle: "Senior", slug: "senior" },
+    { title: "Ages 17 >", subTitle: "Adult", slug: "adult" },
   ];
 
   const imagesData = {
     all: ["/class-1.png", "/class-2.png", "/class-3.png", "/class-4.png"],
-    "age-tier-1": ["/class-2.png"],
-    "age-tier-2": ["/class-1.png", "/class-3.png"],
-    "age-tier-3": ["/class-4.png"],
+    "elementary": ["/class-2.png"],
+    "junior": ["/class-1.png", "/class-3.png"],
+    "senior": ["/class-4.png"],
+    "adult": ["/class-2.png"],
   };
 
   const renderImages = () => {
@@ -105,6 +114,7 @@ function OurServices() {
               style={{ minWidth: "100px" }} // Added minWidth to ensure button size consistency
             >
               <h6>{button.title}</h6>
+              {button.subTitle? <h8>{button.subTitle}</h8> : <></>}
             </button>
           ))}
         </div>

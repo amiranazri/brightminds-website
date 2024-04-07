@@ -272,7 +272,7 @@ function About() {
       )}
 
       <div className="mt-16 pt-8 pb-16 bg-sky-100 ">
-        <h1 className="my-16">Partner Schools</h1>
+        <h1 className="my-16">Schools We Work With</h1>
         <Slider
           width="250px"
           duration={30}

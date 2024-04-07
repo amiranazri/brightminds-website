@@ -16,7 +16,7 @@ export default function Page() {
   };
 
   const handleFreeClasses = () => {
-    router.push(`/about`);
+    router.push(`/contact/student/free`);
   };
 
   return (

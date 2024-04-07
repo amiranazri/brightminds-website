@@ -3,18 +3,19 @@ import Modal from "react-modal";
 import styled from "styled-components";
 
 const CardContainer = styled.div`
-  width: 90%;
-  min-height: 464px;
+  width: 95%; 
+  min-height: 550px;
   text-align: center;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
   overflow-y: hidden;
-  border-weight: 4px;
   border-color: "#fafafa";
+  margin-bottom: 10px;
+  margin-top: 10px;
 `;
 
 const CardImage = styled.img`
-  width: 60%;
+  width: 30%;
   margin: auto;
 `;
 
@@ -40,7 +41,7 @@ function EducationPillar({
       <CardImage src={`/${imageName}`} alt="" />
       <CardContent>
         <CardTitle>{text}</CardTitle>
-        <p>{modalText}</p>
+        <p className="text-sm sm:text-lg">{modalText}</p>
       </CardContent>
     </CardContainer>
   );

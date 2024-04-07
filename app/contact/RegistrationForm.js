@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 
-function RegistrationForm() {
+function RegistrationForm({isFree=false}) {
   const [buttonClicked, setButtonClicked] = useState(false);
   const [subjects, setSubjects] = useState([
     "English",
@@ -14,6 +14,28 @@ function RegistrationForm() {
     "Leadership",
     "Public Speaking",
   ]);
+  const [classType, setClassType] = useState("Paid");
+
+  function changeRadio(radioID) {
+    document.getElementById("default-radio-1").checked = false;
+    document.getElementById("default-radio-2").checked = false;
+
+    // Check the selected radio button
+    document.getElementById(radioID).checked = true;
+
+    if (radioID == "default-radio-1") setClassType("Paid");
+    else if (radioID == "default-radio-2") setClassType("Free");
+  }
+
+  useEffect(() => {
+    if (isFree) {
+      document.getElementById("default-radio-2").checked = true;
+      setClassType("Free");
+    } else {
+      document.getElementById("default-radio-1").checked = true;
+      setClassType("Paid");
+    }
+  }, [isFree])
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -62,26 +84,27 @@ function RegistrationForm() {
                             ? `<p>Preferred Schedule: ${dataObject.floating_preferred_schedule}</p>`
                             : ""
                         }
+                        <p>Class Type: ${classType}</p>
                     `,
         };
-        emailjs
-          .send(
-            process.env.NEXT_PUBLIC_EMAIL_SERVICE,
-            process.env.NEXT_PUBLIC_EMAIL_TEMPLATE,
-            emailPayload,
-            process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
-          )
-          .then(
-            (result) => {
-              toast.success("Successfully sent email.");
-              event.target.reset();
-            },
-            (error) => {
-              toast.error(
-                "Failed to send email. Please try again later or contact us directly."
-              );
-            }
-          );
+          emailjs
+            .send(
+              process.env.NEXT_PUBLIC_EMAIL_SERVICE,
+              process.env.NEXT_PUBLIC_EMAIL_TEMPLATE,
+              emailPayload,
+              process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
+            )
+            .then(
+              (result) => {
+                toast.success("Successfully sent email.");
+                event.target.reset();
+              },
+              (error) => {
+                toast.error(
+                  "Failed to send email. Please try again later or contact us directly."
+                );
+              }
+            );
         setButtonClicked(false);
       }, 2000); // Simulated delay
     }
@@ -214,6 +237,18 @@ function RegistrationForm() {
           Preferred schedule
         </label>
       </div>
+
+      <div>
+        <div class="flex items-center mb-4">
+          <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300" onClick={() => changeRadio('default-radio-1')} />
+          <label htmlFor="default-radio-1" class="ms-2 text-sm font-medium text-gray-900">Paid Class</label>
+        </div>
+        <div class="flex items-center">
+            <input id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300" onClick={() => changeRadio('default-radio-2')} />
+            <label htmlFor="default-radio-2" class="ms-2 text-sm font-medium text-gray-900">Free Class</label>
+        </div>
+      </div>
+
       <div className="w-full text-center">
       <button
           type="submit"

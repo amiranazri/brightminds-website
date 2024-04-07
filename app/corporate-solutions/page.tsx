@@ -84,8 +84,12 @@ function CorporateSolutions() {
         <MainButton isAbsolute={true} text="Contact Us" />
       </div>
 
-      <div className="my-24 mx-2 min-h-24 justify-center items-center">
-        <h1>Core Education Pillars</h1>
+      <div className="text-center mt-12 mb-12">
+        <h1>Driving Sustainable Social Impact</h1>
+      </div>
+
+      <div className="min-h-[600px] justify-center items-center w-[300px] sm:w-[600px] lg:w-[1000px] xl:w-[1200px] 2xl:w-[1500px] m-auto">
+        <h1 className="mb-5">Core Education Pillars</h1>
         <Carousel
           responsive={responsive}
           swipeable={true}
@@ -94,12 +98,14 @@ function CorporateSolutions() {
           infinite={true}
           autoPlay={true}
           keyBoardControl={true}
+          slidesToSlide={1  }
           customTransition="transform 300ms ease-in-out"
           transitionDuration={500}
-          containerClass="carousel-container"
-          // removeArrowOnDeviceType={["tablet", "mobile"]}
-          itemClass="carousel-item-padding-10-px"
-          className="mt-16 px-8"
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          // itemClass="carousel-item-padding-40-px" // Add this line
+          itemClass="carousel-item-padding-40-px" 
+          partialVisible={false}
+          // centerMode={true}
         >
           {educationPillars.map((pillar, index) => (
             <EducationPillar
@@ -112,7 +118,7 @@ function CorporateSolutions() {
         </Carousel>
       </div>
 
-      <div className=" mb-56 sm:mt-8 md:mt-16">
+      <div className="mb-56 mt-10 md:mt-16">
         <h1>Why Us</h1>
         <WhyUs className="flex flex-col lg:flex-row justify-center mt-10 space-y-2 space-x-4 lg:space-y-0 lg:space-x-4 xl:space-x-10 items-center text-center px-16 md:px-8 md:mb-24 lg:mb-24">
           <Why
@@ -136,8 +142,8 @@ function CorporateSolutions() {
         </WhyUs>
       </div>
 
-      <div className="pt-16 pb-8 bg-sky-100 ">
-        <h1>Our Partners</h1>
+      <div className="pt-16 pb-8 bg-sky-100 sm:mt-24 xl:mt-44">
+        <h1>Companies We Work With</h1>
         <div className="my-4">
           <Slider
             width="250px"
@@ -151,12 +157,12 @@ function CorporateSolutions() {
                 key={p.imageSrc}
                 className="flex items-center justify-center"
               >
-                <img src={p.imageSrc} alt={p.alt} className="w-30" />
+                <img src={p.imageSrc} alt={p.alt} className="w-44" />
               </Slider.Slide>
             ))}
           </Slider>
         </div>
-        <MainButton />
+        <MainButton text={"Discovery Call"} />
       </div>
     </>
   );
@@ -193,16 +199,6 @@ const BannerText = styled.div`
     font-size: 0.5rem;
   }
 `;
-const EducationPillarsWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  gap: 16px;
-  padding-bottom: 16px;
-  margin-bottom: -16px;
-  // width: 80%;
-`;
-
 const WhyUs = styled.div`
   margin-top: 32px;
 `;

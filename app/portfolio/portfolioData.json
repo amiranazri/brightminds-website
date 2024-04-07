@@ -26,19 +26,19 @@
             }
         ],
         "additionalImages": [
-            "/portfolio/1/p1-1.JPG",
-            "/portfolio/1/p1-2.JPG",
-            "/portfolio/1/p1-3.JPG",
-            "/portfolio/1/p1-4.JPG",
-            "/portfolio/1/p1-5.JPG",
-            "/portfolio/1/p1-6.JPG",
-            "/portfolio/1/p1-7.JPG",
-            "/portfolio/1/p1-8.JPG"
+            "/portfolio/1/p1-1.jpg",
+            "/portfolio/1/p1-2.jpeg",
+            "/portfolio/1/p1-3.jpeg",
+            "/portfolio/1/p1-4.jpeg",
+            "/portfolio/1/p1-5.jpeg",
+            "/portfolio/1/p1-6.jpeg",
+            "/portfolio/1/p1-7.jpeg",
+            "/portfolio/1/p1-8.jpeg"
         ]
     },
     {
         "id": "2",
-        "imageSrc": "/portfolio/2/p2-1.png",
+        "imageSrc": "/portfolio/2/p2-1.jpeg",
         "title": "Money & Me Financial Literacy Workshop",
         "content": [
             {
@@ -57,6 +57,12 @@
                 "heading": "Looking Forward:",
                 "paragraph": "The Money & Me Financial Literacy Workshop represents a critical step toward preparing the next generation for the financial challenges and opportunities that lie ahead. By equipping students with the knowledge and confidence to make informed financial decisions, BrightMinds EDU is contributing to the development of financially savvy individuals capable of contributing positively to their communities and the wider economy. As we continue to expand this initiative, our focus remains on empowering more students with the financial literacy skills they need to thrive in an ever-evolving financial landscape."
             }
+        ],
+        "additionalImages": [
+            "/portfolio/2/p2-1.jpeg",
+            "/portfolio/2/p2-2.jpeg",
+            "/portfolio/2/p2-3.jpeg",
+            "/portfolio/2/p2-4.jpeg"
         ]
     },
     {
@@ -80,11 +86,17 @@
                 "heading": "Looking Forward:",
                 "paragraph": "By participating in ConQuest: The Great Speech Challenge 2023, students gained invaluable insights into the dynamics of effective communication, setting them on a path to becoming confident speakers and leaders. BrightMinds EDU's dedication to fostering these essential skills underscores our commitment to holistic educational development. As we reflect on the success of this initiative, we are inspired to continue creating and leading similar programs that nurture the talents and potentials of young individuals, preparing them for the challenges and opportunities of the future."
             }
+        ],
+        "additionalImages": [
+            "/portfolio/3/p3-1.jpeg",
+            "/portfolio/3/p3-2.jpeg",
+            "/portfolio/3/p3-3.jpeg",
+            "/portfolio/3/p3-4.jpeg"
         ]
     },
     {
         "id": "4",
-        "imageSrc": "/portfolio/4/p4-1.jpeg",
+        "imageSrc": "/portfolio/4/p4-1.jpg",
         "title": "Future Ready Holiday Camp with Xtraschool",
         "content": [
             {
@@ -103,11 +115,17 @@
                 "heading": "Commitment to Student Empowerment:",
                 "paragraph": "This collaboration with Xtraschool reflects BrightMinds EDU's dedication to fostering skills that prepare students for the challenges and opportunities ahead. By the end of the camp, participants had not only absorbed critical insights into public speaking and financial literacy but had also cultivated greater confidence and an enthusiastic approach to lifelong learning. We are excited to continue such fruitful partnerships, furthering our mission to contribute to the comprehensive development of young minds and preparing them to thrive in the future."
             }
+        ],
+        "additionalImages": [
+            "/portfolio/4/p4-1.jpg",
+            "/portfolio/4/p4-2.jpg",
+            "/portfolio/4/p4-3.jpg",
+            "/portfolio/4/p4-4.jpg"
         ]
     },
     {
         "id": "5",
-        "imageSrc": "/portfolio/5/p5-3.jpg",
+        "imageSrc": "/portfolio/5/p5-1.png",
         "title": "Nationwide Interpersonal Skills Workshops Initiative",
         "content": [
             {
@@ -121,10 +139,22 @@
             {
                 "heading": "Curriculum Highlights:",
                 "listItems": [
-                    "Financial Literacy: Participants were taught how to manage personal finances, understand budgeting, savings, and the basics of investing, equipping them with the tools for financial independence.",
-                    "Public Speaking: This module focused on enhancing communication skills, building confidence in speaking publicly, and effectively engaging audiences.",
-                    "Critical Thinking: We aimed to sharpen participants' analytical skills, teaching them to approach problems logically and develop solutions creatively.",
-                    "Creative Writing: Encouraging artistic expression, this workshop nurtured storytelling abilities, helping individuals to craft compelling narratives and improve their writing skills."
+                    {
+                        "title": "Financial Literacy: ",
+                        "text": "Participants were taught how to manage personal finances, understand budgeting, savings, and the basics of investing, equipping them with the tools for financial independence."
+                    },
+                    {
+                        "title": "Public Speaking: ",
+                        "text": "This module focused on enhancing communication skills, building confidence in speaking publicly, and effectively engaging audiences."
+                    },
+                    {
+                        "title": "Critical Thinking: ",
+                        "text": "We aimed to sharpen participants' analytical skills, teaching them to approach problems logically and develop solutions creatively."
+                    },
+                    {
+                        "title": "Creative Writing: ",
+                        "text": "Encouraging artistic expression, this workshop nurtured storytelling abilities, helping individuals to craft compelling narratives and improve their writing skills."
+                    }
                 ]
             },
             {
@@ -137,9 +167,14 @@
             }
         ],
         "additionalImages": [
-            "/additional_image_1.jpg",
-            "/additional_image_2.jpg",
-            "/additional_image_3.jpg"
+            "/portfolio/5/p5-1.png",
+            "/portfolio/5/p5-2.png"
         ]
+    },
+    {
+        "id": "6",
+        "imageSrc": "",
+        "title": "School of Confidence",
+        "isComingSoon": true
     }
 ]
