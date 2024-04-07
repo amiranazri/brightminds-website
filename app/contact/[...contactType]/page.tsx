@@ -233,12 +233,14 @@ function ContactUs() {
                 title="Headquarters"
                 subTitle="Ipoh, Malaysia"
               />
-              <ContactInfo
-                imgSrc="/icon_phone.svg"
-                alt="Phone"
-                title="Phone"
-                subTitle="(+60) 111-232-1134"
-              />
+              <div className="cursor-pointer" onClick={() => {window.open(`https://wa.me/+60123658903`, "_blank");}}>
+                <ContactInfo
+                  imgSrc="/whatsapp.png"
+                  alt="Phone"
+                  title="Phone (WhatsApp)"
+                  subTitle="(+60) 12-365 8903"
+                />
+              </div>
               <ContactInfo
                 imgSrc="/icon_email.svg"
                 alt="Email"
