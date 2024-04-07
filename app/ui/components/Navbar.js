@@ -51,7 +51,7 @@ const Navbar = () => {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image
-            src={navbarScroll ? "/bm_icon_light.png" : "/bm_icon.png"}
+            src={"/bm_icon.png"}
             width={48}
             height={48}
             alt="Brightminds Logo"
@@ -93,7 +93,12 @@ const Navbar = () => {
             />
           </svg>
         </button>
-        <div className={`${isMenuOpen ? "block" : "hidden"} w-full md:block md:w-auto`} id="navbar-default">
+        <div
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } w-full md:block md:w-auto`}
+          id="navbar-default"
+        >
           <ul
             className={`max-md:bg-gray-50 font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 transition-none`}
           >
@@ -168,7 +173,12 @@ const Navbar = () => {
                 onClick={toggleMenu}
                 href="/contact/general"
                 className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
-                  ["/contact/general", "/contact/corporate", "/contact/school", "/contact/student"]
+                  [
+                    "/contact/general",
+                    "/contact/corporate",
+                    "/contact/school",
+                    "/contact/student",
+                  ]
                 )}`}
               >
                 Contact Us

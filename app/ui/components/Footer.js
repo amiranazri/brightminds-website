@@ -6,7 +6,7 @@ function Footer() {
   return (
     <div className="bg-[#F7F7F7] flex flex-col items-center justify-center space-y-3 p-2 text-gray-600">
       <Image
-        src="/brightminds_logo_2.jpeg"
+        src="/brightminds_logo_2.png"
         width={220}
         height={220}
         alt="Brightminds logo"
