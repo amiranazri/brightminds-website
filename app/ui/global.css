@@ -109,3 +109,45 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   transition: background-color 5000000s ease-in-out 0s;
 }
+
+/* EVENTS CAROUSEL */
+
+.text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+}
+
+.image-overlay {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  margin-top: 16px;
+}
+
+.image-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 500px) {
+  .responsive-text {
+    font-size: 18px;
+  }
+}

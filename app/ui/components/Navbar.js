@@ -48,7 +48,7 @@ const Navbar = () => {
         navbarScroll ? "bg-primary-blue" : "bg-white"
       } transition ease-in delay:250 shadow-2xl border-gray-200 fixed w-full z-50 top-0 start-0`}
     >
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="z-auto max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image
             src={"/bm_icon.png"}
