@@ -3,7 +3,13 @@ import Image from "next/image";
 import Modal from "react-modal";
 import "./PortfolioCard.css";
 
-function PortfolioCard({ imageSrc, title, content=[], additionalImages=[], isComingSoon=false }) {
+function PortfolioCard({
+  imageSrc,
+  title,
+  content = [],
+  additionalImages = [],
+  isComingSoon = false,
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
@@ -15,22 +21,33 @@ function PortfolioCard({ imageSrc, title, content=[], additionalImages=[], isCom
   };
 
   return (
-    <>
-      <div className="relative w-[200px] h-[300px] overflow-hidden flex-shrink-0 m-2">
-        {imageSrc ? <Image src={imageSrc} fill objectFit="cover" /> : <div className="bg-black"></div>}
+    <div className="mx-2">
+      <div
+        className="portfolio-card relative w-[300px] h-[200px] overflow-hidden"
+        style={{ maxWidth: "600px" }}
+      >
+        {imageSrc ? (
+          <Image src={imageSrc} fill objectFit="cover" />
+        ) : (
+          <div className="bg-black"></div>
+        )}
         <div className="absolute w-full h-full bg-black z-10 opacity-50"></div>
-        <div className="w-full h-[270px] absolute z-20 flex flex-col items-center justify-end">
-          <div className="text-white mb-2 text-center">{title}</div>
-          {isComingSoon ? <div className="text-white bg-[#19598F] w-[150px] p-1 cursor-not-allowed text-center">
-            COMING SOON
-          </div> : 
-                    <div
-                    onClick={openModal}
-                    className="text-white bg-[#19598F] hover:bg-yellow-300 hover:text-black w-[150px] p-1 cursor-pointer text-center"
-                  >
-                    READ MORE
-                  </div>
-          }
+        <div className="w-full h-full absolute z-20 flex flex-col items-center justify-center p-4">
+          <div className="text-center text-white text-lg font-bold">
+            {title}
+          </div>
+          {isComingSoon ? (
+            <div className="text-white bg-[#19598F] w-[150px] p-1 cursor-not-allowed text-center mt-4">
+              COMING SOON
+            </div>
+          ) : (
+            <div
+              onClick={openModal}
+              className="text-white bg-[#19598F] hover:bg-yellow-300 hover:text-black w-[150px] p-1 cursor-pointer text-center mt-4 transition-colors duration-300"
+            >
+              READ MORE
+            </div>
+          )}
         </div>
       </div>
 
@@ -45,14 +62,17 @@ function PortfolioCard({ imageSrc, title, content=[], additionalImages=[], isCom
             Close
           </button>
           {additionalImages.map((item, index) => (
-            <div className="inline-block p-1 align-center justify-center" key={index}>
-                <Image
-                  src={item}
-                  alt={`Additional Image ${index + 1}`}
-                  key={index}
-                  width={500}
-                  height={500}
-                />
+            <div
+              className="inline-block p-1 align-center justify-center"
+              key={index}
+            >
+              <Image
+                src={item}
+                alt={`Additional Image ${index + 1}`}
+                key={index}
+                width={500}
+                height={500}
+              />
             </div>
           ))}
 
@@ -64,7 +84,8 @@ function PortfolioCard({ imageSrc, title, content=[], additionalImages=[], isCom
                 <ul>
                   {item.listItems.map((li, idx) => (
                     <li key={idx}>
-                      <span className="font-bold">{li.title}</span><span>{li.text}</span>
+                      <span className="font-bold">{li.title}</span>
+                      <span>{li.text}</span>
                     </li>
                   ))}
                 </ul>
@@ -73,7 +94,7 @@ function PortfolioCard({ imageSrc, title, content=[], additionalImages=[], isCom
           ))}
         </div>
       </Modal>
-    </>
+    </div>
   );
 }
 

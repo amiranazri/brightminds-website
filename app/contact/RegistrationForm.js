@@ -4,15 +4,17 @@ import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 
-function RegistrationForm({isFree=false}) {
+function RegistrationForm({ isFree = false }) {
   const [buttonClicked, setButtonClicked] = useState(false);
   const [subjects, setSubjects] = useState([
-    "English",
-    "Chinese",
-    "Malay",
-    "Finance",
-    "Leadership",
+    "Communication Skills",
+    "Financial Literacy",
     "Public Speaking",
+    "Critical Analysis",
+    "Entrepreneurial Skills",
+    "Debate",
+    "Leadership Skills",
+    "Writing Skills",
   ]);
   const [classType, setClassType] = useState("Paid");
 
@@ -35,7 +37,7 @@ function RegistrationForm({isFree=false}) {
       document.getElementById("default-radio-1").checked = true;
       setClassType("Paid");
     }
-  }, [isFree])
+  }, [isFree]);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -81,30 +83,30 @@ function RegistrationForm({isFree=false}) {
                         <p>Subjects: ${selectedSubjects.join(", ")}</p>
                         ${
                           dataObject.floating_preferred_schedule
-                            ? `<p>Preferred Schedule: ${dataObject.floating_preferred_schedule}</p>`
+                            ? `<p>Additional Comments: ${dataObject.floating_preferred_schedule}</p>`
                             : ""
                         }
                         <p>Class Type: ${classType}</p>
                     `,
         };
-          emailjs
-            .send(
-              process.env.NEXT_PUBLIC_EMAIL_SERVICE,
-              process.env.NEXT_PUBLIC_EMAIL_TEMPLATE,
-              emailPayload,
-              process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
-            )
-            .then(
-              (result) => {
-                toast.success("Successfully sent email.");
-                event.target.reset();
-              },
-              (error) => {
-                toast.error(
-                  "Failed to send email. Please try again later or contact us directly."
-                );
-              }
-            );
+        emailjs
+          .send(
+            process.env.NEXT_PUBLIC_EMAIL_SERVICE,
+            process.env.NEXT_PUBLIC_EMAIL_TEMPLATE,
+            emailPayload,
+            process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY
+          )
+          .then(
+            (result) => {
+              toast.success("Successfully sent email.");
+              event.target.reset();
+            },
+            (error) => {
+              toast.error(
+                "Failed to send email. Please try again later or contact us directly."
+              );
+            }
+          );
         setButtonClicked(false);
       }, 2000); // Simulated delay
     }
@@ -176,8 +178,7 @@ function RegistrationForm({isFree=false}) {
             htmlFor="floating_phone"
             className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            Phone number (+60123456789){" "}
-            <span className="text-red-500">*</span>
+            Phone number (+60123456789) <span className="text-red-500">*</span>
           </label>
         </div>
         <div className="relative z-0 w-full mb-5 group">
@@ -200,7 +201,7 @@ function RegistrationForm({isFree=false}) {
       </div>
       <div className="relative z-0 w-full mb-5 group">
         <div className="text-gray-500 mb-2 text-sm">
-          Subjects: <span className="text-red-500">*</span>
+          Programs: <span className="text-red-500">*</span>
         </div>
         <div id="checkboxGroup" className="w-50 h-28 overflow-y-scroll p-2">
           {subjects.map((s) => (
@@ -240,17 +241,41 @@ function RegistrationForm({isFree=false}) {
 
       <div>
         <div class="flex items-center mb-4">
-          <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300" onClick={() => changeRadio('default-radio-1')} />
-          <label htmlFor="default-radio-1" class="ms-2 text-sm font-medium text-gray-900">Paid Class</label>
+          <input
+            id="default-radio-1"
+            type="radio"
+            value=""
+            name="default-radio"
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+            onClick={() => changeRadio("default-radio-1")}
+          />
+          <label
+            htmlFor="default-radio-1"
+            class="ms-2 text-sm font-medium text-gray-900"
+          >
+            Paid Class
+          </label>
         </div>
         <div class="flex items-center">
-            <input id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300" onClick={() => changeRadio('default-radio-2')} />
-            <label htmlFor="default-radio-2" class="ms-2 text-sm font-medium text-gray-900">Free Class</label>
+          <input
+            id="default-radio-2"
+            type="radio"
+            value=""
+            name="default-radio"
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300"
+            onClick={() => changeRadio("default-radio-2")}
+          />
+          <label
+            htmlFor="default-radio-2"
+            class="ms-2 text-sm font-medium text-gray-900"
+          >
+            Free Class
+          </label>
         </div>
       </div>
 
       <div className="w-full text-center">
-      <button
+        <button
           type="submit"
           className={`bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 w-auto`}
           disabled={buttonClicked}

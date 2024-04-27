@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import styled from "styled-components";
 
 const CardContainer = styled.div`
-  width: 95%; 
+  width: 95%;
   min-height: 550px;
   text-align: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -41,7 +41,7 @@ function EducationPillar({
       <CardImage src={`/${imageName}`} alt="" />
       <CardContent>
         <CardTitle>{text}</CardTitle>
-        <p className="text-sm sm:text-lg">{modalText}</p>
+        <p className="text-center text-sm sm:text-lg">{modalText}</p>
       </CardContent>
     </CardContainer>
   );

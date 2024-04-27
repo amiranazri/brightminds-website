@@ -82,20 +82,20 @@ function ContactUs() {
               <ContactInfo
                 imgSrc="/icon_location.svg"
                 alt="Marker"
-                title="Headquarters"
+                title="Service Locations"
                 subTitle="Ipoh, Malaysia"
               />
               <ContactInfo
                 imgSrc="/icon_phone.svg"
                 alt="Phone"
                 title="Phone"
-                subTitle="(+60) 111-232-1134"
+                subTitle="111-232-1134"
               />
               <ContactInfo
                 imgSrc="/icon_email.svg"
                 alt="Email"
                 title="Email"
-                subTitle="info@brightminds.com"
+                subTitle="nfo@brightmindsedu.org"
               />
             </div>
           </div>

@@ -100,11 +100,11 @@ function OurServices() {
           <div className="flex justify-center">
             <button
               onClick={() => {
-                handleContactUs("general");
+                handleContactUs("student");
               }}
               className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
             >
-              <h6>Contact Us</h6>
+              <h6>Register Now</h6>
             </button>
           </div>
         </div>

@@ -98,10 +98,11 @@ function Events() {
   return (
     <main>
       <Carousel
+        arrows={true}
         responsive={responsive}
         swipeable={true}
         draggable={true}
-        showDots={false}
+        showDots={true}
         infinite={true}
         autoPlay={true}
         keyBoardControl={true}
@@ -116,12 +117,12 @@ function Events() {
           <div key={index} className="image-container">
             {item.image}
             <div className="text-container">
-              <h1 className={`text-white text-center responsive-text`}>
+              {/* <h1 className={`text-white text-left responsive-text`}>
                 {item.title}
               </h1>
-              <p className={`lg:px-40 md:px-4 sm:px-4 text-white text-center `}>
+              <p className={`lg:px-40 md:px-4 sm:px-4 text-white text-left`}>
                 {item.subtitle}
-              </p>
+              </p> */}
               <button
                 onClick={handleLearnMore}
                 className="my-8 bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"

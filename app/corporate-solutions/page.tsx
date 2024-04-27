@@ -71,7 +71,7 @@ function CorporateSolutions() {
 
   return (
     <>
-      <div style={{ margin: "0 auto", maxWidth: "80%", position: "relative" }}>
+      <div style={{ margin: "0 auto", width: "100%", position: "relative" }}>
         <Image
           src="/corporate_services_banner.svg"
           width={120}
@@ -80,7 +80,8 @@ function CorporateSolutions() {
           alt="bright minds"
           className="mt-[113px] md:mt-[136px] min-[918px]:mt-[-2px]"
         />
-
+      </div>
+      <div className="absolute left-16 top-[50%] hidden md:hidden lg:flex flex-col justify-center">
         <MainButton isAbsolute={true} text="Contact Us" />
       </div>
 
@@ -162,7 +163,7 @@ function CorporateSolutions() {
             ))}
           </Slider>
         </div>
-        <MainButton text={"Discovery Call"} />
+        <MainButton text={"Discovery Session"} />
       </div>
     </>
   );
