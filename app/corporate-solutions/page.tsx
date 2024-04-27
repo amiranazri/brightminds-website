@@ -71,7 +71,7 @@ function CorporateSolutions() {
 
   return (
     <>
-      <div className="w-[100%] relative">
+      <div style={{ margin: "0 auto", maxWidth: "80%", position: "relative" }}>
         <Image
           src="/corporate_services_banner.svg"
           width={120}
@@ -98,12 +98,12 @@ function CorporateSolutions() {
           infinite={true}
           autoPlay={true}
           keyBoardControl={true}
-          slidesToSlide={1  }
+          slidesToSlide={1}
           customTransition="transform 300ms ease-in-out"
           transitionDuration={500}
           removeArrowOnDeviceType={["tablet", "mobile"]}
           // itemClass="carousel-item-padding-40-px" // Add this line
-          itemClass="carousel-item-padding-40-px" 
+          itemClass="carousel-item-padding-40-px"
           partialVisible={false}
           // centerMode={true}
         >

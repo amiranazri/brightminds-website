@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import EventCalendar from "./EventCalendar";
@@ -18,12 +18,20 @@ function OurServices() {
     setSelectedTab(slug);
   };
 
-  // const buttonData = [
-  //   { title: "All", slug: "all" },
-  //   { title: "Ages 7-8", slug: "age-tier-1" },
-  //   { title: "Ages 8-12", slug: "age-tier-2" },
-  //   { title: "Ages 13-15", slug: "age-tier-3" },
-  // ];
+  const ourClassesRef = useRef(null);
+
+  useEffect(() => {
+    console.log("useEffect triggered");
+    if (
+      router.query &&
+      typeof router.query.scrollTo !== "undefined" &&
+      ourClassesRef.current
+    ) {
+      console.log("router.query.scrollTo:", router.query.scrollTo);
+      console.log("ourClassesRef.current:", ourClassesRef.current);
+      ourClassesRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [router.query]);
 
   const buttonData = [
     { title: "All", slug: "all" },
@@ -35,10 +43,10 @@ function OurServices() {
 
   const imagesData = {
     all: ["/class-1.png", "/class-2.png", "/class-3.png", "/class-4.png"],
-    "elementary": ["/class-2.png"],
-    "junior": ["/class-1.png", "/class-3.png"],
-    "senior": ["/class-4.png"],
-    "adult": ["/class-2.png"],
+    elementary: ["/class-2.png"],
+    junior: ["/class-1.png", "/class-3.png"],
+    senior: ["/class-4.png"],
+    adult: ["/class-2.png"],
   };
 
   const renderImages = () => {
@@ -101,7 +109,11 @@ function OurServices() {
           </div>
         </div>
       </div>
-      <div className="flex-1 text-center my-16">
+      <div
+        ref={ourClassesRef}
+        id="ourClasses"
+        className="flex-1 text-center my-16"
+      >
         <h3 className="font-bold mb-4">Our Classes</h3>
         <div className="flex flex-wrap justify-center items-center relative">
           {buttonData.map((button, index) => (
@@ -114,7 +126,7 @@ function OurServices() {
               style={{ minWidth: "100px" }} // Added minWidth to ensure button size consistency
             >
               <h6>{button.title}</h6>
-              {button.subTitle? <h8>{button.subTitle}</h8> : <></>}
+              {button.subTitle ? <h8>{button.subTitle}</h8> : <></>}
             </button>
           ))}
         </div>

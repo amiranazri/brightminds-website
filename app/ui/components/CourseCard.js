@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import "./CourseCard.scss";
 
@@ -8,6 +8,27 @@ const CourseCard = ({ icon, title, description }) => {
   const toggleModal = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleOutsideClick = (event) => {
+    if (!event.target.closest(".modal-content")) {
+      setIsOpen(false);
+    }
+  };
+
+  const handleEscapeKey = (event) => {
+    if (event.key === "Escape") {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleOutsideClick);
+    document.addEventListener("keydown", handleEscapeKey);
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+      document.removeEventListener("keydown", handleEscapeKey);
+    };
+  }, [isOpen]);
 
   return (
     <div className="relative">
@@ -24,9 +45,12 @@ const CourseCard = ({ icon, title, description }) => {
       </div>
 
       {isOpen && (
-        <div className="fixed inset-0 flex justify-center items-center z-50 bg-gray-900 bg-opacity-50">
-          <div className="bg-white p-8 sm:p-4 md:p-4 rounded-lg w-[80%] h-[60%] sm:w-[50%] sm:h-[60%] md:h-[40%] overflow-y-auto relative">
-            <div className="flex justify-center mb-4">
+        <div
+          className="fixed inset-0 flex justify-center items-center z-50 bg-gray-900 bg-opacity-50"
+          onClick={handleOutsideClick}
+        >
+          <div className="bg-white p-8 sm:p-4 md:p-4 rounded-lg w-[80%] h-[80%] sm:w-[50%] sm:h-[60%] md:h-[70%] overflow-y-auto relative">
+            <div className="flex justify-center mb-4 mt-8">
               <Image src={icon} width={200} height={200} alt={title} />
             </div>
             <div className="flex justify-center items-center">

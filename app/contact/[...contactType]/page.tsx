@@ -26,18 +26,19 @@ function ContactUs() {
     if (slug) {
       const slugFormatted = slug.split("?")[0];
       setIsOpen(false);
-      if (slugFormatted == "corporate") setSelectedForm("Corporate");
-      else if (slugFormatted == "school") setSelectedForm("School Partnership");
-      else if (slugFormatted == "student") setSelectedForm("Student Inquiry");
-      else if (slugFormatted == "general") setSelectedForm("General");
-      else if (slugFormatted == "student/free") {
+      if (slugFormatted === "corporate") setSelectedForm("Corporate");
+      else if (slugFormatted === "school")
+        setSelectedForm("School Partnership");
+      else if (slugFormatted === "student") setSelectedForm("Student Inquiry");
+      else if (slugFormatted === "general") setSelectedForm("General");
+      else if (slugFormatted === "student/free") {
         setSelectedForm("Student Inquiry");
-        setIsFree(true)
+        setIsFree(true);
       }
     }
   }, [pathname, searchParams]);
 
-  function selectFunc(value: string) {
+  function selectFunc(value) {
     setIsOpen(false);
     setSelectedForm(value);
   }
@@ -48,8 +49,9 @@ function ContactUs() {
     const updateWindowWidth = () => {
       setWindowWidth(window.innerWidth);
     };
-    updateWindowWidth();
+
     if (typeof window !== "undefined") {
+      updateWindowWidth();
       window.addEventListener("resize", updateWindowWidth);
       return () => {
         window.removeEventListener("resize", updateWindowWidth);
@@ -62,7 +64,7 @@ function ContactUs() {
       {windowWidth <= 1024 ? (
         <div className="flex flex-col items-center justify-center mt-16 px-8 sm:px-4 md:px-8 lg:px-16">
           <div className="w-[90%] max-w-2xl">
-            <h3 className="mt-16 text-center">CONTACT US</h3>
+            <h3 className="mt-16 text-center">Register Now</h3>
             <h6 className="text-center">How can we help?</h6>
             <p className="text-justify my-8">
               Your satisfaction is our top priority. Whether you have a question
@@ -233,7 +235,12 @@ function ContactUs() {
                 title="Headquarters"
                 subTitle="Ipoh, Malaysia"
               />
-              <div className="cursor-pointer" onClick={() => {window.open(`https://wa.me/+60123658903`, "_blank");}}>
+              <div
+                className="cursor-pointer"
+                onClick={() => {
+                  window.open(`https://wa.me/+60123658903`, "_blank");
+                }}
+              >
                 <ContactInfo
                   imgSrc="/whatsapp.png"
                   alt="Phone"

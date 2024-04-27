@@ -27,7 +27,7 @@ function Portfolio() {
           ))}
         </div>
 
-        <h1 className="mb-16 mt-16">Blog Highlights</h1>
+        <h1 className="mb-16 mt-16">Highlights</h1>
 
         <div className="flex flex-wrap items-center justify-center">
           {BlogData.map((b) => (

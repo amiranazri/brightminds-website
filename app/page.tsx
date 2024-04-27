@@ -12,7 +12,7 @@ export default function Page() {
   const router = useRouter();
 
   const handleCourses = () => {
-    router.push(`/about`);
+    router.push(`/services`);
   };
 
   const handleFreeClasses = () => {
@@ -21,14 +21,48 @@ export default function Page() {
 
   return (
     <main>
-      <Image
-        src={heroBanner}
-        width={140}
-        height={140}
-        layout="responsive"
-        alt="bright minds"
-        className="mt-16"
-      />
+      <div>
+        <div style={{ position: "relative" }}>
+          <Image
+            src={heroBanner}
+            width={140}
+            height={140}
+            layout="responsive"
+            alt="bright minds"
+            className="mt-16"
+          />
+        </div>
+
+        <div className="absolute left-16 top-[50%] hidden md:hidden lg:flex flex-col justify-center">
+          <button
+            onClick={handleCourses}
+            className="my-4 bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
+          >
+            <h6>Our Programs</h6>
+          </button>
+          <button
+            onClick={handleFreeClasses}
+            className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
+          >
+            <h6>Free Classes</h6>
+          </button>
+        </div>
+
+        <div className="flex flex-row justify-center items-center my-8 md:flex-row lg:hidden">
+          <button
+            onClick={handleCourses}
+            className="mr-4 bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full"
+          >
+            <h6>Our Programs</h6>
+          </button>
+          <button
+            onClick={handleFreeClasses}
+            className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full"
+          >
+            <h6>Free Classes</h6>
+          </button>
+        </div>
+      </div>
 
       <div className="flex justify-center mt-4 sm:mt-16 lg:my-16 sm:px-24 md:px-32 lg:px-48">
         <h1 className="text-center">
@@ -46,23 +80,6 @@ export default function Page() {
               subtitle={card.subtitle}
             />
           ))}
-        </div>
-      </div>
-
-      <div className="flex flex-row justify-center items-center mt-16">
-        <div>
-          <button
-            onClick={handleCourses}
-            className="mr-8 bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
-          >
-            <h6>Our Courses</h6>
-          </button>
-          <button
-            onClick={handleFreeClasses}
-            className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
-          >
-            <h6>Free Classes</h6>
-          </button>
         </div>
       </div>
 

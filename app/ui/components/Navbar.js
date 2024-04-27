@@ -51,7 +51,7 @@ const Navbar = () => {
       <div className="z-auto max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image
-            src={"/bm_icon.png"}
+            src={navbarScroll ? "/bm_icon.png" : "/logo-transparent.png"}
             width={48}
             height={48}
             alt="Brightminds Logo"
@@ -61,7 +61,7 @@ const Navbar = () => {
               navbarScroll ? "text-white" : "text-primary-blue"
             } transition-colors ease-in delay:250 self-center text-xl font-semibold whitespace-nowrap`}
           >
-            Brightminds
+            Bright Minds EDU
           </span>
         </a>
         <button
@@ -116,28 +116,6 @@ const Navbar = () => {
             <li>
               <Link
                 onClick={toggleMenu}
-                href="/about"
-                className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
-                  ["/about"]
-                )}`}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={toggleMenu}
-                href="/portfolio"
-                className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
-                  ["/portfolio"]
-                )}`}
-              >
-                Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={toggleMenu}
                 href="/services"
                 className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
                   ["/services"]
@@ -160,12 +138,34 @@ const Navbar = () => {
             <li>
               <Link
                 onClick={toggleMenu}
+                href="/portfolio"
+                className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
+                  ["/portfolio"]
+                )}`}
+              >
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={toggleMenu}
                 href="/events"
                 className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
                   ["/events"]
                 )}`}
               >
                 Events
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={toggleMenu}
+                href="/about"
+                className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 ${navLinkCss(
+                  ["/about"]
+                )}`}
+              >
+                About
               </Link>
             </li>
             <li>
