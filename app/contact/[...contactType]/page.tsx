@@ -252,7 +252,7 @@ function ContactUs() {
                 imgSrc="/icon_email.svg"
                 alt="Email"
                 title="Email"
-                subTitle="info@brightminds.com"
+                subTitle="info@brightmindsedu.org"
               />
             </div>
           </div>
