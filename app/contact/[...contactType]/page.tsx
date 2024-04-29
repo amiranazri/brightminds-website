@@ -38,7 +38,7 @@ function ContactUs() {
     }
   }, [pathname, searchParams]);
 
-  function selectFunc(value) {
+  function selectFunc(value: any) {
     setIsOpen(false);
     setSelectedForm(value);
   }
