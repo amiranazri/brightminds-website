@@ -1,24 +1,7 @@
-.portfolio-card-scroll-container {
-  overflow-x: auto;
-  white-space: nowrap;
-  padding: 10px;
-  width: 100%;
-}
-
-.portfolio-cards-container {
+.card-container {
   display: flex;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  max-width: 100%;
-}
-
-.portfolio-card {
-  display: inline-block;
-  vertical-align: top;
-  min-width: 296px;
-  height: 600px;
-  white-space: wrap;
-  overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .modal {

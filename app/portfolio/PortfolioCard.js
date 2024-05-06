@@ -21,29 +21,24 @@ function PortfolioCard({
   };
 
   return (
-    <div className="mx-2">
-      <div
-        className="portfolio-card relative w-[300px] h-[200px] overflow-hidden"
-        style={{ maxWidth: "600px" }}
-      >
+    <>
+      <div className="relative w-[200px] h-[300px] overflow-hidden flex-shrink-0 m-4">
         {imageSrc ? (
           <Image src={imageSrc} fill objectFit="cover" />
         ) : (
           <div className="bg-black"></div>
         )}
         <div className="absolute w-full h-full bg-black z-10 opacity-50"></div>
-        <div className="w-full h-full absolute z-20 flex flex-col items-center justify-center p-4">
-          <div className="text-center text-white text-lg font-bold">
-            {title}
-          </div>
+        <div className="w-full h-[270px] absolute z-20 flex flex-col items-center justify-end">
+          <div className="text-white mb-2 text-center">{title}</div>
           {isComingSoon ? (
-            <div className="text-white bg-[#19598F] w-[150px] p-1 cursor-not-allowed text-center mt-4">
+            <div className="text-white bg-[#19598F] w-[150px] p-1 cursor-not-allowed text-center">
               COMING SOON
             </div>
           ) : (
             <div
               onClick={openModal}
-              className="text-white bg-[#19598F] hover:bg-yellow-300 hover:text-black w-[150px] p-1 cursor-pointer text-center mt-4 transition-colors duration-300"
+              className="text-white bg-[#19598F] hover:bg-yellow-300 hover:text-black w-[150px] p-1 cursor-pointer text-center"
             >
               READ MORE
             </div>
@@ -94,7 +89,7 @@ function PortfolioCard({
           ))}
         </div>
       </Modal>
-    </div>
+    </>
   );
 }
 

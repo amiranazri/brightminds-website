@@ -51,7 +51,7 @@ const Navbar = () => {
       <div className="z-auto max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image
-            src={navbarScroll ? "/bm_icon.png" : "/logo-transparent.png"}
+            src={navbarScroll ? "/logo_white.png" : "/logo-transparent.png"}
             width={48}
             height={48}
             alt="Brightminds Logo"
