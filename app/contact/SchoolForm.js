@@ -6,13 +6,24 @@ import { toast } from "react-toastify";
 
 function RegistrationForm() {
   const [buttonClicked, setButtonClicked] = useState(false);
-  const [subjects, setSubjects] = useState([
-    "English",
-    "Chinese",
-    "Malay",
-    "Finance",
-    "Leadership",
-    "Public Speaking",
+  // const [subjects, setSubjects] = useState([
+  //   "English",
+  //   "Chinese",
+  //   "Malay",
+  //   "Finance",
+  //   "Leadership",
+  //   "Public Speaking",
+  // ]);
+
+    const [subjects, setSubjects] = useState([
+      "Communication Skills",
+      "Financial Literacy",
+      "Public Speaking",
+      "Critical Analysis",
+      "Entrepreneurial Skills",
+      "Debate",
+      "Leadership Skills",
+      "Writing Skills",
   ]);
 
   function handleSubmit(event) {

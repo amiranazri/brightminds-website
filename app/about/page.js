@@ -206,7 +206,7 @@ function About() {
       {/* COURSES */}
       <div className="flex-1 text-center mt-16">
         <h1 className="text-center font-bold mb-4">
-          School Partnership Program
+          Courses
         </h1>
       </div>
       <div className="flex flex-wrap justify-center items-center md:w-[60%] lg:w-[80%] mx-auto my-8">
