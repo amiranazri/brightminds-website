@@ -123,7 +123,6 @@ function CorporateSolutions() {
                 imageName={pillar.imageName}
                 text={pillar.text}
                 modalText={pillar.modalText}
-                className="mb-4"
               />
             ))}
           </div>
