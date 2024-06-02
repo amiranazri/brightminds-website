@@ -69,9 +69,9 @@ export default function Page() {
           Master Practical Soft Skills Anywhere, Anytime
         </h1>
         <h4 className="text-center mt-2 mx-8">
-          Prepare for tomorrow's challenges with Bright Minds EDU. Enroll now
+          {`Prepare for tomorrow's challenges with Bright Minds EDU. Enroll now
           for both online and in-person classes and equip yourself with the
-          essential skills you need to thrive in today's ever-changing world.
+          essential skills you need to thrive in today's ever-changing world.`}
         </h4>
       </div>
 
