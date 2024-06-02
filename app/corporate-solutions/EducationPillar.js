@@ -1,5 +1,4 @@
 import React from "react";
-import Modal from "react-modal";
 import styled from "styled-components";
 
 const CardContainer = styled.div`
@@ -12,23 +11,37 @@ const CardContainer = styled.div`
   border-color: "#fafafa";
   margin-bottom: 10px;
   margin-top: 10px;
+  @media (max-width: 600px) {
+    width: 90%;
+    min-height: auto;
+    margin: 10px auto;
+  }
 `;
 
 const CardImage = styled.img`
   width: 30%;
   margin: auto;
+  @media (max-width: 600px) {
+    width: 50%;
+  }
 `;
 
 const CardContent = styled.div`
   padding: 16px;
   background-color: white;
   text-align: justify;
+  @media (max-width: 600px) {
+    padding: 8px;
+  }
 `;
 
 const CardTitle = styled.h1`
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 10px;
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
 `;
 
 function EducationPillar({

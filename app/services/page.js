@@ -74,8 +74,8 @@ function OurServices() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row items-center justify-center py-24 sm:py-4 mt-16">
-        <div className="flex-1 md:ml-32 lg:ml-32 sm:flex sm:justify-center">
+      <div className="flex flex-col md:flex-row items-center justify-center py-24 sm:py-4 mt-16 sm:mt-2">
+        <div className="flex-1 md:ml-32 lg:ml-32 sm:flex sm:justify-center sm:my-4">
           <Image
             src="/our-services-main.png"
             alt="Bright Minds logo"
@@ -85,18 +85,20 @@ function OurServices() {
           />
         </div>
 
-        <div className="flex-1 flex flex-col justify-center items-center md:text-left md:mr-24 lg:mr-24 px-4 sm:px-2">
-          <h1 className="font-bold mb-4 text-center">The School of Learning</h1>
-          <h4 className="text-center mt-2 my-4 sm:my-2">
+        <div className="flex-1 flex flex-col justify-center items-center md:text-left md:mr-24 lg:mr-24 px-4 sm:px-4">
+          <h1 className="font-bold mb-4 sm:mb-0 text-center">
+            The School of Learning
+          </h1>
+          <h4 className="text-center mt-2 my-4 sm:mb-2 sm:mt-0">
             Setting the standard in soft skill education
           </h4>
-          <p className="text-gray-600 mb-4 sm:mb-2 text-justify">
+          <p className="text-gray-600 mb-4 sm:mb-2 text-justify sm:px-4">
             {`The School of Learning, is an innovative program  that provides a diverse range of essential and practical skill training tailored for younger students.`}
           </p>
-          <p className="text-gray-600 mb-4 sm:mb-2 text-justify">
+          <p className="text-gray-600 mb-4 sm:mb-2 text-justify sm:px-4">
             {`Continuously updated to meet evolving standards, our curriculum remains aligned with the dynamic social landscape of our post-modern society.`}
           </p>
-          <p className="text-gray-600 mb-4 sm:mb-2 text-justify">
+          <p className="text-gray-600 mb-4 sm:mb-2 text-justify sm:px-4">
             {`Offering both online and physical classes, we ensure accessibility and flexibility to cater to the diverse learning needs of our students.`}
           </p>
           <div className="flex justify-center">
@@ -137,7 +139,7 @@ function OurServices() {
         </div>
       </div>
       {/* Calendar */}
-      <div className="max-w-[1280px] sm:p-5 xl:p-0 m-auto">
+      <div className="max-w-[1280px] sm:p-2 xl:p-0 m-auto">
         <h1 className="mb-10">Our Schedule</h1>
         <EventCalendar />
         <div className="mt-10"></div>

@@ -1,11 +1,11 @@
 "use client";
 
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
 import EducationPillar from "./EducationPillar";
 import Why from "./Why";
-import { useEffect, useState, useRef } from "react";
 import MainButton from "@/app/ui/components/MainButton";
 import Slider from "react-infinite-logo-slider";
 import partnerData from "./partnerData.json";
@@ -51,6 +51,24 @@ const educationPillars = [
 ];
 
 function CorporateSolutions() {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+
+    // Initial check
+    handleResize();
+
+    // Event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -78,16 +96,16 @@ function CorporateSolutions() {
           height={120}
           layout="responsive"
           alt="bright minds"
-          className="mt-[113px] md:mt-[136px] min-[918px]:mt-[-2px]"
+          className="mt-[113px] md:mt-[136px] min-[918px]:mt-[-2px] sm:mt-16"
         />
       </div>
       <div className="absolute left-16 top-[50%] hidden md:hidden lg:flex flex-col justify-center">
         <MainButton isAbsolute={true} text="Contact Us" />
       </div>
 
-      <div className="text-center mt-12 mb-12">
+      <div className="text-center mt-12 mb-12 px-4 sm:px-4">
         <h1>Your Community Engagement Partner</h1>
-        <h4 className="text-center mt-2 mx-24">
+        <h4 className="text-center mt-2 mx-24 sm:mx-4">
           We are committed to working alongside our clients to create a
           meaningful impact in communities. We collaborate closely to develop
           and implement quality education initiatives that uplift individuals
@@ -95,38 +113,50 @@ function CorporateSolutions() {
         </h4>
       </div>
 
-      <div className="min-h-[600px] justify-center items-center w-[300px] sm:w-[600px] lg:w-[1000px] xl:w-[1200px] 2xl:w-[1500px] m-auto">
-        <h1 className="mb-5">Core Education Pillars</h1>
-        <Carousel
-          responsive={responsive}
-          swipeable={true}
-          draggable={false}
-          showDots={false}
-          infinite={true}
-          autoPlay={true}
-          keyBoardControl={true}
-          slidesToSlide={1}
-          customTransition="transform 300ms ease-in-out"
-          transitionDuration={500}
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          // itemClass="carousel-item-padding-40-px" // Add this line
-          itemClass="carousel-item-padding-40-px"
-          partialVisible={false}
-          // centerMode={true}
-        >
-          {educationPillars.map((pillar, index) => (
-            <EducationPillar
-              key={pillar.key}
-              imageName={pillar.imageName}
-              text={pillar.text}
-              modalText={pillar.modalText}
-            />
-          ))}
-        </Carousel>
+      <div className="min-h-[600px] flex sm:flex-col justify-center items-center w-full sm:w-full lg:w-[1000px] xl:w-[1200px] 2xl:w-[1500px] m-auto px-4 sm:px-4">
+        <h1 className="mb-5 text-center">Core Education Pillars</h1>
+        {isSmallScreen ? (
+          <div className="flex flex-col items-center">
+            {educationPillars.map((pillar, index) => (
+              <EducationPillar
+                key={pillar.key}
+                imageName={pillar.imageName}
+                text={pillar.text}
+                modalText={pillar.modalText}
+                className="mb-4"
+              />
+            ))}
+          </div>
+        ) : (
+          <Carousel
+            responsive={responsive}
+            swipeable={true}
+            draggable={false}
+            showDots={false}
+            infinite={true}
+            autoPlay={true}
+            keyBoardControl={true}
+            slidesToSlide={1}
+            customTransition="transform 300ms ease-in-out"
+            transitionDuration={500}
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            itemClass="carousel-item-padding-40-px"
+            partialVisible={false}
+          >
+            {educationPillars.map((pillar, index) => (
+              <EducationPillar
+                key={pillar.key}
+                imageName={pillar.imageName}
+                text={pillar.text}
+                modalText={pillar.modalText}
+              />
+            ))}
+          </Carousel>
+        )}
       </div>
-      <div className="mb-56 mt-24">
-        <h1>Why Us</h1>
-        <WhyUs className="flex flex-col lg:flex-row justify-center mt-16 space-y-2 space-x-4 lg:space-y-0 lg:space-x-4 xl:space-x-10 items-center text-center px-16 md:px-8 md:mb-24 lg:mb-24">
+      <div className="mb-56 mt-24 sm:mt-16 sm:mb-16 px-4 sm:px-4">
+        <h1 className="text-center">Why Us</h1>
+        <WhyUs className="flex flex-col lg:flex-row justify-center mt-16 space-y-4 sm:space-y-4 lg:space-y-0 lg:space-x-4 xl:space-x-10 items-center text-center">
           <Why
             key={1}
             imageName="why_us_1.svg"
@@ -166,7 +196,7 @@ function CorporateSolutions() {
         </WhyUs>
       </div>
 
-      <div className="pt-16 pb-8 bg-sky-100 ">
+      <div className="pt-16 pb-8 bg-sky-100 text-center">
         <h1>Companies We Work With</h1>
         <div className="my-4">
           <Slider
