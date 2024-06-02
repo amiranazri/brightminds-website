@@ -77,7 +77,7 @@ function ContactUs() {
             {/* CONTACT INFO ROW */}
             <div
               className="flex flex-row items-center justify-center my-8"
-              style={{ flexWrap: window.innerWidth <= 425 ? "wrap" : "nowrap" }}
+              style={{ flexWrap: typeof window !== 'undefined' && window.innerWidth <= 425 ? "wrap" : "nowrap" }}
             >
               <ContactInfo
                 imgSrc="/icon_location.svg"
