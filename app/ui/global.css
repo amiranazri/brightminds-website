@@ -2,100 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+}
+
 h1 {
-  color: #092135;
-  font-family: "Oswald", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  text-align: center;
-  text-transform: uppercase;
-  @screen sm {
-    font-size: large;
-  }
-  @screen md {
-    font-size: 40px;
-  }
+  @apply text-center text-uppercase text-h1-lg md:text-h1-md sm:text-h1-sm text-[#092135] font-oswald font-medium;
 }
 
 h3 {
-  color: #092135;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: uppercase;
-  @screen sm {
-    font-size: medium;
-  }
-  @screen md {
-    font-size: 26px;
-  }
+  @apply text-uppercase text-h3-lg md:text-h3-md sm:text-h3-sm text-[#092135] font-oswald font-normal;
 }
 
 h4 {
-  color: #092135;
-  font-family: sans-serif;
-  font-weight: 500;
-  font-size: 28px;
-  font-style: normal;
-  @screen sm {
-    font-size: 16px;
-  }
-  @screen md {
-    font-size: 22px;
-  }
+  @apply text-h4-lg md:text-h4-md sm:text-h4-sm text-[#092135] font-sans font-medium;
 }
 
 h5 {
-  color: #092135;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 18;
-  font-style: normal;
-  @screen sm {
-    font-size: 18px;
-  }
-  @screen md {
-    font-size: 22px;
-  }
+  @apply text-uppercase text-h5-lg md:text-h5-md sm:text-h5-sm text-[#092135] font-oswald font-normal;
 }
 
 h6 {
-  /* color: #19598f; */
-  font-weight: 400;
-  font-family: sans-serif;
-  font-color: $tertiary-blue;
-
-  @screen sm {
-    font-size: medium;
-  }
-  @screen md {
-    font-size: 18px;
-  }
+  @apply text-h6-lg md:text-h6-md sm:text-h6-sm font-sans font-normal;
 }
 
 p {
-  font-size: 20px;
-  font-weight: 400;
-  font-family: sans-serif;
-
-  @screen sm {
-    font-size: 15;
-  }
-  @screen md {
-    font-size: 18px;
-  }
+  @apply text-p-lg md:text-p-md sm:text-p-sm font-sans font-normal;
 }
 
 button {
-  font-size: 18px;
-  font-weight: 400;
-  font-family: sans-serif;
+  @apply text-lg font-sans font-normal;
 }
 
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 @layer utilities {
@@ -119,9 +63,6 @@ input:-webkit-autofill:active {
 
 /* EVENTS CAROUSEL */
 
-/* CSS */
-/* EVENTS CAROUSEL */
-
 .text-container {
   position: absolute;
   bottom: 0;
@@ -131,14 +72,14 @@ input:-webkit-autofill:active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* Align text left */
+  align-items: flex-start;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 20px;
 }
 
 .image-container {
-  position: relative; /* Make the container relative */
+  position: relative;
 }
 
 .image-overlay {
@@ -164,11 +105,5 @@ input:-webkit-autofill:active {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  -webkit-line-clamp: 3; /* Number of lines to show */
-}
-
-@media screen and (max-width: 500px) {
-  .responsive-text {
-    font-size: 18px;
-  }
+  -webkit-line-clamp: 3;
 }

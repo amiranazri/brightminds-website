@@ -21,14 +21,11 @@ function OurServices() {
   const ourClassesRef = useRef(null);
 
   useEffect(() => {
-    console.log("useEffect triggered");
     if (
       router.query &&
       typeof router.query.scrollTo !== "undefined" &&
       ourClassesRef.current
     ) {
-      console.log("router.query.scrollTo:", router.query.scrollTo);
-      console.log("ourClassesRef.current:", ourClassesRef.current);
       ourClassesRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [router.query]);
@@ -58,7 +55,7 @@ function OurServices() {
           alt={`Class ${index + 1} image`}
           width={420}
           height={420}
-          className="rounded-lg"
+          className="rounded-lg my-4 mx-auto"
         />
       ));
     } else {
@@ -69,7 +66,7 @@ function OurServices() {
           alt={`Class ${index + 1} image`}
           width={400}
           height={400}
-          className="rounded-lg"
+          className="rounded-lg my-4 mx-auto"
         />
       ));
     }
@@ -77,31 +74,29 @@ function OurServices() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row items-center justify-between py-24 mt-16">
-        <div className="flex-1 md:ml-32 lg:ml-32 ">
+      <div className="flex flex-col md:flex-row items-center justify-center py-24 sm:py-4 mt-16">
+        <div className="flex-1 md:ml-32 lg:ml-32 sm:flex sm:justify-center">
           <Image
             src="/our-services-main.png"
             alt="Bright Minds logo"
             width={450}
             height={450}
-            className="rounded-lg sm:ml-16"
+            className="rounded-lg"
           />
         </div>
 
-        <div className="flex-1 justify-center items-center md:text-left md:mr-24 lg:mr-24">
-          <h1 className="font-bold mb-4 text-center px-16">
-            The School of Learning
-          </h1>
-          <h4 className="text-center mt-2 my-8">
+        <div className="flex-1 flex flex-col justify-center items-center md:text-left md:mr-24 lg:mr-24 px-4 sm:px-2">
+          <h1 className="font-bold mb-4 text-center">The School of Learning</h1>
+          <h4 className="text-center mt-2 my-4 sm:my-2">
             Setting the standard in soft skill education
           </h4>
-          <p className="text-gray-600 mb-8 " style={{ textAlign: "justify" }}>
+          <p className="text-gray-600 mb-4 sm:mb-2 text-justify">
             {`The School of Learning, is an innovative program  that provides a diverse range of essential and practical skill training tailored for younger students.`}
           </p>
-          <p className="text-gray-600 mb-8 " style={{ textAlign: "justify" }}>
+          <p className="text-gray-600 mb-4 sm:mb-2 text-justify">
             {`Continuously updated to meet evolving standards, our curriculum remains aligned with the dynamic social landscape of our post-modern society.`}
           </p>
-          <p className="text-gray-600 mb-8 " style={{ textAlign: "justify" }}>
+          <p className="text-gray-600 mb-4 sm:mb-2 text-justify">
             {`Offering both online and physical classes, we ensure accessibility and flexibility to cater to the diverse learning needs of our students.`}
           </p>
           <div className="flex justify-center">
@@ -119,10 +114,10 @@ function OurServices() {
       <div
         ref={ourClassesRef}
         id="ourClasses"
-        className="flex-1 text-center my-16"
+        className="flex-1 text-center my-16 sm:my-8"
       >
         <h3 className="font-bold mb-4">Our Classes</h3>
-        <div className="flex flex-wrap justify-center items-center relative">
+        <div className="flex flex-wrap justify-center items-center relative px-4 sm:px-2">
           {buttonData.map((button, index) => (
             <button
               key={index}
@@ -137,7 +132,7 @@ function OurServices() {
             </button>
           ))}
         </div>
-        <div className="mt-4 flex flex-wrap content-center  justify-center">
+        <div className="mt-4 flex flex-wrap content-center justify-center">
           {renderImages()}
         </div>
       </div>

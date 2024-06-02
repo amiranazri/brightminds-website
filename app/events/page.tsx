@@ -83,22 +83,27 @@ function Events() {
         className="sm:mt-16 mt-16"
       >
         {carouselImages.map((item, index) => (
-          <div key={index} className={styles.carouselItem}>
-            <div className={styles.textColumn}>
-              <h1 className="lg:px-8 md:px-4 sm:px-4 text-left responsive-text">
+          <div
+            key={index}
+            className={`${styles.carouselItem} flex flex-col-reverse lg:flex-row`}
+          >
+            <div className={`${styles.textColumn} w-full lg:w-1/2`}>
+              <h1 className="lg:px-8 md:px-4 sm:px-4 text-center lg:text-left responsive-text">
                 {item.title}
               </h1>
-              <p className="lg:px-8 md:px-4 sm:px-4 text-left">
+              <p className="lg:px-8 md:px-4 sm:px-4 text-center lg:text-left">
                 {item.subtitle}
               </p>
-              <button
-                onClick={handleLearnMore}
-                className="my-8 mx-8 bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
-              >
-                <h6>Learn More</h6>
-              </button>
+              <div className="flex justify-center lg:justify-start">
+                <button
+                  onClick={handleLearnMore}
+                  className="my-8 mx-8 bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
+                >
+                  <h6>Learn More</h6>
+                </button>
+              </div>
             </div>
-            <div className={styles.imageColumn}>
+            <div className={`${styles.imageColumn} w-full lg:w-1/2`}>
               <Image
                 src={item.image}
                 layout="responsive"

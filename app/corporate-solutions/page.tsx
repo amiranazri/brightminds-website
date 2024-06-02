@@ -124,10 +124,9 @@ function CorporateSolutions() {
           ))}
         </Carousel>
       </div>
-
       <div className="mb-56 mt-24">
         <h1>Why Us</h1>
-        <WhyUs className="flex flex-col lg:flex-row justify-center mt-10 space-y-2 space-x-4 lg:space-y-0 lg:space-x-4 xl:space-x-10 items-center text-center px-16 md:px-8 md:mb-24 lg:mb-24">
+        <WhyUs className="flex flex-col lg:flex-row justify-center mt-16 space-y-2 space-x-4 lg:space-y-0 lg:space-x-4 xl:space-x-10 items-center text-center px-16 md:px-8 md:mb-24 lg:mb-24">
           <Why
             key={1}
             imageName="why_us_1.svg"
@@ -138,18 +137,6 @@ function CorporateSolutions() {
               "Reliable social impact assessments",
               "Supports corporate sustainability commitments",
               "Facilitates  transparent progress reporting",
-            ]}
-          />
-          <Why
-            key={2}
-            imageName="why_us_2.svg"
-            text="Comprehensive Reports"
-            subText={[
-              "Comprehensive data collection and analysis",
-              "Tailored reporting frameworks",
-              "Clear insights into program objectives",
-              "Transparent and accountable reporting",
-              "Maximize effectiveness of investments",
             ]}
           />
           <Why
@@ -164,10 +151,22 @@ function CorporateSolutions() {
               "Empowers communities towards collective progress",
             ]}
           />
+          <Why
+            key={2}
+            imageName="why_us_2.svg"
+            text="Comprehensive Reports"
+            subText={[
+              "Comprehensive data collection and analysis",
+              "Tailored reporting frameworks",
+              "Clear insights into program objectives",
+              "Transparent and accountable reporting",
+              "Maximize effectiveness of investments",
+            ]}
+          />
         </WhyUs>
       </div>
 
-      <div className="pt-16 pb-8 bg-sky-100 sm:mt-8 xl:mt-16">
+      <div className="pt-16 pb-8 bg-sky-100 ">
         <h1>Companies We Work With</h1>
         <div className="my-4">
           <Slider

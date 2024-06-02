@@ -15,9 +15,11 @@ const HorizontalCard = ({ imageUrl, title, subtitle }) => {
       }}
     >
       <Image src={imageUrl} width={188} height={148} />
-      <div className="ml-4 text-center sm:text-left md:text-left">
-        <p className="text-[#19598f] font-bold mb-2 text-2xl">{title}</p>
-        <p className="text-gray-700 text-lg">{subtitle}</p>
+      <div className="ml-4 sm:m-0 text-center  md:text-left">
+        <p className="text-[#19598f] font-bold mb-2 text-2xl sm:text-center">
+          {title}
+        </p>
+        <p className="text-gray-700 text-lg sm:text-center">{subtitle}</p>
       </div>
     </div>
   );

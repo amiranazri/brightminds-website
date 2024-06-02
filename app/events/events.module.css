@@ -4,13 +4,18 @@
 
 .carouselItem {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   width: 100%;
   height: 100%;
 }
 
+@media (min-width: 1024px) {
+  .carouselItem {
+    flex-direction: row;
+  }
+}
+
 .textColumn {
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,5 +24,11 @@
 }
 
 .imageColumn {
-  width: 50%;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .imageColumn {
+    width: 50%;
+  }
 }

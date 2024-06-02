@@ -64,8 +64,8 @@ function ContactUs() {
       {windowWidth <= 1024 ? (
         <div className="flex flex-col items-center justify-center mt-16 px-8 sm:px-4 md:px-8 lg:px-16">
           <div className="w-[90%] max-w-2xl">
-            <h3 className="mt-16 text-center">Register Now</h3>
-            <h6 className="text-center">How can we help?</h6>
+            <h1 className="mt-16 text-center">Register Now</h1>
+            <h4 className="text-center">How can we help?</h4>
             <p className="text-justify my-8">
               Your satisfaction is our top priority. Whether you have a question
               about our services, need assistance with registration, or simply
@@ -77,7 +77,12 @@ function ContactUs() {
             {/* CONTACT INFO ROW */}
             <div
               className="flex flex-row items-center justify-center my-8"
-              style={{ flexWrap: typeof window !== 'undefined' && window.innerWidth <= 425 ? "wrap" : "nowrap" }}
+              style={{
+                flexWrap:
+                  typeof window !== "undefined" && window.innerWidth <= 425
+                    ? "wrap"
+                    : "nowrap",
+              }}
             >
               <ContactInfo
                 imgSrc="/icon_location.svg"
@@ -217,8 +222,8 @@ function ContactUs() {
       ) : (
         <div className="flex sm:flex-col md:flex-col lg:flex-row mt-16 justify-center items-center px-8 sm:px-4 md:px-8 lg:px-16">
           <div className="w-[90%] max-w-2xl">
-            <h3 className=" mt-16 text-center">CONTACT US</h3>
-            <h6 className="text-center">How can we help?</h6>
+            <h1 className=" mt-16 text-center">CONTACT US</h1>
+            <h4 className="text-center">How can we help?</h4>
             <p className="text-justify my-8">
               {`Your satisfaction is our top priority. Whether you have a question
         about our services, need assistance with registration, or simply want
