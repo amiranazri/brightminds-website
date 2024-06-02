@@ -125,7 +125,7 @@ function CorporateSolutions() {
         </Carousel>
       </div>
 
-      <div className="mb-56 mt-10 md:mt-16">
+      <div className="mb-56 mt-24">
         <h1>Why Us</h1>
         <WhyUs className="flex flex-col lg:flex-row justify-center mt-10 space-y-2 space-x-4 lg:space-y-0 lg:space-x-4 xl:space-x-10 items-center text-center px-16 md:px-8 md:mb-24 lg:mb-24">
           <Why
@@ -167,7 +167,7 @@ function CorporateSolutions() {
         </WhyUs>
       </div>
 
-      <div className="pt-16 pb-8 bg-sky-100 sm:mt-24 xl:mt-44">
+      <div className="pt-16 pb-8 bg-sky-100 sm:mt-8 xl:mt-16">
         <h1>Companies We Work With</h1>
         <div className="my-4">
           <Slider
