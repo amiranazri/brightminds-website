@@ -86,7 +86,13 @@ function CorporateSolutions() {
       </div>
 
       <div className="text-center mt-12 mb-12">
-        <h1>Driving Sustainable Social Impact</h1>
+        <h1>Your Community Engagement Partner</h1>
+        <h4 className="text-center mt-2 mx-24">
+          We are committed to working alongside our clients to create a
+          meaningful impact in communities. We collaborate closely to develop
+          and implement quality education initiatives that uplift individuals
+          and foster positive change, ensuring a brighter future for all.
+        </h4>
       </div>
 
       <div className="min-h-[600px] justify-center items-center w-[300px] sm:w-[600px] lg:w-[1000px] xl:w-[1200px] 2xl:w-[1500px] m-auto">
@@ -125,20 +131,38 @@ function CorporateSolutions() {
           <Why
             key={1}
             imageName="why_us_1.svg"
-            text=" Data-Driven Social Impact"
-            subText="Our data-driven approach, underscored by field experts, aligns with both the Sustainable Development Goals (SDGs) and ESG reporting requirements. This ensures our social impact assessments are not only reliable but also strategically positioned to support corporate clients in achieving their sustainability commitments. By leveraging SDG-aligned metrics and providing essential data for ESG reporting, we empower companies to transparently demonstrate their progress towards global sustainability targets and enhance their stakeholder engagement."
+            text="Data-Driven Social Impact"
+            subText={[
+              "Data-driven approach underscored by field experts",
+              "Aligned with Sustainable Development Goals (SDGs) and ESG reporting",
+              "Reliable social impact assessments",
+              "Supports corporate sustainability commitments",
+              "Facilitates  transparent progress reporting",
+            ]}
           />
           <Why
             key={2}
             imageName="why_us_2.svg"
             text="Comprehensive Reports"
-            subText="Our comprehensive reporting sets us apart by meticulously collecting and analyzing a wide array of data points relevant to each program's objectives. Tailored reporting frameworks ensure alignment with client priorities, offering clear insights into academic, skill-based, and community impact. Transparent and accountable, our reports foster informed decision-making while inviting stakeholder input for continuous improvement. Through this approach, we empower clients to maximize the effectiveness of their investments, driving meaningful change and lasting impact."
+            subText={[
+              "Comprehensive data collection and analysis",
+              "Tailored reporting frameworks",
+              "Clear insights into program objectives",
+              "Transparent and accountable reporting",
+              "Maximize effectiveness of investments",
+            ]}
           />
           <Why
             key={3}
             imageName="why_us_3.svg"
             text="Community-Centric Engagement"
-            subText="Our commitment to community engagement is foundational. By listening to and incorporating community feedback, we ensure our educational programs are adaptable and resonate on a universal/micro scale. This approach allows us to create experiences that are deeply rooted in diverse needs and aspirations, fostering a culture of participation and long-term success. Our inclusive strategy empowers communities, driving collective progress towards social and environmental goals with a foundation of active engagement and shared success. Our programs are designed to not just meet, but exceed, the collective aspirations of the communities we serve, laying the groundwork for enduring impact and mutual growth."
+            subText={[
+              "Commitment to community engagement",
+              "Incorporate community feedback for adaptability",
+              "Programs resonate on universal/micro scale",
+              "Rooted in diverse needs and aspirations",
+              "Empowers communities towards collective progress",
+            ]}
           />
         </WhyUs>
       </div>

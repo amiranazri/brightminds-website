@@ -34,21 +34,33 @@ function About() {
     <>
       {windowWidth <= 1024 ? (
         <>
-          <div className="flex flex-col items-center justify-between md:items-center md:justify-center mx-auto max-w-7xl py-12">
+          <div className="flex flex-col items-center justify-between mx-8 max-w-6xl pt-4">
             <div className="flex-1 text-center ">
               <Image
-                src="/what-we-do.svg"
+                src="/about-us-main.png"
                 alt="What we do at Brightminds"
-                width={400}
-                height={400}
+                width={300}
+                height={300}
                 className="rounded-lg mt-16 mx-auto"
               />
-              <h3 className=" font-bold mb-4">What We Do</h3>
+              <h3 className=" font-bold my-4">What We Do</h3>
               <p
-                className="text-gray-600 mb-8 px-8"
+                className="text-gray-600 mb-8"
                 style={{ textAlign: "justify" }}
               >
-                {`At BrightMinds we're committed to empowering students with essential soft skills and life skills needed for success, offering tailored classes that focus on communication, leadership, critical thinking, and emotional intelligence and essential life skills. Through interactive classes and workshops and personalized mentoring, we prepare students for academic excellence and future careers. Simultaneously, we partner with corporate clients to deliver impactful CSR initiatives, addressing pressing social and environmental challenges collaboratively. We specialize in community engagement projects where our data driven approach assists our corporate clients to create the social impact they intended through these projects. We work together to drive meaningful change. Join us in shaping the next generation of leaders and making a positive impact on society.`}
+                {`At Bright Minds EDU we aim to empower students with essential soft skills like communication, leadership, critical thinking, and emotional intelligence.`}
+              </p>
+              <p
+                className="text-gray-600 mb-8"
+                style={{ textAlign: "justify" }}
+              >
+                {`Through our soft skills education, we ensure that our students are equipped with knowledge beyond traditional learning, fostering multifaceted abilities and critical thinking skills.`}
+              </p>
+              <p
+                className="text-gray-600 mb-8"
+                style={{ textAlign: "justify" }}
+              >
+                {`Simultaneously, we partner with corporate clients on impactful CSR initiatives and community engagement projects, using a data-driven approach to drive meaningful change and shape the next generation of leaders.`}
               </p>
               <button
                 onClick={() => {
@@ -56,20 +68,20 @@ function About() {
                 }}
                 className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
               >
-                <h6>Contact Us</h6>
+                <h6>Register Now</h6>
               </button>
             </div>
           </div>
           <div className="flex flex-col items-center justify-between mx-auto max-w-6xl pt-4">
             <div className="flex-1">
               <Image
-                src="/the-gap.svg"
+                src="/the-gap.png"
                 alt="Bright Minds logo"
-                width={400}
-                height={400}
+                width={300}
+                height={300}
                 className="rounded-lg mx-auto"
               />
-              <h3 className="font-bold mb-4 text-center px-8">
+              <h3 className="font-bold my-4 text-center px-8">
                 Navigating the Gap Between Education and Industry{" "}
               </h3>
               <p
@@ -88,34 +100,55 @@ function About() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-between mx-auto max-w-6xl pt-4">
-            <div className="flex-1">
-              <Image
-                src="/bright-learners.svg"
-                alt="Bright Minds logo"
-                width={300}
-                height={300}
-                className="rounded-lg mx-auto"
-              />
-              <h3 className="font-bold mb-4 text-center">
-                BrightLearners Initiative{" "}
-              </h3>
+          <div className="flex flex-col items-center justify-center mx-auto py-12 mt-8 bg-sky-100">
+            <div className="flex-1 mb-8">
+              <h1 className="font-bold mb-4 text-center">
+                Bright Learners Initiative{" "}
+              </h1>
+
+              <div>
+                <Image
+                  src="/learners-initiative.png"
+                  alt="Bright Minds logo"
+                  width={300}
+                  height={300}
+                  className="rounded-lg mx-auto"
+                />
+              </div>
+            </div>
+            <div className="flex-1 text-center w-[80%]">
               <p
-                className="text-gray-600 mb-8 px-8"
+                className="text-gray-600 mb-8"
                 style={{ textAlign: "justify" }}
               >
-                {`We are deeply committed to making soft skill and life skill education accessible to all, regardless of socioeconomic status. As part of our 'BrightLearners' initiative, we offer free classes to students from underserved communities and anyone who may not be able to afford our classes. Our dedication to this cause stems from our belief that everyone deserves the opportunity to develop essential skills that pave the way for success in both personal and professional endeavors. If this applies to you, we invite you to take advantage of this opportunity by clicking the button below to be directed to our contact form. We will reach out to you promptly to discuss the available classes and how we can support your journey towards a brighter future. Do note that the eligibility for these free classes will be assessed before you are enrolled.`}
+                {`We are deeply committed to making soft skill and life skill education accessible to all, regardless of socio-economic status. `}
               </p>
-              <div className="flex justify-center items-center">
-                <button
-                  onClick={() => {
-                    handleContactUs("school");
-                  }}
-                  className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
-                >
-                  <h6>Free Classes</h6>
-                </button>
-              </div>
+              <p
+                className="text-gray-600 mb-8"
+                style={{ textAlign: "justify" }}
+              >
+                {`As part of our 'Bright Learners' initiative, we offer free classes to students from underserved communities and anyone who may not be able to afford our classes.`}
+              </p>
+              <p
+                className="text-gray-600 mb-8"
+                style={{ textAlign: "justify" }}
+              >
+                {`Our dedication to this cause stems from our belief that everyone deserves the opportunity to develop essential skills that pave the way for success in both personal and professional endeavours.`}
+              </p>
+              <p
+                className="text-gray-600 mb-8"
+                style={{ textAlign: "justify" }}
+              >
+                {`If this applies to you, we invite you to take advantage of this opportunity by clicking the button below to be directed to our contact form. We will reach out to you promptly to discuss the available classes and how we can support your journey towards a brighter future. Do note that the eligibility for these free classes will be assessed before you are enrolled.`}
+              </p>
+              <button
+                onClick={() => {
+                  handleContactUs("school");
+                }}
+                className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
+              >
+                <h6>Free Classes</h6>
+              </button>
             </div>
           </div>
         </>
@@ -124,19 +157,32 @@ function About() {
           <div className="flex flex-col md:flex-row items-center justify-between mx-auto py-12 mt-16">
             <div className="flex-1 ml-24">
               <Image
-                src="/what-we-do.svg"
+                src="/about-us-main.png"
                 alt="What we do at Brightminds"
-                width={424}
-                height={576}
-                className="rounded-16 pt-12"
+                width={450}
+                height={450}
+                className="rounded-lg mt-16 mx-auto"
               />
             </div>
 
             <div className="flex-1 text-center mr-40">
               <h1 className="font-bold mb-4">What We Do </h1>
-              <p className="text-gray-600 " style={{ textAlign: "justify" }}>
-                {`BrightMinds offers tailored classes in essential soft and life skills like communication, leadership, critical thinking, and emotional intelligence. They prepare students for academic and career success through interactive sessions and personalized mentoring. Additionally, they collaborate with corporate clients on CSR initiatives, specializing in data-driven community projects to achieve social impact. Together, they aim to shape future leaders and drive meaningful change.`}
+              <p
+                className="text-gray-600 my-8"
+                style={{ textAlign: "justify" }}
+              >
+                {`At Bright Minds EDU we aim to empower students with essential soft skills like communication, leadership, critical thinking, and emotional intelligence.`}
               </p>
+              <p
+                className="text-gray-600  my-8"
+                style={{ textAlign: "justify" }}
+              >
+                {`Through our soft skills education, we ensure that our students are equipped with knowledge beyond traditional learning, fostering multifaceted abilities and critical thinking skills.`}
+              </p>
+              <p
+                className="text-gray-600  my-8"
+                style={{ textAlign: "justify" }}
+              >{`Simultaneously, we partner with corporate clients on impactful CSR initiatives and community engagement projects, using a data-driven approach to drive meaningful change and shape the next generation of leaders.`}</p>
             </div>
           </div>
 
@@ -158,46 +204,51 @@ function About() {
             </div>
             <div className="flex-1 mr-24">
               <Image
-                src="/the-gap.svg"
+                src="/the-gap.png"
                 alt="Bright Minds logo"
-                width={400}
-                height={400}
+                width={500}
+                height={500}
                 className="rounded-lg mx-auto"
               />
             </div>
           </div>
 
           <div className="flex flex-col items-center justify-center mx-auto py-12 mt-8 bg-sky-100">
-            <div className="flex-1 mb-8">
-              <h1 className="font-bold mb-4 text-center">
-                BrightLearners Initiative{" "}
-              </h1>
-
-              <div className="ml-8">
+            <div className="flex-1 mb-8 items-center justify-center text-center">
+              <h1 className="font-bold mb-4">Bright Learners Initiative</h1>
+              <div className="">
                 <Image
-                  src="/bright-learners.svg"
-                  alt="Bright Minds logo"
-                  width={400}
-                  height={400}
+                  src="/learners-initiative.png"
+                  alt="Bright Learners Initiative"
+                  width={500}
+                  height={500}
                   className="rounded-lg mx-auto"
                 />
               </div>
             </div>
-            <div className="flex-1 text-center mx-8">
-              <p
-                className="text-gray-600 mb-8"
-                style={{ textAlign: "justify" }}
-              >
-                {`We are deeply committed to making soft skill and life skill education accessible to all, regardless of socioeconomic status. As part of our 'BrightLearners' initiative, we offer free classes to students from underserved communities and anyone who may not be able to afford our classes. Our dedication to this cause stems from our belief that everyone deserves the opportunity to develop essential skills that pave the way for success in both personal and professional endeavors. If this applies to you, we invite you to take advantage of this opportunity by clicking the button below to be directed to our contact form. We will reach out to you promptly to discuss the available classes and how we can support your journey towards a brighter future. Do note that the eligibility for these free classes will be assessed before you are enrolled.`}
+            <div className="flex-1 w-[65%]">
+              <p className="text-gray-600 mb-8 text-justify">
+                {`We are deeply committed to making soft skill and life skill education accessible to all, regardless of socio-economic status.`}
               </p>
-              <button
-                onClick={() => {
-                  handleContactUs("school");
-                }}
-                className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
-              >
-                <h6>Free Classes</h6>
-              </button>
+              <p className="text-gray-600 mb-8 text-justify">
+                {`As part of our 'Bright Learners' initiative, we offer free classes to students from underserved communities and anyone who may not be able to afford our classes.`}
+              </p>
+              <p className="text-gray-600 mb-8 text-justify">
+                {`Our dedication to this cause stems from our belief that everyone deserves the opportunity to develop essential skills that pave the way for success in both personal and professional endeavours.`}
+              </p>
+              <p className="text-gray-600 mb-8 text-justify">
+                {`If this applies to you, we invite you to take advantage of this opportunity by clicking the button below to be directed to our contact form. We will reach out to you promptly to discuss the available classes and how we can support your journey towards a brighter future. Do note that the eligibility for these free classes will be assessed before you are enrolled.`}
+              </p>
+              <div className="flex justify-center">
+                <button
+                  onClick={() => {
+                    handleContactUs("school");
+                  }}
+                  className="bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full lg:w-[170px]"
+                >
+                  <h6>Free Classes</h6>
+                </button>
+              </div>
             </div>
           </div>
         </>
@@ -224,13 +275,13 @@ function About() {
         <div className="flex flex-col md:flex-row items-center justify-between mx-auto py-12 mt-4">
           <div className="flex-1 text-center px-8">
             <Image
-              src="/about_4.svg"
+              src="/partnership.png"
               alt="Bright Minds logo"
-              width={400}
-              height={400}
+              width={500}
+              height={500}
               className="rounded-lg mx-auto"
             />
-            <h3 className="text-center font-bold mb-4">
+            <h3 className="text-center font-bold my-4">
               School Partnership Program
             </h3>
             <p className="text-gray-600 mb-8 " style={{ textAlign: "justify" }}>
@@ -270,11 +321,11 @@ function About() {
             </div>
             <div className="flex-1 ml-8 mt-16">
               <Image
-                src="/about_4.svg"
+                src="/partnership.png"
                 alt="Bright Minds logo"
-                width={400}
-                height={400}
-                className="rounded-lg"
+                width={500}
+                height={500}
+                className="rounded-lg mx-auto"
               />
             </div>
           </div>

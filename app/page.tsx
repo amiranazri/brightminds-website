@@ -64,10 +64,15 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="flex justify-center mt-4 sm:mt-16 lg:my-16 sm:px-24 md:px-32 lg:px-48">
+      <div className="flex flex-col justify-center mt-4 sm:mt-16 lg:my-16 sm:px-24 md:px-32 lg:px-48">
         <h1 className="text-center">
-          Learn practical soft skills from the comfort of your own home
+          Master Practical Soft Skills Anywhere, Anytime
         </h1>
+        <h4 className="text-center mt-2 mx-8">
+          Prepare for tomorrow's challenges with Bright Minds EDU. Enroll now
+          for both online and in-person classes and equip yourself with the
+          essential skills you need to thrive in today's ever-changing world.
+        </h4>
       </div>
 
       <div className="flex justify-center content-center my-4">

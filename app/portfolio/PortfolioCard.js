@@ -52,28 +52,22 @@ function PortfolioCard({
         className="modal"
         overlayClassName="overlay"
       >
-        <div className="p-4 sm:p-4 lg:p-8">
+        <div className="p-4 sm:p-4 lg:p-8 modal-content">
           <button onClick={closeModal} className="close-button">
             Close
           </button>
-          {additionalImages.map((item, index) => (
-            <div
-              className="inline-block p-1 align-center justify-center"
-              key={index}
-            >
-              <Image
-                src={item}
-                alt={`Additional Image ${index + 1}`}
-                key={index}
-                width={500}
-                height={500}
-              />
-            </div>
-          ))}
-
           {content.map((item, index) => (
-            <div key={index}>
+            <div key={index} className="modal-text">
               <h4 className="mt-8">{item.heading}</h4>
+              {index === 0 && additionalImages[0] && (
+                <Image
+                  src={additionalImages[0]}
+                  alt={`Additional Image ${index + 1}`}
+                  className="float-image-right"
+                  width={500}
+                  height={500}
+                />
+              )}
               {item.paragraph && <p className="mt-2">{item.paragraph}</p>}
               {item.listItems && (
                 <ul>
@@ -87,6 +81,18 @@ function PortfolioCard({
               )}
             </div>
           ))}
+          <div className="additional-images">
+            {additionalImages.slice(1).map((item, index) => (
+              <Image
+                src={item}
+                alt={`Additional Image ${index + 2}`}
+                key={index}
+                className="additional-image"
+                width={500}
+                height={500}
+              />
+            ))}
+          </div>
         </div>
       </Modal>
     </>

@@ -80,20 +80,29 @@ function OurServices() {
       <div className="flex flex-col md:flex-row items-center justify-between py-24 mt-16">
         <div className="flex-1 md:ml-32 lg:ml-32 ">
           <Image
-            src="/about_1.svg"
+            src="/our-services-main.png"
             alt="Bright Minds logo"
-            width={400}
-            height={400}
+            width={450}
+            height={450}
             className="rounded-lg sm:ml-16"
           />
         </div>
 
         <div className="flex-1 justify-center items-center md:text-left md:mr-24 lg:mr-24">
-          <h3 className="font-bold mb-4 text-center px-16">
-            Unlock Your Potential With E-Learning Classes
-          </h3>
+          <h1 className="font-bold mb-4 text-center px-16">
+            The School of Learning
+          </h1>
+          <h4 className="text-center mt-2 my-8">
+            Setting the standard in soft skill education
+          </h4>
           <p className="text-gray-600 mb-8 " style={{ textAlign: "justify" }}>
-            {`Embark on a transformative journey with our online classes tailored exclusively for students. Each session is not just a course; it's an immersive experience crafted to ignite curiosity, broaden horizons, and propel students towards academic and personal growth. Led by expert instructors passionate about nurturing young minds, our dynamic online classes offer a diverse range of subjects to explore. Whether your child seeks to enhance their skills or prepare for future academic challenges, our flexible, interactive approach ensures learning anytime, anywhere. With unparalleled support and guidance, our goal is to empower students to unlock their fullest potential and excel in their educational journey. Start your child's adventure today and set them on the path to lifelong learning and skill mastery!`}
+            {`The School of Learning, is an innovative program  that provides a diverse range of essential and practical skill training tailored for younger students.`}
+          </p>
+          <p className="text-gray-600 mb-8 " style={{ textAlign: "justify" }}>
+            {`Continuously updated to meet evolving standards, our curriculum remains aligned with the dynamic social landscape of our post-modern society.`}
+          </p>
+          <p className="text-gray-600 mb-8 " style={{ textAlign: "justify" }}>
+            {`Offering both online and physical classes, we ensure accessibility and flexibility to cater to the diverse learning needs of our students.`}
           </p>
           <div className="flex justify-center">
             <button

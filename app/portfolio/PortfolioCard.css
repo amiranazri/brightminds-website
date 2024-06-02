@@ -34,3 +34,30 @@
   right: 10px;
   cursor: pointer;
 }
+.float-image-right {
+  float: right;
+  margin: 0 0 1em 1em;
+  width: 50%;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-text {
+  text-align: left;
+}
+
+.additional-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.additional-image {
+  width: calc(33.33% - 10px);
+  height: auto;
+}
