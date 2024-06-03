@@ -6,7 +6,7 @@ function BlogCard({ imageSrc, blogUrl, blogSummary }) {
     <div className="relative w-[300px] h-[400px] overflow-hidden flex-shrink-0 m-2 border">
       <div className="relative w-[300px] h-[150px] overflow-hidden flex-shrink-0 m-2 mx-auto">
         {/* Image */}
-        <Image src={imageSrc} fill objectFit="contain" />
+        <Image src={imageSrc} fill objectFit="fill" />
       </div>
       <div className="w-full h-[230px] absolute z-20 flex flex-col items-center justify-start p-3 text-md">
         {/* Content */}

@@ -6,7 +6,7 @@ import HorizontalCard from "./ui/components/HorizontalCard";
 import skillsList from "../data/skillsList.json";
 import ReviewCard from "@/app/ui/components/ReviewCard";
 import reviewsData from "@/data/googleReviews.json";
-import "./home.module.css";
+import styles from "./home.module.css"; // Assuming you're using CSS modules for styling
 
 export default function Page() {
   const router = useRouter();
@@ -17,6 +17,10 @@ export default function Page() {
 
   const handleFreeClasses = () => {
     router.push(`/contact/student/free`);
+  };
+
+  const handleLeaveReview = () => {
+    window.location.href = "https://g.page/r/CZxhwWFfbyc3EAI/review";
   };
 
   return (
@@ -105,6 +109,12 @@ export default function Page() {
             />
           ))}
         </div>
+        <button
+          onClick={handleLeaveReview}
+          className="mt-8 bg-[#19598F] hover:bg-yellow-300 text-white hover:text-black font-bold py-2 px-4 rounded-full"
+        >
+          <h6>Leave a Review</h6>
+        </button>
       </div>
     </main>
   );

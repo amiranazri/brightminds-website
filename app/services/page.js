@@ -74,7 +74,7 @@ function OurServices() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row items-center justify-center py-24 sm:py-4 mt-16 sm:mt-2">
+      <div className="flex flex-col md:flex-row items-center justify-center lg:mt-24 sm:py-4 sm:mt-8">
         <div className="flex-1 md:ml-32 lg:ml-32 sm:flex sm:justify-center sm:my-4">
           <Image
             src="/our-services-main.png"

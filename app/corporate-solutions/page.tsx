@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
 import EducationPillar from "./EducationPillar";
@@ -58,10 +57,7 @@ function CorporateSolutions() {
       setIsSmallScreen(window.innerWidth < 768);
     };
 
-    // Initial check
     handleResize();
-
-    // Event listener for window resize
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -76,15 +72,15 @@ function CorporateSolutions() {
       slidesToSlide: 2,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 768 },
       items: 1,
       slidesToSlide: 1,
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1,
-    },
+    // mobile: {
+    //   breakpoint: { max: 464, min: 0 },
+    //   items: 1,
+    //   slidesToSlide: 1,
+    // },
   };
 
   return (
@@ -99,13 +95,13 @@ function CorporateSolutions() {
           className="mt-[113px] md:mt-[136px] min-[918px]:mt-[-2px] sm:mt-16"
         />
       </div>
-      <div className="absolute left-16 top-[50%] hidden md:hidden lg:flex flex-col justify-center">
+      <div className="absolute left-16 top-[50%] hidden lg:flex flex-col justify-center">
         <MainButton isAbsolute={true} text="Contact Us" />
       </div>
 
       <div className="text-center mt-12 mb-12 px-4 sm:px-4">
         <h1>Your Community Engagement Partner</h1>
-        <h4 className="text-center mt-2 mx-24 sm:mx-4">
+        <h4 className="text-center mt-2 lg:mx-32 sm:mx-4">
           We are committed to working alongside our clients to create a
           meaningful impact in communities. We collaborate closely to develop
           and implement quality education initiatives that uplift individuals
@@ -113,11 +109,11 @@ function CorporateSolutions() {
         </h4>
       </div>
 
-      <div className="min-h-[600px] flex sm:flex-col justify-center items-center w-full sm:w-full lg:w-[1000px] xl:w-[1200px] 2xl:w-[1500px] m-auto px-4 sm:px-4">
-        <h1 className="mb-5 text-center">Core Education Pillars</h1>
-        {isSmallScreen ? (
+      {isSmallScreen ? (
+        <div className="min-h-[600px] flex flex-col lg:flex-row justify-center items-center w-full lg:w-[1000px] xl:w-[1200px] 2xl:w-[1500px] m-auto px-4 sm:px-4">
+          <h1 className="mb-5 text-center">Core Education Pillars</h1>
           <div className="flex flex-col items-center">
-            {educationPillars.map((pillar, index) => (
+            {educationPillars.map((pillar) => (
               <EducationPillar
                 key={pillar.key}
                 imageName={pillar.imageName}
@@ -126,7 +122,10 @@ function CorporateSolutions() {
               />
             ))}
           </div>
-        ) : (
+        </div>
+      ) : (
+        <div className="min-h-[600px] justify-center items-center w-[300px] sm:w-[600px] lg:w-[1000px] xl:w-[1200px] 2xl:w-[1500px] m-auto lg:mt-8">
+          <h1 className="mb-5">Core Education Pillars</h1>
           <Carousel
             responsive={responsive}
             swipeable={true}
@@ -139,8 +138,10 @@ function CorporateSolutions() {
             customTransition="transform 300ms ease-in-out"
             transitionDuration={500}
             removeArrowOnDeviceType={["tablet", "mobile"]}
+            // itemClass="carousel-item-padding-40-px" // Add this line
             itemClass="carousel-item-padding-40-px"
             partialVisible={false}
+            // centerMode={true}
           >
             {educationPillars.map((pillar, index) => (
               <EducationPillar
@@ -151,9 +152,10 @@ function CorporateSolutions() {
               />
             ))}
           </Carousel>
-        )}
-      </div>
-      <div className="mb-56 mt-24 sm:mt-16 sm:mb-16 px-4 sm:px-4">
+        </div>
+      )}
+
+      <div className="mb-56 lg:mb-64 sm:mt-16 sm:mb-16 px-4 sm:px-4">
         <h1 className="text-center">Why Us</h1>
         <WhyUs className="flex flex-col lg:flex-row justify-center mt-16 space-y-4 sm:space-y-4 lg:space-y-0 lg:space-x-4 xl:space-x-10 items-center text-center">
           <Why
@@ -223,35 +225,6 @@ function CorporateSolutions() {
 
 export default CorporateSolutions;
 
-const BannerContainer = styled.div`
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-`;
-
-const Banner = styled.img`
-  /* @media (max-width: 639px) {
-    transform: scale(1.5);
-  } */
-`;
-
-const BannerText = styled.div`
-  transition: transform 0.3s ease;
-  @media (max-width: 639px) {
-    bottom: 0;
-    margin-bottom: 2px;
-  }
-  @media (max-width: 520px) {
-    bottom: 0;
-    margin-bottom: 2px;
-    font-size: 0.7rem;
-  }
-  @media (max-width: 430px) {
-    bottom: 0;
-    margin-bottom: 2px;
-    font-size: 0.5rem;
-  }
-`;
 const WhyUs = styled.div`
   margin-top: 32px;
 `;

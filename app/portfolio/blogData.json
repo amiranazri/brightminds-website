@@ -4,5 +4,23 @@
         "imageSrc": "/blog/blog1.jpg",
         "blogUrl": "https://hbr.org/2020/09/social-impact-efforts-that-create-real-value",
         "blogSummary": "Companies must integrate ESG into strategy and operations, engage boards with a clear purpose, and ensure transparent communication. Rating ESG involves assessing risks, monitoring management, and engaging for accurate analysis."
+    },
+    {
+        "id": "2",
+        "imageSrc": "/blog/blog2.png",
+        "blogUrl": "https://www.forbes.com/sites/forbesbusinesscouncil/2023/06/02/sharpening-the-s-in-esg-how-companies-can-make-a-social-impact/?sh=27f1c7f86d8c",
+        "blogSummary": "Companies focused on social impact in ESG face challenges in measuring value, leading to potential mistrust when actions don't align with values."
+    },
+    {
+        "id": "3",
+        "imageSrc": "/blog/blog3.jpg",
+        "blogUrl": "https://hbr.org/2023/11/succeeding-at-the-social-part-of-esg",
+        "blogSummary": "Effective social initiatives in ESG create long-term value by aligning with corporate strategy, seeking community input, using a multidimensional approach, consulting experts, and measuring impact accurately."
+    },
+    {
+        "id": "4",
+        "imageSrc": "/blog/blog4.png",
+        "blogUrl": "https://www.forbes.com/sites/forbeshumanresourcescouncil/2021/01/20/soft-skills-are-essential-to-the-future-of-work/?sh=f5438d813416",
+        "blogSummary": "Soft skills like empathy, emotional intelligence, and adaptability are now crucial in the evolving workplace, offering a competitive advantage that automation can't replicate."
     }
 ]
