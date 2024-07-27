@@ -3,7 +3,8 @@
         "id": "1",
         "imageSrc": "/blog/blog1.jpg",
         "blogUrl": "https://hbr.org/2020/09/social-impact-efforts-that-create-real-value",
-        "blogSummary": "Companies must integrate ESG into strategy and operations, engage boards with a clear purpose, and ensure transparent communication. Rating ESG involves assessing risks, monitoring management, and engaging for accurate analysis."
+        "blogSummary": "Companies must integrate ESG into strategy and operations, engage boards with a clear purpose, and ensure transparent communication. Rating ESG involves assessing risks, monitoring management, and engaging for accurate analysis.",
+        "heroBlog": true
     },
     {
         "id": "2",

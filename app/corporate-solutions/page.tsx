@@ -155,7 +155,7 @@ function CorporateSolutions() {
         </div>
       )}
 
-      <div className="mb-56 lg:mb-64 sm:mt-16 sm:mb-16 px-4 sm:px-4">
+      <div className="mb-56 lg:mb-72 sm:mt-16 sm:mb-16 px-4 sm:px-4">
         <h1 className="text-center">Why Us</h1>
         <WhyUs className="flex flex-col lg:flex-row justify-center mt-16 space-y-4 sm:space-y-4 lg:space-y-0 lg:space-x-4 xl:space-x-10 items-center text-center">
           <Why
