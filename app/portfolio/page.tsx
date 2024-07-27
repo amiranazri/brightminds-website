@@ -42,7 +42,7 @@ function Portfolio() {
               <div className="p-4 text-center">
                 <div className="mb-4 text-lg lines-clamp-3">{HeroBlog.blogSummary}</div>
                 <a
-                  className="inline-block text-white bg-[#19598F] hover:bg-yellow-300 hover:text-black px-4 py-2 rounded"
+                  className="inline-block text-white bg-[#19598F] hover:bg-yellow-300 hover:text-black px-4 py-2"
                   target="_blank"
                   href={HeroBlog.blogUrl}
                   rel="noopener noreferrer"
